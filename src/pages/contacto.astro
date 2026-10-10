@@ -21,13 +21,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <h2>Escríbenos</h2>
         <p>Te respondemos en menos de 24 horas.</p>
         <form
-          name="contacto"
           method="POST"
-          action="/gracias/"
-          data-netlify="true"
+          action="https://api.web3forms.com/submit"
           class="contact-form"
         >
-          <input type="hidden" name="form-name" value="contacto" />
+          <input type="hidden" name="access_key" value={import.meta.env.PUBLIC_WEB3FORMS_KEY} />
+          <input type="hidden" name="subject" value="Nuevo contacto desde 33setecientos.com" />
+          <input type="hidden" name="redirect" value="https://33setecientos.com/gracias/" />
+          <input type="hidden" name="from_name" value="Web 33setecientos" />
+          <input type="checkbox" name="botcheck" style="display:none" />
 
           <div class="field">
             <label for="nombre">Nombre *</label>
@@ -99,8 +101,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="card newsletter-box">
           <h3>Newsletter</h3>
           <p>Consejos de marketing para negocios locales. Sin spam.</p>
-          <form name="newsletter" method="POST" data-netlify="true" class="newsletter-form">
-            <input type="hidden" name="form-name" value="newsletter" />
+          <form method="POST" action="https://api.web3forms.com/submit" class="newsletter-form">
+            <input type="hidden" name="access_key" value={import.meta.env.PUBLIC_WEB3FORMS_KEY} />
+            <input type="hidden" name="subject" value="Nueva suscripción newsletter 33setecientos.com" />
+            <input type="hidden" name="redirect" value="https://33setecientos.com/gracias/" />
+            <input type="checkbox" name="botcheck" style="display:none" />
             <input type="email" name="email" required placeholder="tu@email.com" />
             <button type="submit" class="btn btn-primary">Suscribirme</button>
           </form>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import ServiceIcon from '../components/ServiceIcon.astro';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -39,12 +40,12 @@ const schema = {
 };
 
 const services = [
-  { icon: '🌐', title: 'Creamos tu web', href: '/servicios-marketing/creamos-tu-web/', desc: 'Webs rápidas, posicionadas y orientadas a convertir.' },
-  { icon: '📣', title: 'Publicidad Online', href: '/servicios-marketing/publicidad-online/', desc: 'Google Ads y Meta Ads con resultados medibles.' },
-  { icon: '📱', title: 'Redes Sociales', href: '/servicios-marketing/redes-sociales/', desc: 'Gestión de contenido y comunidad en Instagram y Facebook.' },
-  { icon: '📧', title: 'Email Marketing', href: '/servicios-marketing/email-marketing/', desc: 'Automatizaciones y newsletters que generan ventas.' },
-  { icon: '🔍', title: 'Posicionamiento SEO', href: '/servicios-marketing/seo-sem-buscadores/', desc: 'Aparece antes que tu competencia en Google.' },
-  { icon: '🎓', title: 'Formación', href: '/servicios-marketing/formacion/', desc: 'Aprende a gestionar tu marketing digital con autonomía.' },
+  { icon: 'web',      title: 'Creamos tu web',       href: '/servicios-marketing/creamos-tu-web/',        desc: 'Webs rápidas, posicionadas y orientadas a convertir.' },
+  { icon: 'ads',      title: 'Publicidad Online',     href: '/servicios-marketing/publicidad-online/',     desc: 'Google Ads y Meta Ads con resultados medibles.' },
+  { icon: 'social',   title: 'Redes Sociales',        href: '/servicios-marketing/redes-sociales/',        desc: 'Gestión de contenido y comunidad en Instagram y Facebook.' },
+  { icon: 'email',    title: 'Email Marketing',       href: '/servicios-marketing/email-marketing/',       desc: 'Automatizaciones y newsletters que generan ventas.' },
+  { icon: 'seo',      title: 'Posicionamiento SEO',   href: '/servicios-marketing/seo-sem-buscadores/',    desc: 'Aparece antes que tu competencia en Google.' },
+  { icon: 'formacion',title: 'Formación',             href: '/servicios-marketing/formacion/',             desc: 'Aprende a gestionar tu marketing digital con autonomía.' },
 ];
 
 const stats = [
@@ -107,7 +108,7 @@ const stats = [
       <div class="services-grid">
         {services.map((s) => (
           <a href={s.href} class="service-card card">
-            <span class="service-icon" aria-hidden="true">{s.icon}</span>
+            <ServiceIcon name={s.icon} />
             <h3>{s.title}</h3>
             <p>{s.desc}</p>
           </a>
@@ -240,7 +241,6 @@ const stats = [
     transition: transform 0.15s, box-shadow 0.15s;
   }
   .service-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(26,43,107,0.12); }
-  .service-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
   .service-card h3 { color: var(--navy); font-size: 1.05rem; margin-bottom: 0.4rem; }
   .service-card p { color: var(--grey); font-size: 0.9rem; margin: 0; }
 

@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceIcon from '../../components/ServiceIcon.astro';
 
 const services = [
-  { icon: '📣', title: 'Publicidad Online', href: '/servicios-marketing/publicidad-online/', desc: 'Google Ads y Meta Ads para llegar a tu cliente en el momento exacto en que te busca.' },
-  { icon: '📱', title: 'Redes Sociales', href: '/servicios-marketing/redes-sociales/', desc: 'Contenido local, auténtico y publicado con criterio. Sin plantillas genéricas.' },
-  { icon: '🌐', title: 'Creamos tu web', href: '/servicios-marketing/creamos-tu-web/', desc: 'Webs que aparecen en Google, se ven bien en móvil y convierten visitas en clientes.' },
-  { icon: '📧', title: 'Email Marketing', href: '/servicios-marketing/email-marketing/', desc: 'El canal que no depende de ningún algoritmo. Fideliza y vende fuera de temporada.' },
-  { icon: '🔍', title: 'Posicionamiento SEO', href: '/servicios-marketing/seo-sem-buscadores/', desc: 'Aparece antes que tu competencia cuando te buscan en Google.' },
-  { icon: '🎓', title: 'Formación', href: '/servicios-marketing/formacion/', desc: 'Aprende a gestionar tu presencia digital sin depender de nadie.' },
+  { icon: 'ads',       title: 'Publicidad Online',   href: '/servicios-marketing/publicidad-online/',  desc: 'Google Ads y Meta Ads para llegar a tu cliente en el momento exacto en que te busca.' },
+  { icon: 'social',    title: 'Redes Sociales',       href: '/servicios-marketing/redes-sociales/',     desc: 'Contenido local, auténtico y publicado con criterio. Sin plantillas genéricas.' },
+  { icon: 'web',       title: 'Creamos tu web',       href: '/servicios-marketing/creamos-tu-web/',     desc: 'Webs que aparecen en Google, se ven bien en móvil y convierten visitas en clientes.' },
+  { icon: 'email',     title: 'Email Marketing',      href: '/servicios-marketing/email-marketing/',    desc: 'El canal que no depende de ningún algoritmo. Fideliza y vende fuera de temporada.' },
+  { icon: 'seo',       title: 'Posicionamiento SEO',  href: '/servicios-marketing/seo-sem-buscadores/', desc: 'Aparece antes que tu competencia cuando te buscan en Google.' },
+  { icon: 'formacion', title: 'Formación',            href: '/servicios-marketing/formacion/',          desc: 'Aprende a gestionar tu presencia digital sin depender de nadie.' },
 ];
 ---
 
@@ -28,7 +29,7 @@ const services = [
       <div class="services-grid">
         {services.map((s) => (
           <a href={s.href} class="service-card card">
-            <span class="service-icon" aria-hidden="true">{s.icon}</span>
+            <ServiceIcon name={s.icon} />
             <h2>{s.title}</h2>
             <p>{s.desc}</p>
             <span class="link-arrow">Saber más →</span>

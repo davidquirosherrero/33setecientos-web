@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: '33setecientos — Marketing Digital en El Franco',
+  url: 'https://33setecientos.com/marketing-digital-el-franco/',
+  telephone: '+34984681133',
+  areaServed: { '@type': 'AdministrativeArea', name: 'El Franco, Asturias' },
+};
+---
+
+<BaseLayout
+  title="Marketing Digital en El Franco · 33setecientos"
+  description="Agencia de marketing digital para negocios de El Franco. SEO local, Google Ads, Meta Ads, redes sociales y diseño web. Desde Luarca, occidente de Asturias."
+  schema={schema}
+>
+  <section class="section--navy hero">
+    <div class="container">
+      <span class="badge" style="background:rgba(255,255,255,.15);color:var(--white)">El Franco · Asturias</span>
+      <h1>Marketing Digital para negocios en El Franco</h1>
+      <p>Trabajamos con negocios de El Franco desde nuestra sede en Luarca. Conocemos el mercado local, la estacionalidad y la competencia real que tienes enfrente.</p>
+      <a href="/contacto/" class="btn btn-primary" style="margin-top:1.5rem;display:inline-block">Consulta gratuita</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content-col">
+      <h2>Marketing digital para El Franco</h2>
+      <p>Los clientes buscan en Google antes de entrar por la puerta. Si tu negocio no aparece cuando buscan tu servicio en El Franco, para ellos no existes. En 33setecientos hacemos SEO local, Google Ads y gestión de redes sociales para negocios del occidente de Asturias.</p>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container">
+      <h2>Servicios para negocios de El Franco</h2>
+      <div class="svc-grid">
+        {[
+          { href: '/servicios-marketing/seo-sem-buscadores/', title: 'SEO en El Franco', desc: 'Aparece cuando buscan tu servicio en El Franco. Google My Business, búsquedas locales y contenido.' },
+          { href: '/servicios-marketing/publicidad-online/', title: 'Google Ads y Meta Ads', desc: 'Campañas segmentadas para El Franco y alrededores. Solo pagas cuando te hacen clic.' },
+          { href: '/servicios-marketing/redes-sociales/', title: 'Redes Sociales', desc: 'Instagram y Facebook gestionados con conocimiento del mercado local.' },
+          { href: '/servicios-marketing/creamos-tu-web/', title: 'Diseño Web', desc: 'Webs rápidas, posicionadas y que convierten visitas en clientes.' },
+        ].map((s) => (
+          <a href={s.href} class="card svc-card">
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+            <span class="link-arrow">Saber más →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy">
+    <div class="container" style="text-align:center">
+      <h2 style="color:var(--white);font-size:clamp(1.5rem,3vw,2rem);margin-bottom:.75rem">¿Tienes un negocio en El Franco?</h2>
+      <p style="color:rgba(255,255,255,.75);margin-bottom:2rem">Primera consulta gratuita. Sin compromiso.</p>
+      <a href="/contacto/" class="btn btn-primary">Contactar</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero { padding-block: clamp(3rem,6vw,5rem); }
+  h1 { color: var(--white); font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 800; margin: .75rem 0 1rem; max-width: 680px; }
+  .hero p { color: rgba(255,255,255,.8); max-width: 600px; }
+  h2 { color: var(--navy); font-size: clamp(1.3rem,2.5vw,1.8rem); margin-bottom: 1rem; }
+  .content-col { max-width: 720px; }
+  .content-col p { color: var(--grey); line-height: 1.7; margin-bottom: 1rem; }
+  .svc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+  .svc-card { text-decoration: none; color: var(--dark); transition: transform .15s; }
+  .svc-card:hover { transform: translateY(-3px); }
+  .svc-card h3 { color: var(--navy); font-size: 1rem; margin-bottom: .4rem; }
+  .svc-card p { color: var(--grey); font-size: .9rem; margin-bottom: .75rem; }
+  .link-arrow { color: var(--teal2); font-weight: 600; font-size: .875rem; }
+</style>

@@ -1,0 +1,115 @@
+---
+// Cookie banner GDPR nativo — sin dependencias externas
+// Guarda consentimiento en localStorage. GA4 solo se carga si se acepta.
+---
+
+<div id="cookie-banner" class="cookie-banner" role="alertdialog" aria-label="Aviso de cookies" aria-describedby="cookie-desc">
+  <div class="cookie-inner">
+    <p id="cookie-desc">
+      Usamos cookies propias y de terceros (Google Analytics) para mejorar la experiencia y analizar el tráfico.
+      <a href="/politica-privacidad/" class="cookie-link">Más información</a>
+    </p>
+    <div class="cookie-btns">
+      <button id="cookie-reject" class="btn-cookie btn-cookie--outline">Rechazar</button>
+      <button id="cookie-accept" class="btn-cookie btn-cookie--primary">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const COOKIE_KEY = 'cookie_consent_33set';
+
+  function getCookieConsent() {
+    try { return localStorage.getItem(COOKIE_KEY); } catch { return null; }
+  }
+
+  function setCookieConsent(value: string) {
+    try { localStorage.setItem(COOKIE_KEY, value); } catch {}
+  }
+
+  function hideBanner() {
+    const banner = document.getElementById('cookie-banner');
+    if (banner) banner.style.display = 'none';
+  }
+
+  function loadAnalytics() {
+    // Cargar Google Tag Manager (ya tiene GA4 configurado internamente)
+    const GTM_ID = 'GTM-MRS2VN3V';
+    (function(w,d,s,l,i){
+      (w as any)[l]=(w as any)[l]||[];
+      (w as any)[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      const f=d.getElementsByTagName(s)[0];
+      const j=d.createElement(s) as HTMLScriptElement;
+      const dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode!.insertBefore(j,f);
+    })(window,document,'script','dataLayer',GTM_ID);
+  }
+
+  // On load
+  const consent = getCookieConsent();
+  if (consent === 'accepted') {
+    hideBanner();
+    loadAnalytics();
+  } else if (consent === 'rejected') {
+    hideBanner();
+  }
+  // Otherwise, show banner
+
+  document.getElementById('cookie-accept')?.addEventListener('click', () => {
+    setCookieConsent('accepted');
+    hideBanner();
+    loadAnalytics();
+  });
+
+  document.getElementById('cookie-reject')?.addEventListener('click', () => {
+    setCookieConsent('rejected');
+    hideBanner();
+  });
+</script>
+
+<style>
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: var(--dark);
+    color: var(--white);
+    padding: 1rem;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.25);
+  }
+  .cookie-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .cookie-inner p {
+    font-size: .875rem;
+    color: rgba(255,255,255,.8);
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+  }
+  .cookie-link { color: var(--teal); text-decoration: underline; }
+  .cookie-btns { display: flex; gap: .75rem; flex-shrink: 0; }
+  .btn-cookie {
+    padding: .5rem 1.25rem;
+    border-radius: .4rem;
+    font-size: .875rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+  .btn-cookie--primary { background: var(--teal); color: var(--dark); }
+  .btn-cookie--primary:hover { background: var(--teal2); }
+  .btn-cookie--outline { background: transparent; color: rgba(255,255,255,.7); border: 1px solid rgba(255,255,255,.3); }
+  .btn-cookie--outline:hover { background: rgba(255,255,255,.1); color: var(--white); }
+</style>

@@ -30,7 +30,7 @@ const icons: Record<string, string> = {
 ---
 <span class="svc-icon" aria-hidden="true" set:html={icons[name] ?? icons.web} />
 
-<style>
+<style is:global>
   .svc-icon {
     display: flex;
     align-items: center;

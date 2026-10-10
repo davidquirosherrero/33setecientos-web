@@ -4,6 +4,7 @@ description: "Hacer un bollo en Valdés es un oficio. Venderlo fuera del concejo
 pubDate: "2026-05-11"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/marketing-digital-pasteleria-autor-valdes.png
 draft: false
 ---
 

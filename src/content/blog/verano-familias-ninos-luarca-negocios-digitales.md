@@ -4,6 +4,7 @@ description: "El 20 de junio los colegios cierran y miles de familias buscan pla
 pubDate: "2026-06-25"
 updatedDate: "2026-10-05"
 tags: []
+heroImage: /images/blog/verano-familias-ninos-luarca-negocios-digitales.png
 draft: false
 ---
 

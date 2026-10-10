@@ -4,6 +4,7 @@ description: "La III Edición de GastroLuarca está a la vuelta de la esquina (1
 pubDate: "2026-04-30"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/gastroluarca-2026-marketing-para-restaurantes.png
 draft: false
 ---
 

@@ -3,6 +3,7 @@ title: "Asociaciones en Valdés: captar socios con y sin marketing"
 description: "La Lira de Luarca pasó de 600 a 300 socios. El digital ayuda, pero no hace milagros. Esto es lo que funciona de verdad en un concejo como Valdés."
 pubDate: "2026-05-26"
 tags: []
+heroImage: /images/blog/captar-socios-asociaciones-valdes-luarca.png
 draft: false
 ---
 

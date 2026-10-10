@@ -4,6 +4,7 @@ description: "Manual de Guerrilla: Cómo hacer que todo Valdés se entere de tu 
 pubDate: "2026-04-03"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/segmentacion-eventos-luarca-valdes.png
 draft: false
 ---
 

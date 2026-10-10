@@ -4,6 +4,7 @@ description: "El 30 de abril a las 20:16h se decide el éxito de tu negocio el d
 pubDate: "2026-04-20"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/ensayo-eclipse-2026-luarca-valdes.png
 draft: false
 ---
 

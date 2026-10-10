@@ -4,6 +4,7 @@ description: "Hemos analizado 12 meses de datos reales de Google Trends para Lua
 pubDate: "2026-06-11"
 updatedDate: "2026-10-05"
 tags: []
+heroImage: /images/blog/google-trends-luarca-datos-negocio-valdes-2026.png
 draft: false
 ---
 

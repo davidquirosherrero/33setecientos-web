@@ -4,6 +4,7 @@ description: "La Cofradía de San Timoteo tiene miles de cofrades y una gestión
 pubDate: "2026-06-04"
 updatedDate: "2026-05-21"
 tags: []
+heroImage: /images/blog/cofradia-san-timoteo-modernizar-digital-luarca.png
 draft: false
 ---
 

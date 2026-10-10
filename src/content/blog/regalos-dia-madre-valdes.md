@@ -4,6 +4,7 @@ description: "Sabemos que el comercio de Luarca tiene algo que Amazon nunca tend
 pubDate: "2026-04-23"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/regalos-dia-madre-valdes.png
 draft: false
 ---
 

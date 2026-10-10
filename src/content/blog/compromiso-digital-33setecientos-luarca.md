@@ -4,6 +4,7 @@ description: "Llevamos dos meses compartiendo con vosotros ideas para mejorar la
 pubDate: "2026-05-08"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/compromiso-digital-33setecientos-luarca.png
 draft: false
 ---
 

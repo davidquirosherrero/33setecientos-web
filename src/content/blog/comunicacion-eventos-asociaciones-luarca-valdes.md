@@ -4,6 +4,7 @@ description: "El cartel en el tablón ya no llega a todo el concejo. Pero sí pu
 pubDate: "2026-05-13"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/comunicacion-eventos-asociaciones-luarca-valdes.png
 draft: false
 ---
 

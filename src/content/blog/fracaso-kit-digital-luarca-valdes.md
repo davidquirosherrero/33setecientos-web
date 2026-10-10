@@ -4,6 +4,7 @@ description: "El cementerio digital de Valdés: Cuando lo &#8220;gratis&#8221; s
 pubDate: "2026-04-22"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/fracaso-kit-digital-luarca-valdes.png
 draft: false
 ---
 

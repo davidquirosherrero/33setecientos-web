@@ -4,6 +4,7 @@ description: "En mayo, Luarca empieza a oler a fiestas locales y a vacaciones. S
 pubDate: "2026-05-06"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/alquiler-vacacional-luarca-consejos-verano.png
 draft: false
 ---
 

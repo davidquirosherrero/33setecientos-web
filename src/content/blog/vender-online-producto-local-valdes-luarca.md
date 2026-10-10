@@ -4,6 +4,7 @@ description: "Hay gente en Madrid, en Oviedo y en Noruega que pagaría por lo qu
 pubDate: "2026-05-20"
 updatedDate: "2026-05-01"
 tags: []
+heroImage: /images/blog/vender-online-producto-local-valdes-luarca.png
 draft: false
 ---
 

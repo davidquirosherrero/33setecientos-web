@@ -4,6 +4,7 @@ description: "San Timoteo es el evento de Luarca con mayor proyección exterior 
 pubDate: "2026-06-29"
 updatedDate: "2026-05-21"
 tags: []
+heroImage: /images/blog/fiestas-san-timoteo-luarca-agosto-negocios-digitales.png
 draft: false
 ---
 

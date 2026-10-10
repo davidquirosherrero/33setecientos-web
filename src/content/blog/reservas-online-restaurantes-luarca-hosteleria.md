@@ -4,6 +4,7 @@ description: "El cliente que viene a Luarca ya sabe dónde va a cenar. Ha decidi
 pubDate: "2026-05-18"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/reservas-online-restaurantes-luarca-hosteleria.png
 draft: false
 ---
 

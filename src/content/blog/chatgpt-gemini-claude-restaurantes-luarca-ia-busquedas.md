@@ -4,6 +4,7 @@ description: "Le preguntamos a ChatGPT, Gemini y Claude dónde comer en Luarca. 
 pubDate: "2026-05-29"
 updatedDate: "2026-10-05"
 tags: []
+heroImage: /images/blog/chatgpt-gemini-claude-restaurantes-luarca-ia-busquedas.png
 draft: false
 ---
 

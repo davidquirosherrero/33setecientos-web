@@ -4,6 +4,7 @@ description: "De &#8220;mirar escaparates&#8221; a &#8220;comprar en Luarca&#822
 pubDate: "2026-04-29"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/comercio-luarca-ventas-turismo-valdes.png
 draft: false
 ---
 

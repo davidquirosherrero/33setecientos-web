@@ -3,6 +3,7 @@ title: "Caso de éxito: Esto es lo que pasa cuando dejas de invertir en digital 
 description: "Hay negocios que llevan años invirtiendo en marketing digital sin saber si funciona. Este es el caso más habitual que vemos. Y tiene solución. Cuando un cliente llega a 33setecientos referenciado por otro cliente — como ocurrió en este caso — ya sabemos que algo está funcionando."
 pubDate: "2026-05-25"
 tags: []
+heroImage: /images/blog/caso-exito-marketing-digital-asturias.png
 draft: false
 ---
 

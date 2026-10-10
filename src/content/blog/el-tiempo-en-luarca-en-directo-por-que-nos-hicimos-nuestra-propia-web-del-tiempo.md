@@ -3,6 +3,7 @@ title: "El tiempo en Luarca, en directo: por qué nos hicimos nuestra propia web
 description: "Llevamos toda la semana con las mesas de la terraza jugando al despiste: fuera, dentro, fuera otra vez. Y si algo tenemos claro después de veinte años metidos en esto es que el tiempo en Luarca no lo da bien ninguna app. Te dan el tiempo de &#8220;Asturias&#8221;, el tiempo de &#"
 pubDate: "2026-07-27"
 tags: []
+heroImage: /images/blog/el-tiempo-en-luarca-en-directo-por-que-nos-hicimos-nuestra-propia-web-del-tiempo.jpg
 draft: false
 ---
 

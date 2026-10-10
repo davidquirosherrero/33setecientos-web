@@ -4,6 +4,7 @@ description: "El 12 de agosto de 2026, Luarca será el mejor punto del mundo par
 pubDate: "2026-05-22"
 updatedDate: "2026-08-02"
 tags: []
+heroImage: /images/blog/eclipse-solar-luarca-2026-horarios-puntos-observacion.png
 draft: false
 ---
 

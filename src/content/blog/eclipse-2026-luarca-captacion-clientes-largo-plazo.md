@@ -4,6 +4,7 @@ description: "El 12 de agosto, Luarca tendrá la mayor concentración de visitan
 pubDate: "2026-06-01"
 updatedDate: "2026-05-21"
 tags: []
+heroImage: /images/blog/eclipse-2026-luarca-captacion-clientes-largo-plazo.png
 draft: false
 ---
 

@@ -4,6 +4,7 @@ description: "En Luarca apareces en Google. El problema es lo que encuentran cua
 pubDate: "2026-05-05"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/profesionales-servicios-luarca-clientes-google.png
 draft: false
 ---
 

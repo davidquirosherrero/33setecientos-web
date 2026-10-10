@@ -4,6 +4,7 @@ description: "Busca &#8220;pueblos más bonitos de Asturias&#8221;. Cudillero es
 pubDate: "2026-05-15"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/luarca-valdes-posicionamiento-digital-turismo.png
 draft: false
 ---
 

@@ -4,6 +4,7 @@ description: "Durante casi una década, luarcaasturias.com fue el mayor reposito
 pubDate: "2026-04-02"
 updatedDate: "2026-05-21"
 tags: []
+heroImage: /images/blog/directorio-digital-luarca-264000-visitas-organicas.png
 draft: false
 ---
 

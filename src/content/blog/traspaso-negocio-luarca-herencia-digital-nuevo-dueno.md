@@ -4,6 +4,7 @@ description: "Cuando un negocio cambia de manos en Luarca, la presencia digital 
 pubDate: "2026-06-08"
 updatedDate: "2026-05-21"
 tags: []
+heroImage: /images/blog/traspaso-negocio-luarca-herencia-digital-nuevo-dueno.png
 draft: false
 ---
 

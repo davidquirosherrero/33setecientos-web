@@ -4,6 +4,7 @@ description: "El interés en Luarca cae un 70% entre agosto y octubre. Pero los 
 pubDate: "2026-06-15"
 updatedDate: "2026-10-05"
 tags: []
+heroImage: /images/blog/estacionalidad-luarca-negocio-temporada-baja-datos-google.png
 draft: false
 ---
 

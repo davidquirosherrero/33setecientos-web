@@ -4,6 +4,7 @@ description: "Si has llegado hasta aquí es porque al menos hemos conseguido que
 pubDate: "2024-09-08"
 updatedDate: "2026-05-21"
 tags: []
+heroImage: /images/blog/lanzamos-agencia-marketing-luarca.png
 draft: false
 ---
 

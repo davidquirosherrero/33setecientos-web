@@ -4,6 +4,7 @@ description: "Zapatero a tus zapatos (y nosotros a tus redes y tu web en Valdés
 pubDate: "2026-04-15"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/soluciones-digitales-negocios-luarca.png
 draft: false
 ---
 

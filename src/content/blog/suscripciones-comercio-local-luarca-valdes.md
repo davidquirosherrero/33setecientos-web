@@ -4,6 +4,7 @@ description: "¿Y si el lunes después del Día de la Madre ya tuvieras la mitad
 pubDate: "2026-04-25"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/suscripciones-comercio-local-luarca-valdes.png
 draft: false
 ---
 

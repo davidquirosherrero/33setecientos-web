@@ -4,6 +4,7 @@ description: "Puentes de Mayo en Luarca: ¿Por qué el turista de Madrid necesit
 pubDate: "2026-04-24"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/reservar-hotel-restaurante-luarca-mayo.png
 draft: false
 ---
 

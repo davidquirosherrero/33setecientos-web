@@ -4,6 +4,7 @@ description: "Luarca cumple 756 años y en 33setecientos.com no queremos limitar
 pubDate: "2026-05-04"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/reto-7-56-luarca-carta-puebla.png
 draft: false
 ---
 

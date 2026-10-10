@@ -4,6 +4,7 @@ description: "El &#8220;boca a boca&#8221; ya no se hace solo en la Plaza del Ay
 pubDate: "2026-04-17"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/negocios-servicios-valdes-digital.png
 draft: false
 ---
 

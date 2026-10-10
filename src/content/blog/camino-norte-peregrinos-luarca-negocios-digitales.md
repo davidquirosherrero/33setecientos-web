@@ -4,6 +4,7 @@ description: "Más de 21.000 peregrinos recorren el Camino del Norte cada año y
 pubDate: "2026-06-18"
 updatedDate: "2026-05-21"
 tags: []
+heroImage: /images/blog/camino-norte-peregrinos-luarca-negocios-digitales.png
 draft: false
 ---
 

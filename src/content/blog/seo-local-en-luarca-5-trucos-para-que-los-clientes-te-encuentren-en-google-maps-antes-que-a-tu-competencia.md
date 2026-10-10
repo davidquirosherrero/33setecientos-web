@@ -4,6 +4,7 @@ description: "Si buscas ahora mismo &#8220;dónde comer en Luarca&#8221; o &#822
 pubDate: "2026-03-30"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/seo-local-en-luarca-5-trucos-para-que-los-clientes-te-encuentren-en-google-maps-antes-que-a-tu-competencia.png
 draft: false
 ---
 

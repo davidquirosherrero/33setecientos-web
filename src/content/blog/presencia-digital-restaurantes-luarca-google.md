@@ -4,6 +4,7 @@ description: "En junio de 2026 auditamos los cinco restaurantes mejor valorados 
 pubDate: "2026-05-27"
 updatedDate: "2026-10-05"
 tags: []
+heroImage: /images/blog/presencia-digital-restaurantes-luarca-google.jpeg
 draft: false
 ---
 

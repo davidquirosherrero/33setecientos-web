@@ -4,6 +4,7 @@ description: "Luarca se reinventa: El pulso de un comercio que no se detiene Lua
 pubDate: "2026-04-18"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/relevo-empresarial-luarca-valdes.png
 draft: false
 ---
 

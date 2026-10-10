@@ -4,6 +4,7 @@ description: "La Semana Santa ya está aquí y en Luarca se respira ese ambiente
 pubDate: "2026-03-31"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/semana-santa-en-luarca-como-poner-a-punto-tu-negocio-en-internet-para-la-avalancha-de-turistas.jpeg
 draft: false
 ---
 

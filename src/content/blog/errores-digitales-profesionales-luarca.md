@@ -4,6 +4,7 @@ description: "Navegación de precisión: Lo que el sector servicios de Luarca de
 pubDate: "2026-04-16"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/errores-digitales-profesionales-luarca.png
 draft: false
 ---
 

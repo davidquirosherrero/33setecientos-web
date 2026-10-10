@@ -4,6 +4,7 @@ description: "Los Bonos Comercio Asturias caducan el 30 de junio. Si tienes un c
 pubDate: "2026-06-22"
 updatedDate: "2026-05-21"
 tags: []
+heroImage: /images/blog/bonos-comercio-asturias-2026-luarca-campana-junio.png
 draft: false
 ---
 

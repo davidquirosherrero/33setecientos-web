@@ -4,6 +4,7 @@ description: "El marketing de Luarca no se puede hacer desde un despacho en el c
 pubDate: "2026-04-27"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/marketing-local-vs-agencias-fuera-luarca.png
 draft: false
 ---
 

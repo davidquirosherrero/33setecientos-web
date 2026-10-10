@@ -4,6 +4,7 @@ description: "No construyas tu negocio en terreno alquilado: la soberanía digit
 pubDate: "2026-04-10"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/peligro-dependencia-redes-sociales-valdes.png
 draft: false
 ---
 

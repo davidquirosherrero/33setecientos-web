@@ -4,6 +4,7 @@ description: "Si regentamos una tienda de ropa, calzado o mascotas en cualquier 
 pubDate: "2026-04-13"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/comercio-luarca-seo-local.png
 draft: false
 ---
 

@@ -4,6 +4,7 @@ description: "Seguro que te suena esta historia: abriste tu negocio en Luarca, c
 pubDate: "2026-04-01"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/porque-necesitas-web-propia.png
 draft: false
 ---
 

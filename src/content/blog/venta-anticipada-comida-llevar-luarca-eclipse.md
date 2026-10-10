@@ -4,6 +4,7 @@ description: "El 12 de agosto de 2026, Luarca vivirá un fenómeno que no se rep
 pubDate: "2026-04-08"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/venta-anticipada-comida-llevar-luarca-eclipse.png
 draft: false
 ---
 

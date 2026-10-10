@@ -4,6 +4,7 @@ description: "Todos los que tenemos un negocio en el concejo conocemos esa sensa
 pubDate: "2026-04-06"
 updatedDate: "2026-05-19"
 tags: []
+heroImage: /images/blog/marketing-digital-luarca-post-semana-santa.png
 draft: false
 ---
 

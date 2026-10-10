@@ -23,7 +23,7 @@ const currentPath = Astro.url.pathname;
 <header class="site-header">
   <div class="header-bar">
     <a href="/" class="header-logo" aria-label="33setecientos — Inicio">
-      <img src="/images/logos/logo-dark.png" alt="33setecientos" style="height:44px;width:auto;display:block;" />
+      <img src="/images/logos/logo-dark.png" alt="33setecientos" style="height:44px;width:44px;object-fit:contain;display:block;" />
     </a>
 
     <!-- Nav desktop -->
@@ -102,7 +102,14 @@ const currentPath = Astro.url.pathname;
     padding: 0 1rem;
   }
 
-  .header-logo { flex-shrink: 0; line-height: 0; }
+  .header-logo {
+    flex-shrink: 0;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    overflow: hidden;
+  }
 
   /* ── Desktop nav ── */
   .desk-nav {

@@ -66,6 +66,7 @@ const currentPath = Astro.url.pathname;
     position: sticky;
     top: 0;
     z-index: 100;
+    isolation: isolate;
     background: var(--white);
     border-bottom: 1px solid var(--lgrey);
     box-shadow: 0 1px 4px rgba(26,43,107,0.06);
@@ -163,20 +164,75 @@ const currentPath = Astro.url.pathname;
   }
 
   @media (max-width: 768px) {
-    .header-nav, .header-cta { display: none; }
+    .header-cta { display: none; }
     .nav-toggle { display: flex; }
+
+    .header-nav {
+      display: none;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-top: 1px solid var(--lgrey);
+      border-bottom: 2px solid var(--lgrey);
+      box-shadow: 0 4px 16px rgba(26,43,107,0.1);
+      z-index: 99;
+      padding: 0.75rem 1rem 1.25rem;
+    }
+
+    .header-nav.is-open { display: block; }
+
+    .header-nav > ul {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .header-nav a {
+      padding: 0.75rem 0.5rem;
+      font-size: 1rem;
+      border-bottom: 1px solid var(--lgrey);
+      border-radius: 0;
+    }
+
+    .has-dropdown > a { border-bottom: none; }
+
+    .dropdown {
+      display: block;
+      position: static;
+      box-shadow: none;
+      border: none;
+      padding: 0 0 0.5rem 1rem;
+      min-width: unset;
+    }
+
+    .dropdown a {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.5rem;
+      border-bottom: 1px solid var(--lgrey);
+      border-radius: 0;
+    }
+
+    .dropdown li:last-child a { border-bottom: none; }
   }
 </style>
 
 <script>
   const toggle = document.querySelector('.nav-toggle') as HTMLButtonElement;
   const nav    = document.querySelector('.header-nav') as HTMLElement;
-  const cta    = document.querySelector('.header-cta') as HTMLElement;
 
   toggle?.addEventListener('click', () => {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
-    if (nav) nav.style.display = expanded ? '' : 'block';
-    if (cta) cta.style.display = expanded ? '' : 'block';
+    nav?.classList.toggle('is-open', !expanded);
+  });
+
+  // Cerrar al hacer clic fuera
+  document.addEventListener('click', (e) => {
+    const header = document.querySelector('.site-header');
+    if (header && !header.contains(e.target as Node)) {
+      toggle?.setAttribute('aria-expanded', 'false');
+      nav?.classList.remove('is-open');
+    }
   });
 </script>

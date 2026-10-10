@@ -1,9 +1,9 @@
 ---
 title: "Negocios en Luarca: No pierdas clientes frente a los de fuera"
-description: "El &#8220;boca a boca&#8221; ya no se hace solo en la Plaza del Ayuntamiento Durante años, en el concejo de Valdés, el prestigio se ganaba en la calle. Si eras un buen electricista en Almuña o tenías la mejor tienda de ropa en la Avenida de Galicia, el trabajo no te faltaba porqu"
+description: "El &#8220;boca a boca&#8221; ya no se hace solo en la Plaza del Ayuntamiento Durante años, en el concejo de Valdés, el prestigio se ganaba en la calle. Si..."
 pubDate: "2026-04-17"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['negocios-locales']
 heroImage: /images/blog/negocios-servicios-valdes-digital.png
 draft: false
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Modelos de suscripción: el fin de la dependencia de los picos de venta"
-description: "¿Y si el lunes después del Día de la Madre ya tuvieras la mitad del mes facturado? Cualquier comerciante de la Párroco Camino o de la Avenida de Galicia sabe lo que es el estrés de una campaña: preparar stock, rezar para que el tiempo acompañe en Luarca y esperar a que la gente e"
+description: "¿Y si el lunes después del Día de la Madre ya tuvieras la mitad del mes facturado? Cualquier comerciante de la Párroco Camino o de la Avenida de Galicia..."
 pubDate: "2026-04-25"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['email-marketing', 'luarca', 'negocios-locales']
 heroImage: /images/blog/suscripciones-comercio-local-luarca-valdes.png
 draft: false
 ---

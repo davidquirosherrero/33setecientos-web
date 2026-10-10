@@ -1,9 +1,9 @@
 ---
 title: "Cómo ganar a Amazon desde tu negocio en Luarca"
-description: "Si regentamos una tienda de ropa, calzado o mascotas en cualquier calle de Luarca, seguro que nos resulta familiar esta escena: un vecino entra a por un artículo de última hora tras haber esperado tres días a que le llegara un paquete de internet que, para colmo, venía defectuoso"
+description: "Si regentamos una tienda de ropa, calzado o mascotas en cualquier calle de Luarca, seguro que nos resulta familiar esta escena: un vecino entra a por un..."
 pubDate: "2026-04-13"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales', 'seo-local']
 heroImage: /images/blog/comercio-luarca-seo-local.png
 draft: false
 ---

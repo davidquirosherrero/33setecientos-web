@@ -1,9 +1,9 @@
 ---
 title: "Por qué en 33setecientos regalamos nuestras mejores ideas a Luarca"
-description: "Llevamos dos meses compartiendo con vosotros ideas para mejorar la hostelería, trucos para el comercio y algún que otro &#8220;tirón de orejas&#8221; cariñoso. Algunos nos habéis preguntado con esa retranca tan nuestra: “Oye, ¿por qué soltáis todo esto gratis? ¿No estáis regaland"
+description: "Llevamos dos meses compartiendo con vosotros ideas para mejorar la hostelería, trucos para el comercio y algún que otro &#8220;tirón de orejas&#8221..."
 pubDate: "2026-05-08"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/compromiso-digital-33setecientos-luarca.png
 draft: false
 ---

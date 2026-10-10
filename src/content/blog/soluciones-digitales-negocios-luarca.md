@@ -1,9 +1,9 @@
 ---
 title: "Digitaliza tu negocio en Luarca sin perder el tiempo"
-description: "Zapatero a tus zapatos (y nosotros a tus redes y tu web en Valdés) Levantar la persiana cada día en Luarca ya es bastante duro. Entre pedidos, facturas, clientes y el día a día, lo último que necesitas es llegar a casa y tener que pelearte con una actualización de Google, subir f"
+description: "Zapatero a tus zapatos (y nosotros a tus redes y tu web en Valdés) Levantar la persiana cada día en Luarca ya es bastante duro. Entre pedidos, facturas..."
 pubDate: "2026-04-15"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/soluciones-digitales-negocios-luarca.png
 draft: false
 ---

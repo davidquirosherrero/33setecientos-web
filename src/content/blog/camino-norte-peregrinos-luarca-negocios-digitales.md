@@ -1,9 +1,9 @@
 ---
 title: "Cada año más de 21.000 peregrinos recorren el Camino del Norte. ¿Sabe alguno que existes?"
-description: "Más de 21.000 peregrinos recorren el Camino del Norte cada año y pasan por Luarca. Casi ningún negocio del concejo tiene presencia digital orientada a captarlos."
+description: "Más de 21.000 peregrinos recorren el Camino del Norte cada año y pasan por Luarca. Casi ningún negocio del concejo tiene presencia digital orientada a..."
 pubDate: "2026-06-18"
 updatedDate: "2026-05-21"
-tags: []
+tags: ['luarca', 'negocios-locales', 'turismo']
 heroImage: /images/blog/camino-norte-peregrinos-luarca-negocios-digitales.png
 draft: false
 ---

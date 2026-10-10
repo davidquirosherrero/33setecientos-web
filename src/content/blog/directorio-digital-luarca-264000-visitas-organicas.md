@@ -1,9 +1,9 @@
 ---
 title: "Caso de éxito: Construimos el mayor directorio digital de Luarca. 264.000 visitas orgánicas, sin invertir un euro en publicidad."
-description: "Durante casi una década, luarcaasturias.com fue el mayor repositorio digital del concejo de Valdés. 264.000 visitas, sin un euro en publicidad. Esto es lo que aprendimos."
+description: "Durante casi una década, luarcaasturias.com fue el mayor repositorio digital del concejo de Valdés. 264.000 visitas, sin un euro en publicidad. Esto es lo..."
 pubDate: "2026-04-02"
 updatedDate: "2026-05-21"
-tags: []
+tags: ['casos-de-exito', 'luarca', 'negocios-locales']
 heroImage: /images/blog/directorio-digital-luarca-264000-visitas-organicas.png
 draft: false
 ---

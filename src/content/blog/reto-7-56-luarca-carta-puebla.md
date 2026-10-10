@@ -1,9 +1,9 @@
 ---
 title: "Reto 7,56% Luarca: Aniversario Carta Puebla Valdés"
-description: "Luarca cumple 756 años y en 33setecientos.com no queremos limitarnos a soplar las velas. Queremos que este mayo la Villa Blanca sea un hervidero de actividad comercial. Por eso, lanzamos una propuesta que es a la vez un homenaje y un motor de ventas: El Reto del 7,56%. ¿Por qué c"
+description: "Luarca cumple 756 años y en 33setecientos.com no queremos limitarnos a soplar las velas. Queremos que este mayo la Villa Blanca sea un hervidero de..."
 pubDate: "2026-05-04"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/reto-7-56-luarca-carta-puebla.png
 draft: false
 ---

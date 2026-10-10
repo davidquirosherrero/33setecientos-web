@@ -1,9 +1,9 @@
 ---
 title: "Alquileres en Luarca: ¿Tu piso está listo para el agosto digital?"
-description: "En mayo, Luarca empieza a oler a fiestas locales y a vacaciones. Si tienes un piso para alquilar en la Villa Blanca, este es el mes clave: o te profesionalizas o regalas tu beneficio de todo el año a las grandes plataformas. Muchos propietarios de Valdés piensan que Booking o Air"
+description: "En mayo, Luarca empieza a oler a fiestas locales y a vacaciones. Si tienes un piso para alquilar en la Villa Blanca, este es el mes clave: o te..."
 pubDate: "2026-05-06"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales', 'temporada']
 heroImage: /images/blog/alquiler-vacacional-luarca-consejos-verano.png
 draft: false
 ---

@@ -1,9 +1,9 @@
 ---
 title: "¿Tu negocio en Luarca depende solo de Facebook o Instagram? Por qué necesitas una web propia"
-description: "Seguro que te suena esta historia: abriste tu negocio en Luarca, creaste una página en Facebook o un perfil en Instagram y, con mucho esfuerzo, has ido consiguiendo seguidores. Subes fotos de tus productos, avisas de tus horarios y la gente del pueblo te escribe por privado para "
+description: "Seguro que te suena esta historia: abriste tu negocio en Luarca, creaste una página en Facebook o un perfil en Instagram y, con mucho esfuerzo, has ido..."
 pubDate: "2026-04-01"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['diseño-web', 'negocios-locales']
 heroImage: /images/blog/porque-necesitas-web-propia.png
 draft: false
 ---

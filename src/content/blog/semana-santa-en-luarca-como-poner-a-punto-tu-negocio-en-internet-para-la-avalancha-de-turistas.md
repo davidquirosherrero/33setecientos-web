@@ -1,9 +1,9 @@
 ---
 title: "Semana Santa en Luarca: Cómo poner a punto tu negocio en internet para la avalancha de turistas"
-description: "La Semana Santa ya está aquí y en Luarca se respira ese ambiente tan especial. Las calles se llenan, el puerto es un hervidero de gente y los turistas (y muchos valdesanos que vuelven a casa) están listos para disfrutar de la villa. Para los negocios locales, esta es una de las s"
+description: "La Semana Santa ya está aquí y en Luarca se respira ese ambiente tan especial. Las calles se llenan, el puerto es un hervidero de gente y los turistas (y..."
 pubDate: "2026-03-31"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales', 'temporada']
 heroImage: /images/blog/semana-santa-en-luarca-como-poner-a-punto-tu-negocio-en-internet-para-la-avalancha-de-turistas.jpeg
 draft: false
 ---

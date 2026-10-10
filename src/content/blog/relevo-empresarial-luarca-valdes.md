@@ -1,9 +1,9 @@
 ---
 title: "Relevo generacional en Luarca: La nueva era empresarial"
-description: "Luarca se reinventa: El pulso de un comercio que no se detiene Luarca siempre ha tenido un carácter comercial y hostelero único. Sus calles han sido el escenario de negocios que son auténticas instituciones. Sin embargo, estamos viviendo un momento clave: el paso del testigo. La "
+description: "Luarca se reinventa: El pulso de un comercio que no se detiene Luarca siempre ha tenido un carácter comercial y hostelero único. Sus calles han sido el..."
 pubDate: "2026-04-18"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/relevo-empresarial-luarca-valdes.png
 draft: false
 ---

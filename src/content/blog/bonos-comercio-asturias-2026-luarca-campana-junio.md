@@ -1,9 +1,9 @@
 ---
 title: "Los bonos caducan el 30 de junio. Quedan 8 días."
-description: "Los Bonos Comercio Asturias caducan el 30 de junio. Si tienes un comercio en Luarca y no has activado tu campaña todavía, quedan 8 días. Esto es lo que puedes hacer ahora."
+description: "Los Bonos Comercio Asturias caducan el 30 de junio. Si tienes un comercio en Luarca y no has activado tu campaña todavía, quedan 8 días. Esto es lo que..."
 pubDate: "2026-06-22"
 updatedDate: "2026-05-21"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/bonos-comercio-asturias-2026-luarca-campana-junio.png
 draft: false
 ---

@@ -1,9 +1,9 @@
 ---
 title: "El eclipse dura 110 segundos. El cliente puede durar años."
-description: "El 12 de agosto, Luarca tendrá la mayor concentración de visitantes nuevos de su historia reciente. La mayoría se irán sin que ningún negocio haya hecho nada para quedarse con ellos. No es un reproche. Es lo que pasa cuando un negocio se prepara solo para el día del evento y no p"
+description: "El 12 de agosto, Luarca tendrá la mayor concentración de visitantes nuevos de su historia reciente. La mayoría se irán sin que ningún negocio haya hecho..."
 pubDate: "2026-06-01"
 updatedDate: "2026-05-21"
-tags: []
+tags: ['eclipse', 'luarca', 'negocios-locales']
 heroImage: /images/blog/eclipse-2026-luarca-captacion-clientes-largo-plazo.png
 draft: false
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Luarca renueva su tejido empresarial. ¿Qué haces con la herencia digital?"
-description: "Cuando un negocio cambia de manos en Luarca, la presencia digital no se hereda sola. Cuatro escenarios reales y cómo hacer bien la transición digital desde el primer día en Valdés."
+description: "Cuando un negocio cambia de manos en Luarca, la presencia digital no se hereda sola. Cuatro escenarios reales y cómo hacer bien la transición digital..."
 pubDate: "2026-06-08"
 updatedDate: "2026-05-21"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/traspaso-negocio-luarca-herencia-digital-nuevo-dueno.png
 draft: false
 ---

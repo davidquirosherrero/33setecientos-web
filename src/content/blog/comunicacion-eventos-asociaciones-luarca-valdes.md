@@ -1,9 +1,9 @@
 ---
 title: "Comunicación de eventos para asociaciones en Luarca"
-description: "El cartel en el tablón ya no llega a todo el concejo. Pero sí puede hacerlo una estrategia digital que cuesta lo mismo que imprimirlo.Mayo en el concejo de Valdés es un mes lleno de vida asociativa. San Isidro en Trevías el 15, Santa Rita en Otur el 22, y al final del mes la [&he"
+description: "El cartel en el tablón ya no llega a todo el concejo. Pero sí puede hacerlo una estrategia digital que cuesta lo mismo que imprimirlo.Mayo en el concejo..."
 pubDate: "2026-05-13"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/comunicacion-eventos-asociaciones-luarca-valdes.png
 draft: false
 ---

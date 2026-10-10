@@ -1,9 +1,9 @@
 ---
 title: "Comercio en Luarca: Vender a turistas de vivienda vacacional"
-description: "De &#8220;mirar escaparates&#8221; a &#8220;comprar en Luarca&#8221;: El reto del comercio local Luarca ya no es solo un destino de paso; ahora la gente vive la Villa desde dentro de sus pisos turísticos. Esto es una oportunidad de oro para el comercio de proximidad, pero hay un "
+description: "De &#8220;mirar escaparates&#8221; a &#8220;comprar en Luarca&#8221;: El reto del comercio local Luarca ya no es solo un destino de paso; ahora la gente..."
 pubDate: "2026-04-29"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales', 'turismo']
 heroImage: /images/blog/comercio-luarca-ventas-turismo-valdes.png
 draft: false
 ---

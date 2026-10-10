@@ -1,9 +1,9 @@
 ---
 title: "El &#8220;apagón&#8221; tras la Semana Santa en Valdés: Cómo mantener tu negocio encendido"
-description: "Todos los que tenemos un negocio en el concejo conocemos esa sensación. El lunes de Pascua, Luarca se siente distinta. Las mesas del muelle se recogen más rápido y el ritmo de las tiendas baja de revoluciones. Parece que, si el turista se va, el dinero también. Pero, ¿y si te dij"
+description: "Todos los que tenemos un negocio en el concejo conocemos esa sensación. El lunes de Pascua, Luarca se siente distinta. Las mesas del muelle se recogen más..."
 pubDate: "2026-04-06"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales', 'temporada']
 heroImage: /images/blog/marketing-digital-luarca-post-semana-santa.png
 draft: false
 ---

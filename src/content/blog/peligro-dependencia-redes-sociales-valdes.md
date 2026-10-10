@@ -1,9 +1,9 @@
 ---
 title: "El riesgo de comunicar solo en redes sociales en Luarca y Valdés"
-description: "No construyas tu negocio en terreno alquilado: la soberanía digital en Valdés Muchos negocios, asociaciones e instituciones de Luarca y el resto del concejo han caído en una trampa cómoda: usar Facebook e Instagram como su única ventana al mundo. Parece gratis y parece fácil, per"
+description: "No construyas tu negocio en terreno alquilado: la soberanía digital en Valdés Muchos negocios, asociaciones e instituciones de Luarca y el resto del..."
 pubDate: "2026-04-10"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['negocios-locales', 'redes-sociales']
 heroImage: /images/blog/peligro-dependencia-redes-sociales-valdes.png
 draft: false
 ---

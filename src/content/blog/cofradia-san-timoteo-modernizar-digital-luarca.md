@@ -1,9 +1,9 @@
 ---
 title: "Cofradía de San Timoteo: una propuesta para modernizar la gestión y llegar más lejos"
-description: "La Cofradía de San Timoteo tiene miles de cofrades y una gestión que sigue dependiendo del papel y del presencialismo. Nuestra propuesta concreta para modernizarla sin perder lo que la hace única."
+description: "La Cofradía de San Timoteo tiene miles de cofrades y una gestión que sigue dependiendo del papel y del presencialismo. Nuestra propuesta concreta para..."
 pubDate: "2026-06-04"
 updatedDate: "2026-05-21"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/cofradia-san-timoteo-modernizar-digital-luarca.png
 draft: false
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Tienes producto de Valdés. Fuera del concejo hay quien lo compraría hoy."
-description: "Hay gente en Madrid, en Oviedo y en Noruega que pagaría por lo que produces en Valdés. El problema es que no saben que existes. El asturiano que lleva veinte años viviendo fuera y añora la miel del mercadillo del miércoles de Luarca. La familia que pasó una semana en una casa rur"
+description: "Hay gente en Madrid, en Oviedo y en Noruega que pagaría por lo que produces en Valdés. El problema es que no saben que existes. El asturiano que lleva..."
 pubDate: "2026-05-20"
 updatedDate: "2026-05-01"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/vender-online-producto-local-valdes-luarca.png
 draft: false
 ---

@@ -1,9 +1,9 @@
 ---
 title: "GastroLuarca 2026: Marketing para Restaurantes en Luarca"
-description: "La III Edición de GastroLuarca está a la vuelta de la esquina (1 al 3 de mayo) y la pregunta que te haces tras la barra es la de siempre: ¿Cómo hago para que esa marea de gente cruce mi puerta? La carpa en la Plaza Alfonso X es un escaparate brutal, pero para el [&hellip;]"
+description: "La III Edición de GastroLuarca está a la vuelta de la esquina (1 al 3 de mayo) y la pregunta que te haces tras la barra es la de siempre: ¿Cómo hago para..."
 pubDate: "2026-04-30"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales', 'turismo']
 heroImage: /images/blog/gastroluarca-2026-marketing-para-restaurantes.png
 draft: false
 ---

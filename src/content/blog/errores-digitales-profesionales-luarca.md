@@ -1,9 +1,9 @@
 ---
 title: "La precisión técnica y la frescura local como antídotos contra el error digital"
-description: "Navegación de precisión: Lo que el sector servicios de Luarca debe aprender hoy Este viernes 17, la asociación Viento del Norte nos invita en la Casa de Cultura a reflexionar sobre la “La mar de errores en torno a la mar”. Se hablará de imprecisiones técnicas, de nombres mal pues"
+description: "Navegación de precisión: Lo que el sector servicios de Luarca debe aprender hoy Este viernes 17, la asociación Viento del Norte nos invita en la Casa de..."
 pubDate: "2026-04-16"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/errores-digitales-profesionales-luarca.png
 draft: false
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Cómo aparecer en Google Maps si tienes un negocio en Luarca"
-description: "Si buscas ahora mismo &#8220;dónde comer en Luarca&#8221; o &#8220;tienda en Luarca&#8221; en Google Maps, verás qué negocios aparecen primero. ¿Está el tuyo? Si no, este post es para ti. Imagina esta escena: un grupo de turistas acaba de bajar del Chano, asombrados con las vista"
+description: "Si buscas ahora mismo &#8220;dónde comer en Luarca&#8221; o &#8220;tienda en Luarca&#8221; en Google Maps, verás qué negocios aparecen primero. ¿Está el..."
 pubDate: "2026-03-30"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales', 'seo-local']
 heroImage: /images/blog/seo-local-en-luarca-5-trucos-para-que-los-clientes-te-encuentren-en-google-maps-antes-que-a-tu-competencia.png
 draft: false
 ---

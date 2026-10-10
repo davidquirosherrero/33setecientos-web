@@ -1,9 +1,9 @@
 ---
 title: "El viernes pasado se acabo el colegio. ¿Está tu negocio en el radar de las familias?"
-description: "El 20 de junio los colegios cierran y miles de familias buscan planes en Asturias. Luarca tiene todo para ese perfil. El problema es que casi ningún negocio del concejo aparece cuando lo buscan."
+description: "El 20 de junio los colegios cierran y miles de familias buscan planes en Asturias. Luarca tiene todo para ese perfil. El problema es que casi ningún..."
 pubDate: "2026-06-25"
 updatedDate: "2026-10-05"
-tags: []
+tags: ['luarca', 'negocios-locales', 'temporada']
 heroImage: /images/blog/verano-familias-ninos-luarca-negocios-digitales.png
 draft: false
 ---

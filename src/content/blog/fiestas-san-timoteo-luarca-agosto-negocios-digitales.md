@@ -1,9 +1,9 @@
 ---
 title: "Las fiestas de San Timoteo llenan Luarca cada agosto. Los datos dicen que la gente empieza a buscarlas en julio."
-description: "San Timoteo es el evento de Luarca con mayor proyección exterior del año. Los datos de Google muestran que el interés empieza en julio. ¿Está tu negocio listo para recibirlo?"
+description: "San Timoteo es el evento de Luarca con mayor proyección exterior del año. Los datos de Google muestran que el interés empieza en julio. ¿Está tu negocio..."
 pubDate: "2026-06-29"
 updatedDate: "2026-05-21"
-tags: []
+tags: ['luarca', 'negocios-locales', 'turismo']
 heroImage: /images/blog/fiestas-san-timoteo-luarca-agosto-negocios-digitales.png
 draft: false
 ---

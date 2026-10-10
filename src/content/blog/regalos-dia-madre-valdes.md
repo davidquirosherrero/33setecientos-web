@@ -1,9 +1,9 @@
 ---
 title: "Regalos Día de la Madre en Valdés: Guía para Comercios"
-description: "Sabemos que el comercio de Luarca tiene algo que Amazon nunca tendrá: el conocimiento personal del vecino. Sin embargo, si no estás en la pantalla de su móvil, no existes. Para este Día de la Madre, el pequeño comercio de Valdés debe ser el salvavidas de última hora. Estrategias "
+description: "Sabemos que el comercio de Luarca tiene algo que Amazon nunca tendrá: el conocimiento personal del vecino. Sin embargo, si no estás en la pantalla de su..."
 pubDate: "2026-04-23"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['negocios-locales', 'temporada']
 heroImage: /images/blog/regalos-dia-madre-valdes.png
 draft: false
 ---

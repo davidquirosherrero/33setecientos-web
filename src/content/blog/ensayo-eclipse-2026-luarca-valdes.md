@@ -1,9 +1,9 @@
 ---
 title: "Eclipse 2026 en Luarca: Por qué el 30 de abril es la fecha clave para tu negocio"
-description: "El 30 de abril a las 20:16h se decide el éxito de tu negocio el dia del eclipse en agosto de 2026 En Luarca sabemos que las cosas buenas se cocinan a fuego lento. Pero hay eventos que no admiten improvisación. El 12 de agosto de 2026, nuestra Villa Blanca será uno de los mejores "
+description: "El 30 de abril a las 20:16h se decide el éxito de tu negocio el dia del eclipse en agosto de 2026 En Luarca sabemos que las cosas buenas se cocinan a..."
 pubDate: "2026-04-20"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['eclipse', 'luarca', 'negocios-locales']
 heroImage: /images/blog/ensayo-eclipse-2026-luarca-valdes.png
 draft: false
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Marketing en Luarca: Por qué lo de fuera no funciona"
-description: "El marketing de Luarca no se puede hacer desde un despacho en el centro de Asturias o Madrid Hay una tendencia creciente en el tejido empresarial de Luarca y nuestro concejo: confiar la estrategia digital a agencias situadas en el centro de la región o la capital del país. Sobre "
+description: "El marketing de Luarca no se puede hacer desde un despacho en el centro de Asturias o Madrid Hay una tendencia creciente en el tejido empresarial de..."
 pubDate: "2026-04-27"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/marketing-local-vs-agencias-fuera-luarca.png
 draft: false
 ---

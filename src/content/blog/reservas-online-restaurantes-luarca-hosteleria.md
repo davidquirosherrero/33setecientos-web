@@ -1,9 +1,9 @@
 ---
 title: "Reservas online para restaurantes en Luarca: cómo activarlas"
-description: "El cliente que viene a Luarca ya sabe dónde va a cenar. Ha decidido antes de salir de casa. Si no puede reservar online en tu restaurante, ha reservado en otro. Mayo arranca la temporada en los restaurantes de Luarca. Las terrazas se llenan, los visitantes de fuera empiezan a apa"
+description: "El cliente que viene a Luarca ya sabe dónde va a cenar. Ha decidido antes de salir de casa. Si no puede reservar online en tu restaurante, ha reservado en..."
 pubDate: "2026-05-18"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales', 'turismo']
 heroImage: /images/blog/reservas-online-restaurantes-luarca-hosteleria.png
 draft: false
 ---

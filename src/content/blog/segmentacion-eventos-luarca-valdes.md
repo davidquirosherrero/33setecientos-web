@@ -1,9 +1,9 @@
 ---
 title: "Cómo segmentar publicidad para eventos en Luarca y Valdés: Guía técnica."
-description: "Manual de Guerrilla: Cómo hacer que todo Valdés se entere de tu evento (sin tirar el dinero) Organizar un mercado artesano en el Parque o un festival de música en pleno octubre tiene mérito. Pero que el público responda requiere algo más que &#8220;darle al botón de promocionar&#"
+description: "Manual de Guerrilla: Cómo hacer que todo Valdés se entere de tu evento (sin tirar el dinero) Organizar un mercado artesano en el Parque o un festival de..."
 pubDate: "2026-04-03"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales', 'publicidad']
 heroImage: /images/blog/segmentacion-eventos-luarca-valdes.png
 draft: false
 ---

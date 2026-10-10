@@ -1,9 +1,9 @@
 ---
 title: "Tu negocio llena en agosto. Los datos dicen que hay dinero en los otros 11 meses."
-description: "El interés en Luarca cae un 70% entre agosto y octubre. Pero los datos muestran demanda real en momentos que el tejido empresarial del concejo no está capturando. Esto es lo que dicen."
+description: "El interés en Luarca cae un 70% entre agosto y octubre. Pero los datos muestran demanda real en momentos que el tejido empresarial del concejo no está..."
 pubDate: "2026-06-15"
 updatedDate: "2026-10-05"
-tags: []
+tags: ['luarca', 'negocios-locales', 'seo-local']
 heroImage: /images/blog/estacionalidad-luarca-negocio-temporada-baja-datos-google.png
 draft: false
 ---

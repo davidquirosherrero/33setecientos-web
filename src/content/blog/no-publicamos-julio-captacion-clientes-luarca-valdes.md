@@ -1,8 +1,8 @@
 ---
 title: "No publicamos en julio: nuestro verano en Luarca"
-description: "En julio el blog se ha callado. La agenda, no. Desde finales de junio no hay artículos nuevos aquí. No es descuido ni un parón por vacaciones adelantadas: hemos abierto una ventana de captación de clientes en Valdés, y la mayor parte de las horas que normalmente dedicamos a escri"
+description: "En julio el blog se ha callado. La agenda, no. Desde finales de junio no hay artículos nuevos aquí. No es descuido ni un parón por vacaciones adelantadas..."
 pubDate: "2026-07-18"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/no-publicamos-julio-captacion-clientes-luarca-valdes.png
 draft: false
 ---

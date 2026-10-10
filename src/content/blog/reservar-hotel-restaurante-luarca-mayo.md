@@ -1,9 +1,9 @@
 ---
 title: "Marketing para Hostelería en Luarca: Llenar los Puentes de Mayo"
-description: "Puentes de Mayo en Luarca: ¿Por qué el turista de Madrid necesita reservarte hoy mismo? Luarca es el refugio perfecto para quienes huyen del bullicio de la capital el 1 de mayo y el 15 de mayo (San Isidro). Pero hay algo que debemos entender sobre el visitante madrileño: no le gu"
+description: "Puentes de Mayo en Luarca: ¿Por qué el turista de Madrid necesita reservarte hoy mismo? Luarca es el refugio perfecto para quienes huyen del bullicio de..."
 pubDate: "2026-04-24"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales', 'turismo']
 heroImage: /images/blog/reservar-hotel-restaurante-luarca-mayo.png
 draft: false
 ---

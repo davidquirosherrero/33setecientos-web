@@ -1,9 +1,9 @@
 ---
 title: "Eclipse solar en Luarca el 12 de agosto de 2026: horarios, mejores puntos y todo lo que necesitas saber"
-description: "El 12 de agosto de 2026, Luarca será el mejor punto del mundo para ver el eclipse solar total. Horarios exactos, mejores miradores y todo lo que necesitas saber para no perderte nada."
+description: "El 12 de agosto de 2026, Luarca será el mejor punto del mundo para ver el eclipse solar total. Horarios exactos, mejores miradores y todo lo que necesitas..."
 pubDate: "2026-05-22"
 updatedDate: "2026-08-02"
-tags: []
+tags: ['eclipse', 'luarca', 'negocios-locales']
 heroImage: /images/blog/eclipse-solar-luarca-2026-horarios-puntos-observacion.png
 draft: false
 ---

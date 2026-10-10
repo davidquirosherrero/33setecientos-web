@@ -1,9 +1,9 @@
 ---
 title: "Luarca vs Cudillero: por qué Valdés pierde visibilidad turística"
-description: "Busca &#8220;pueblos más bonitos de Asturias&#8221;. Cudillero está en el primer puesto de casi todas las listas. Luarca aparece en algunas. No en todas. Y casi nunca la primera. No es una opinión. Es lo que devuelve Google cuando miles de personas planifican su viaje a Asturias "
+description: "Busca &#8220;pueblos más bonitos de Asturias&#8221;. Cudillero está en el primer puesto de casi todas las listas. Luarca aparece en algunas. No en todas..."
 pubDate: "2026-05-15"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales', 'seo-local']
 heroImage: /images/blog/luarca-valdes-posicionamiento-digital-turismo.png
 draft: false
 ---

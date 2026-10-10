@@ -1,9 +1,9 @@
 ---
 title: "Eclipse 2026 en Luarca: Cómo vender 5 veces más sin ocupar una sola mesa"
-description: "El 12 de agosto de 2026, Luarca vivirá un fenómeno que no se repetirá en siglos. Pero para tu negocio, el peligro no es la oscuridad, sino la parálisis. Si tu plan para ese día es esperar a que la gente &#8220;entre y se siente&#8221; en tu local de la Calle Rivero o el Muelle, ["
+description: "El 12 de agosto de 2026, Luarca vivirá un fenómeno que no se repetirá en siglos. Pero para tu negocio, el peligro no es la oscuridad, sino la parálisis..."
 pubDate: "2026-04-08"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['eclipse', 'luarca', 'negocios-locales']
 heroImage: /images/blog/venta-anticipada-comida-llevar-luarca-eclipse.png
 draft: false
 ---

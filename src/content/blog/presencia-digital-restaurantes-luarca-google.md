@@ -1,9 +1,9 @@
 ---
 title: "Analizamos la presencia digital de los 5 restaurantes mejor valorados de Luarca en Google"
-description: "En junio de 2026 auditamos los cinco restaurantes mejor valorados de Luarca en Google. Ficha, web, Instagram y reservas online. Esto es lo que encontramos — y lo que dice sobre el estado de la hostelería digital en Valdés."
+description: "En junio de 2026 auditamos los cinco restaurantes mejor valorados de Luarca en Google. Ficha, web, Instagram y reservas online. Esto es lo que encontramos..."
 pubDate: "2026-05-27"
 updatedDate: "2026-10-05"
-tags: []
+tags: ['luarca', 'negocios-locales', 'seo-local']
 heroImage: /images/blog/presencia-digital-restaurantes-luarca-google.jpeg
 draft: false
 ---

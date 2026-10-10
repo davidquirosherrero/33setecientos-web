@@ -1,9 +1,9 @@
 ---
 title: "Marketing para artesanos pasteleros en Valdés "
-description: "Hacer un bollo en Valdés es un oficio. Venderlo fuera del concejo es otra historia. Este artículo va dirigido a los obradores y pastelerías artesanas de Luarca y alrededores que hacen un producto excelente pero dependen casi en exclusiva del cliente que entra por la puerta. Estra"
+description: "Hacer un bollo en Valdés es un oficio. Venderlo fuera del concejo es otra historia. Este artículo va dirigido a los obradores y pastelerías artesanas de..."
 pubDate: "2026-05-11"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['casos-de-exito', 'negocios-locales']
 heroImage: /images/blog/marketing-digital-pasteleria-autor-valdes.png
 draft: false
 ---

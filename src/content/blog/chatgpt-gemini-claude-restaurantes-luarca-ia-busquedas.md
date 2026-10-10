@@ -1,9 +1,9 @@
 ---
 title: "Le preguntamos a ChatGPT, Gemini y Claude dónde comer en Luarca. Esto es lo que respondieron."
-description: "Le preguntamos a ChatGPT, Gemini y Claude dónde comer en Luarca. Tres respuestas distintas, con errores distintos. Y un patrón que debería preocupar a cualquier hostelero del concejo antes del verano del eclipse."
+description: "Le preguntamos a ChatGPT, Gemini y Claude dónde comer en Luarca. Tres respuestas distintas, con errores distintos. Y un patrón que debería preocupar a..."
 pubDate: "2026-05-29"
 updatedDate: "2026-10-05"
-tags: []
+tags: ['luarca', 'negocios-locales', 'seo-local']
 heroImage: /images/blog/chatgpt-gemini-claude-restaurantes-luarca-ia-busquedas.png
 draft: false
 ---

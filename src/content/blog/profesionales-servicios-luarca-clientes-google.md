@@ -1,9 +1,9 @@
 ---
 title: "Profesionales en Luarca: capta clientes que te buscan online"
-description: "En Luarca apareces en Google. El problema es lo que encuentran cuando te buscan. Si alguien busca “gestoría Luarca” o “abogado Valdés” hoy mismo, tu nombre probablemente aparece. En directorios, en Páginas Amarillas, quizá en una ficha de Google con la dirección correcta. Hasta a"
+description: "En Luarca apareces en Google. El problema es lo que encuentran cuando te buscan. Si alguien busca “gestoría Luarca” o “abogado Valdés” hoy mismo, tu..."
 pubDate: "2026-05-05"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales', 'seo-local']
 heroImage: /images/blog/profesionales-servicios-luarca-clientes-google.png
 draft: false
 ---

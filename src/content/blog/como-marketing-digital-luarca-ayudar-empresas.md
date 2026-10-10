@@ -1,9 +1,9 @@
 ---
 title: "Cómo el Marketing Digital puede impulsar tu negocio en Luarca"
-description: "Luarca, con su encanto único y su rica historia, es un lugar que merece ser conocido por todos. Sin embargo, en la era digital en la que vivimos, no basta con tener un negocio en un lugar maravilloso; es esencial que ese negocio esté presente en el mundo online. El marketing digi"
+description: "Luarca, con su encanto único y su rica historia, es un lugar que merece ser conocido por todos. Sin embargo, en la era digital en la que vivimos, no basta..."
 pubDate: "2024-09-10"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['luarca', 'negocios-locales']
 draft: false
 ---
 

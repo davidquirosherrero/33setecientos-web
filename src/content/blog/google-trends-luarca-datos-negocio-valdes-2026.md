@@ -1,9 +1,9 @@
 ---
 title: "Lo que Google sabe sobre Luarca que tu negocio ignora"
-description: "Hemos analizado 12 meses de datos reales de Google Trends para Luarca. Los patrones de búsqueda dicen cosas concretas sobre cómo planificar tu negocio. Esto es lo que encontramos."
+description: "Hemos analizado 12 meses de datos reales de Google Trends para Luarca. Los patrones de búsqueda dicen cosas concretas sobre cómo planificar tu negocio..."
 pubDate: "2026-06-11"
 updatedDate: "2026-10-05"
-tags: []
+tags: ['luarca', 'negocios-locales', 'seo-local']
 heroImage: /images/blog/google-trends-luarca-datos-negocio-valdes-2026.png
 draft: false
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Lanzamos 33setecientos.com"
-description: "Si has llegado hasta aquí es porque al menos hemos conseguido que te pique la curiosidad de que es esto de 33setecientos.com. Y aquí te lo contamos.. 33setecientos.com es un proyecto que se ha cocinado a fuego muy lento durante varios años. David y Raquel, los co-fundadores de es"
+description: "Si has llegado hasta aquí es porque al menos hemos conseguido que te pique la curiosidad de que es esto de 33setecientos.com. Y aquí te lo contamos..."
 pubDate: "2024-09-08"
 updatedDate: "2026-05-21"
-tags: []
+tags: ['luarca', 'negocios-locales']
 heroImage: /images/blog/lanzamos-agencia-marketing-luarca.png
 draft: false
 ---

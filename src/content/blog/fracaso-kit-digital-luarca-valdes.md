@@ -1,9 +1,9 @@
 ---
 title: "¿Tu web del Kit Digital en Luarca es un adorno? Por qué el &#8220;todo gratis&#8221; te está saliendo caro."
-description: "El cementerio digital de Valdés: Cuando lo &#8220;gratis&#8221; sale caro Paseando por las calles de Luarca hemos tenida la misma conversación del Kit Digital con muchos dueños de negocios. Muchos negocios del concejo dieron el paso, rellenaron papeles y estrenaron web. Sin embar"
+description: "El cementerio digital de Valdés: Cuando lo &#8220;gratis&#8221; sale caro Paseando por las calles de Luarca hemos tenida la misma conversación del Kit..."
 pubDate: "2026-04-22"
 updatedDate: "2026-05-19"
-tags: []
+tags: ['formacion', 'luarca', 'negocios-locales']
 heroImage: /images/blog/fracaso-kit-digital-luarca-valdes.png
 draft: false
 ---

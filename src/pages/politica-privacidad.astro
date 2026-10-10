@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Política de Privacidad · 33setecientos"
+  description="Política de privacidad de 33setecientos. Cómo recogemos, usamos y protegemos tus datos personales."
+>
+  <section class="section--light legal-hero">
+    <div class="container">
+      <h1>Política de Privacidad</h1>
+      <p class="updated">Última actualización: 30 de julio de 2023</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container legal-content">
+
+      <p>En 33setecientos reconocemos la importancia de la privacidad y nos comprometemos a proteger los datos personales de quienes interactúan con nosotros. Esta política describe cómo recogemos, usamos y protegemos tu información.</p>
+
+      <h2>1. Propósito y recogida de información</h2>
+      <p>33setecientos es una agencia de marketing digital que ayuda a negocios de Luarca y el occidente de Asturias. No exigimos registro de cuentas para acceder a nuestro sitio web.</p>
+      <p>Recogemos datos únicamente a través de:</p>
+      <ul>
+        <li><strong>Formulario de contacto:</strong> nombre, correo electrónico y teléfono (opcional).</li>
+        <li><strong>Suscripción a la newsletter:</strong> correo electrónico.</li>
+      </ul>
+
+      <h2>2. Datos obtenidos automáticamente</h2>
+      <p>Utilizamos herramientas de terceros, Google Analytics y HubSpot, que recogen datos de comportamiento mediante cookies y otras tecnologías de seguimiento. Estos datos son de naturaleza estadística (páginas visitadas, tiempo de navegación, dispositivo utilizado) y no permiten identificarte directamente.</p>
+
+      <h2>3. Uso de la información</h2>
+      <p>Los datos recogidos mediante formularios se utilizan exclusivamente para contactar con clientes potenciales y responder a sus consultas. No compartimos ni vendemos tus datos a terceros.</p>
+
+      <h2>4. Privacidad de menores</h2>
+      <p>Nuestros servicios están dirigidos a personas adultas. Si detectamos que un menor ha facilitado datos personales sin el consentimiento de sus tutores legales, procederemos a eliminarlos inmediatamente.</p>
+
+      <h2>5. Medidas de seguridad</h2>
+      <p>Tus datos se almacenan en plataformas gestionadas por Google Analytics y HubSpot, que cumplen estándares de seguridad elevados. Aplicamos las medidas técnicas y organizativas adecuadas para proteger la información contra accesos no autorizados.</p>
+
+      <h2>6. Tus derechos</h2>
+      <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, limitación del tratamiento y portabilidad en cualquier momento escribiendo a <a href="mailto:info@33setecientos.com">info@33setecientos.com</a>. Atenderemos tu solicitud en el plazo establecido por la normativa aplicable.</p>
+
+      <h2>7. Cambios en esta política</h2>
+      <p>Esta política puede actualizarse. Los cambios significativos se comunicarán en el sitio web y por correo electrónico a los suscriptores de nuestra newsletter.</p>
+
+      <p>Para cualquier duda, escríbenos a <a href="mailto:info@33setecientos.com">info@33setecientos.com</a>.</p>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-hero { padding-block: 2.5rem 2rem; border-bottom: 3px solid var(--teal); }
+  .legal-hero h1 { color: var(--navy); font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 800; margin-bottom: .25rem; }
+  .updated { color: var(--grey); font-size: .875rem; }
+  .legal-content { max-width: 760px; }
+  .legal-content p { color: var(--grey); line-height: 1.7; margin-bottom: 1rem; }
+  .legal-content h2 { color: var(--navy); font-size: 1.15rem; margin: 2rem 0 .5rem; }
+  .legal-content ul { padding-left: 1.5rem; color: var(--grey); }
+  .legal-content ul li { margin-bottom: .35rem; line-height: 1.6; }
+  .legal-content a { color: var(--teal2); }
+</style>

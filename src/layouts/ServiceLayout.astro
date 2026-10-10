@@ -1,0 +1,67 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  heading: string;
+  subheading?: string;
+  schema?: object;
+}
+const { title, description, heading, subheading, schema } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <div class="service-hero section--light">
+    <div class="container">
+      <a href="/servicios-marketing/" class="breadcrumb">← Todos los servicios</a>
+      <h1>{heading}</h1>
+      {subheading && <p class="service-intro">{subheading}</p>}
+    </div>
+  </div>
+
+  <slot />
+
+  <section class="service-cta section--navy">
+    <div class="container cta-center">
+      <h2>¿Hablamos?</h2>
+      <p>Primera consulta gratuita. Te decimos qué tiene sentido para tu negocio ahora mismo.</p>
+      <div class="cta-btns">
+        <a href="/contacto/" class="btn btn-primary">Contactar</a>
+        <a href="https://wa.me/34984681133" class="btn btn-outline" style="border-color:rgba(255,255,255,0.4);color:var(--white)" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .service-hero {
+    padding-block: 3rem 2.5rem;
+    border-bottom: 3px solid var(--teal);
+  }
+  .breadcrumb {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--grey);
+    text-decoration: none;
+    margin-bottom: 1rem;
+  }
+  .breadcrumb:hover { color: var(--teal2); }
+  .service-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--navy);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .service-intro {
+    font-size: 1.1rem;
+    color: var(--grey);
+    max-width: 640px;
+    margin: 0;
+  }
+  .service-cta { padding-block: 4rem; }
+  .cta-center { text-align: center; }
+  .cta-center h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--white); margin-bottom: 0.75rem; }
+  .cta-center p { color: rgba(255,255,255,0.75); margin-bottom: 2rem; }
+  .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+</style>

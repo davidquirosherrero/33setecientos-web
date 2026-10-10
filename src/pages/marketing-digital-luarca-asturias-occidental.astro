@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: '¿Qué es el marketing digital y para qué sirve a un negocio local?',
+      acceptedAnswer: { '@type': 'Answer', text: 'El marketing digital es el conjunto de estrategias y acciones online que ayudan a tu negocio a ser encontrado, conocido y elegido por los clientes en internet. Para un negocio local en Luarca o el occidente de Asturias, esto incluye aparecer en Google cuando alguien busca tu servicio, mantener activas las redes sociales, y publicar anuncios dirigidos a personas de tu zona.' },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Cuánto cuesta el marketing digital para un negocio local en Luarca?',
+      acceptedAnswer: { '@type': 'Answer', text: 'El coste varía según el servicio y el tamaño del negocio. En 33setecientos trabajamos con negocios locales del concejo de Valdés con presupuestos ajustados a la realidad del mercado local. La primera consulta es gratuita y sin compromiso: te decimos qué tiene sentido para tu negocio y cuánto costaría.' },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Vale la pena invertir en Google Ads para un negocio de Luarca?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Sí, especialmente para negocios de temporada o servicios que la gente busca activamente (fontanero, restaurante, hotel). Google Ads permite aparecer en los primeros resultados cuando alguien en Luarca o sus alrededores busca exactamente lo que ofreces. El retorno depende del sector y la competencia local.' },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Por qué contratar una agencia local de Luarca y no una de Oviedo o Madrid?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Una agencia local conoce el mercado, la estacionalidad, la competencia real y hasta el comportamiento del turista que viene a Luarca. Cuando hay un eclipse que trae miles de visitantes al concejo, lo anticipamos. Cuando es temporada baja, lo sabemos. Ese conocimiento no lo tiene nadie de fuera.' },
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Marketing Digital en Luarca · Agencia Local · 33setecientos"
+  description="Marketing digital para negocios en Luarca y la Asturias occidental. SEO, Google Ads, redes sociales y diseño web desde la única agencia local del concejo de Valdés."
+  schema={faqSchema}
+>
+  <!-- Hero -->
+  <section class="section--navy" style="padding-block:clamp(3rem,6vw,5rem)">
+    <div class="container">
+      <span class="badge" style="background:rgba(255,255,255,.15);color:var(--white)">Luarca · Asturias</span>
+      <h1>Marketing Digital en Luarca y la Asturias Occidental</h1>
+      <p>La única agencia de marketing digital del concejo de Valdés. Conocemos tu mercado, tu competencia y a tus clientes mejor que nadie de fuera.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem">
+        <a href="/contacto/" class="btn btn-primary">Consulta gratuita</a>
+        <a href="/servicios-marketing/" class="btn btn-outline" style="border-color:rgba(255,255,255,.4);color:var(--white)">Ver servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="container content-col">
+      <h2>¿Qué hace diferente el marketing digital local en Luarca?</h2>
+      <p>En Luarca hay unas 5.000 personas. El concejo de Valdés tiene poco más de 12.000 habitantes. El mercado es pequeño, y eso lo cambia todo.</p>
+      <p>No sirve el mismo Google Ads que funciona en una ciudad de 200.000 personas. No sirve el mismo SEO ni el mismo contenido. El turista que llega a Luarca en agosto busca cosas distintas al residente de toda la vida. El emigrante que vuelve en verano tiene comportamientos distintos al que trabaja aquí. Y el eclipse de 2026 ya está en los calendarios de miles de visitantes que vendrán a la Costa Verde.</p>
+      <p>En 33setecientos hacemos marketing digital para negocios del occidente de Asturias desde Luarca. Somos de aquí.</p>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="section section--light">
+    <div class="container">
+      <h2>Marketing digital para negocios de Luarca</h2>
+      <div class="services-grid">
+        {[
+          { href: '/servicios-marketing/seo-sem-buscadores/', title: 'SEO Local en Luarca', desc: 'Aparece antes que tu competencia cuando alguien busca tu servicio en Google. "Restaurante en Luarca", "fontanero Valdés", "tienda Luarca".' },
+          { href: '/servicios-marketing/publicidad-online/', title: 'Google Ads y Meta Ads', desc: 'Campañas de publicidad segmentadas por zona, temporada y perfil de cliente. Solo pagas cuando alguien te hace clic.' },
+          { href: '/servicios-marketing/redes-sociales/', title: 'Redes Sociales', desc: 'Instagram y Facebook gestionados desde Luarca. Contenido auténtico que conecta con el cliente local.' },
+          { href: '/servicios-marketing/creamos-tu-web/', title: 'Diseño Web', desc: 'Webs rápidas, bien posicionadas y que convierten visitas en clientes. Con SEO técnico incluido.' },
+          { href: '/servicios-marketing/email-marketing/', title: 'Email Marketing', desc: 'Para no olvidarte de tus clientes entre temporada y temporada. El canal más rentable que existe.' },
+          { href: '/servicios-marketing/formacion/', title: 'Formación', desc: 'Aprende a gestionar tu propio marketing digital. Sesiones adaptadas a tu nivel y a tu negocio.' },
+        ].map((s) => (
+          <a href={s.href} class="card svc-card">
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+            <span class="link-arrow">Saber más →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="stats-grid">
+        {[
+          { v: '60.000', l: 'búsquedas mensuales sobre Luarca en Google' },
+          { v: '500K€', l: 'gestionados en publicidad digital al mes' },
+          { v: '+10 años', l: 'con presencia online sobre Luarca' },
+          { v: '+15 años', l: 'de experiencia en marketing digital' },
+        ].map((s) => (
+          <div style="text-align:center">
+            <p style="font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;color:var(--teal);margin:0">{s.v}</p>
+            <p style="color:rgba(255,255,255,.7);font-size:.875rem;margin:.25rem 0 0">{s.l}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container content-col">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq">
+        {[
+          { q: '¿Qué es el marketing digital y para qué sirve a un negocio local?', a: 'El marketing digital es el conjunto de estrategias y acciones online que ayudan a tu negocio a ser encontrado, conocido y elegido por los clientes en internet. Para un negocio local en Luarca, esto incluye aparecer en Google cuando alguien busca tu servicio, mantener activas las redes sociales y publicar anuncios dirigidos a personas de tu zona.' },
+          { q: '¿Cuánto cuesta el marketing digital para un negocio en Luarca?', a: 'El coste varía según el servicio y el tamaño del negocio. Trabajamos con negocios locales del concejo de Valdés con presupuestos ajustados a la realidad del mercado local. La primera consulta es gratuita: te decimos qué tiene sentido para tu negocio y cuánto costaría.' },
+          { q: '¿Vale la pena invertir en Google Ads para un negocio de Luarca?', a: 'Sí, especialmente para negocios de temporada o servicios que la gente busca activamente. Google Ads permite aparecer cuando alguien en Luarca o sus alrededores busca exactamente lo que ofreces. El retorno depende del sector y la competencia local.' },
+          { q: '¿Por qué contratar una agencia local y no una de Oviedo o Madrid?', a: 'Una agencia local conoce el mercado, la estacionalidad, la competencia real y el comportamiento del turista. Cuando hay un eclipse que trae miles de visitantes al concejo, lo anticipamos. Ese conocimiento no lo tiene nadie de fuera.' },
+        ].map((f) => (
+          <details class="faq-item card">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--teal">
+    <div class="container" style="text-align:center">
+      <h2 style="color:var(--navy);font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:.75rem">¿Hablamos sobre tu negocio?</h2>
+      <p style="color:var(--navy);opacity:.85;margin-bottom:2rem">Primera consulta gratuita. Sin compromiso. Te decimos qué tiene más sentido para tu negocio ahora mismo.</p>
+      <a href="/contacto/" class="btn btn-white">Contactar</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  h1 { color: var(--white); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; margin: .75rem 0 1rem; max-width: 700px; }
+  .container > p { color: rgba(255,255,255,.8); max-width: 640px; font-size: 1.05rem; }
+  h2 { color: var(--navy); font-size: clamp(1.4rem, 2.5vw, 1.9rem); margin-bottom: 1rem; }
+  .content-col { max-width: 760px; }
+  .content-col p { color: var(--grey); line-height: 1.7; margin-bottom: 1rem; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+  .svc-card { text-decoration: none; color: var(--dark); transition: transform .15s; }
+  .svc-card:hover { transform: translateY(-3px); }
+  .svc-card h3 { color: var(--navy); font-size: 1rem; margin-bottom: .4rem; }
+  .svc-card p { color: var(--grey); font-size: .9rem; margin-bottom: .75rem; }
+  .link-arrow { color: var(--teal2); font-weight: 600; font-size: .875rem; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; }
+  .faq { display: flex; flex-direction: column; gap: .75rem; margin-top: 1.5rem; }
+  .faq-item summary { cursor: pointer; font-weight: 600; color: var(--navy); padding: 0; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-item summary::after { content: '+'; font-size: 1.3rem; color: var(--teal); }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item p { color: var(--grey); font-size: .95rem; margin: .75rem 0 0; line-height: 1.7; }
+  .btn-white { background: var(--white); color: var(--navy); font-weight: 700; padding: .75rem 2rem; border-radius: .5rem; text-decoration: none; display: inline-block; }
+  .btn-white:hover { background: var(--lgrey); }
+</style>

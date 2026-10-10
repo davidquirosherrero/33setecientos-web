@@ -12,8 +12,8 @@ const schema = {
   name: '33setecientos',
   description: 'Agencia de marketing digital para negocios del occidente de Asturias. SEO, Google Ads, Meta Ads, web y redes sociales.',
   url: 'https://33setecientos.com',
-  telephone: '', // TODO: añadir teléfono real
-  email: 'hola@33setecientos.com',
+  telephone: '+34984681133',
+  email: 'info@33setecientos.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Centro de Empresas, Polígono Industrial Barcia - Almuña',
@@ -154,7 +154,7 @@ const stats = [
       <div class="hero-ctas">
         <a href="/contacto/" class="btn btn-white">Contactar</a>
         <a
-          href="https://wa.me/34XXXXXXXXX"
+          href="https://wa.me/34984681133"
           class="btn btn-outline"
           style="border-color:var(--navy);color:var(--navy)"
           target="_blank"
@@ -172,7 +172,7 @@ const stats = [
         <h2>Últimos artículos</h2>
         <div class="blog-grid">
           {posts.map((post) => (
-            <a href={`/${post.slug}/`} class="blog-card card">
+            <a href={`/${post.id}/`} class="blog-card card">
               <time datetime={post.data.pubDate.toISOString()} class="post-date">
                 {post.data.pubDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
               </time>

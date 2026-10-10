@@ -1,0 +1,76 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Email Marketing',
+  provider: { '@type': 'LocalBusiness', name: '33setecientos', url: 'https://33setecientos.com' },
+  areaServed: { '@type': 'AdministrativeArea', name: 'Occidente de Asturias' },
+  description: 'Email marketing para negocios locales en Luarca y Valdés. Newsletters y automatizaciones que fidelizan y generan ventas fuera de temporada.',
+};
+
+const services = [
+  { title: 'La herramienta adecuada para tu tamaño', desc: 'Recomendamos soluciones acordes al volumen de cada negocio, sin pagar por lo que no necesitas.' },
+  { title: 'Primero, entender a quién le escribes', desc: 'Definimos el público objetivo, sus intereses y cómo captar suscriptores de forma orgánica.' },
+  { title: 'Sabes qué emails funcionan y cuáles no', desc: 'Analizamos aperturas, clics, bajas y conversiones. Sin informes que no lee nadie.' },
+  { title: 'El email adecuado en el momento adecuado', desc: 'Automatizaciones de bienvenida, recordatorios de temporada, ofertas y felicitaciones.' },
+  { title: 'CRM si lo necesitas', desc: 'Experiencia en HubSpot y otras plataformas. Te recomendamos la herramienta según tus necesidades.' },
+];
+---
+
+<ServiceLayout
+  title="Email Marketing para negocios en Luarca · 33setecientos"
+  description="Email marketing para negocios locales en Luarca y Valdés. Newsletters y automatizaciones que fidelizan clientes y generan ventas fuera de temporada."
+  heading="Email Marketing"
+  subheading="El canal que no depende de ningún algoritmo. Para negocios locales en Luarca y Valdés."
+  schema={schema}
+>
+  <section class="section">
+    <div class="container">
+      <h2>De cero suscriptores a una lista que vende</h2>
+      <p class="intro">El email es el canal más rentable que existe si se trabaja bien. No depende de cambios en Instagram ni de actualizaciones de Google. Es tuyo. Y en Valdés, funciona especialmente bien para recuperar clientes fuera de temporada.</p>
+
+      <div class="benefit-grid">
+        <div class="card benefit">
+          <h3>Que no se olviden de ti fuera de temporada</h3>
+          <p>Un email en temporada baja recupera a clientes que ya vinieron. Es más barato fidelizar que captar.</p>
+        </div>
+        <div class="card benefit">
+          <h3>Contenido que fideliza, no que molesta</h3>
+          <p>Aportamos valor real en cada envío para que tus emails no acaben en spam ni en la papelera.</p>
+        </div>
+      </div>
+
+      <h2 style="margin-top:3rem">Cómo lo hacemos</h2>
+      <div class="service-steps">
+        {services.map((s) => (
+          <div class="step-item card">
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container">
+      <h2>¿Tienes una lista de clientes que no estás aprovechando?</h2>
+      <p>Dinos cuántos contactos tienes y valoramos qué podemos hacer con ellos. Muchos negocios tienen una lista de emails durmiendo en un cajón y no saben qué hacer con ella.</p>
+    </div>
+  </section>
+</ServiceLayout>
+
+<style>
+  .intro { color: var(--grey); max-width: 680px; margin-bottom: 2.5rem; font-size: 1.05rem; }
+  h2 { color: var(--navy); font-size: clamp(1.4rem, 2.5vw, 1.8rem); margin-bottom: 1rem; }
+  .benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem; }
+  .benefit h3 { color: var(--navy); margin-bottom: .4rem; }
+  .benefit p { color: var(--grey); font-size: .95rem; margin: 0; }
+  .service-steps { display: flex; flex-direction: column; gap: 1rem; }
+  .step-item h3 { color: var(--navy); margin-bottom: .25rem; }
+  .step-item p { color: var(--grey); font-size: .95rem; margin: 0; }
+  .section--light p { color: var(--grey); max-width: 680px; }
+  @media (max-width: 640px) { .benefit-grid { grid-template-columns: 1fr; } }
+</style>

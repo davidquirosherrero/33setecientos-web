@@ -1,0 +1,104 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+const { post } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, tags } = post.data;
+
+const publishedDate = pubDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+const updatedStr = updatedDate
+  ? updatedDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })
+  : null;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
+  author: { '@type': 'Organization', name: '33setecientos', url: 'https://33setecientos.com' },
+  publisher: { '@type': 'Organization', name: '33setecientos', logo: { '@type': 'ImageObject', url: 'https://33setecientos.com/images/logo.png' } },
+  image: heroImage ? `https://33setecientos.com${heroImage}` : undefined,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': Astro.url.toString() },
+};
+---
+
+<BaseLayout title={`${title} · 33setecientos`} description={description} schema={schema}>
+  <article>
+    {heroImage && (
+      <div class="post-hero-img">
+        <img src={heroImage} alt={title} width="1200" height="630" loading="eager" />
+      </div>
+    )}
+
+    <section class="section--light post-header">
+      <div class="container">
+        <a href="/blog-marketing-luarca/" class="breadcrumb">← Blog</a>
+        {tags.length > 0 && (
+          <div class="tags">
+            {tags.map((tag) => <span class="badge">{tag}</span>)}
+          </div>
+        )}
+        <h1>{title}</h1>
+        <p class="post-meta">
+          <time datetime={pubDate.toISOString()}>{publishedDate}</time>
+          {updatedStr && <span> · Actualizado el {updatedStr}</span>}
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container post-body">
+        <slot />
+      </div>
+    </section>
+
+    <section class="section section--light">
+      <div class="container post-footer">
+        <div class="author-card card">
+          <div>
+            <strong>33setecientos</strong>
+            <p>Agencia de marketing digital en Luarca, Asturias. Especialistas en negocios locales del occidente de Asturias.</p>
+          </div>
+        </div>
+        <div class="post-nav">
+          <a href="/blog-marketing-luarca/" class="btn btn-outline">← Todos los artículos</a>
+          <a href="/contacto/" class="btn btn-primary">¿Hablamos?</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .post-hero-img img { width: 100%; max-height: 460px; object-fit: cover; display: block; }
+  .post-header { padding-block: 2.5rem 2rem; border-bottom: 3px solid var(--teal); }
+  .breadcrumb { display: inline-block; font-size: .875rem; color: var(--grey); text-decoration: none; margin-bottom: 1rem; }
+  .breadcrumb:hover { color: var(--teal2); }
+  .tags { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: .75rem; }
+  .post-header h1 { color: var(--navy); font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800; margin-bottom: .5rem; }
+  .post-meta { color: var(--grey); font-size: .875rem; }
+
+  .post-body { max-width: 720px; }
+  .post-body :global(h2) { color: var(--navy); font-size: 1.4rem; margin: 2rem 0 .75rem; }
+  .post-body :global(h3) { color: var(--navy); font-size: 1.1rem; margin: 1.5rem 0 .5rem; }
+  .post-body :global(p) { color: var(--grey); line-height: 1.75; margin-bottom: 1.25rem; }
+  .post-body :global(ul), .post-body :global(ol) { padding-left: 1.5rem; color: var(--grey); margin-bottom: 1.25rem; }
+  .post-body :global(li) { margin-bottom: .4rem; line-height: 1.6; }
+  .post-body :global(a) { color: var(--teal2); }
+  .post-body :global(strong) { color: var(--navy); }
+  .post-body :global(blockquote) { border-left: 3px solid var(--teal); margin: 1.5rem 0; padding-left: 1.25rem; color: var(--navy); font-style: italic; }
+  .post-body :global(img) { max-width: 100%; border-radius: .5rem; margin: 1.5rem 0; }
+  .post-body :global(pre) { background: var(--dark); color: #e5e7eb; padding: 1.25rem; border-radius: .5rem; overflow-x: auto; margin: 1.5rem 0; }
+  .post-body :global(code) { font-family: monospace; font-size: .9em; background: var(--lgrey); padding: .15em .35em; border-radius: .25rem; }
+
+  .post-footer { max-width: 720px; display: flex; flex-direction: column; gap: 1.5rem; }
+  .author-card { display: flex; gap: 1rem; align-items: flex-start; }
+  .author-card strong { display: block; color: var(--navy); margin-bottom: .25rem; }
+  .author-card p { color: var(--grey); font-size: .875rem; margin: 0; }
+  .post-nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+</style>

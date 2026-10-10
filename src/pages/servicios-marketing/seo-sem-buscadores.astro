@@ -1,0 +1,62 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Posicionamiento en Buscadores (SEO)',
+  provider: { '@type': 'LocalBusiness', name: '33setecientos', url: 'https://33setecientos.com' },
+  areaServed: { '@type': 'AdministrativeArea', name: 'Occidente de Asturias' },
+  description: 'SEO local para negocios en Luarca y el occidente de Asturias. Posicionamiento orgánico, Google My Business y contenidos que generan tráfico.',
+};
+
+const services = [
+  { title: 'Buscamos cómo te buscan a ti', desc: 'Antes de escribir una sola línea, identificamos qué términos usa tu cliente en Luarca y el occidente de Asturias. No disparamos a ciegas.' },
+  { title: 'Tu ficha en Google Maps, al día y optimizada', desc: 'Cuando alguien busca tu tipo de negocio en Luarca, lo primero que ve es tu ficha. Es el activo SEO local más rentable y el más descuidado.' },
+  { title: 'Contenido que posiciona y que vende', desc: 'Un artículo bien escrito sobre un tema que busca tu cliente puede traerte visitas durante años. Te decimos qué escribir y cuándo publicarlo.' },
+  { title: 'El calendario de Valdés como ventaja', desc: 'Semana Santa, el eclipse de agosto, la Feria Medieval. Publicar en el momento correcto multiplica el efecto del contenido.' },
+  { title: 'Google Ads cuando el SEO necesita refuerzo', desc: 'Para búsquedas competidas o resultados inmediatos, complementamos el SEO orgánico con Google Ads. Solo pagamos cuando alguien hace clic.' },
+  { title: 'Más reseñas, mejor posición', desc: 'En Luarca el boca a boca ahora ocurre en Google. Te ayudamos a conseguir reseñas de forma sistemática y a responderlas para que Google te premie.' },
+];
+---
+
+<ServiceLayout
+  title="Posicionamiento SEO en Luarca · 33setecientos"
+  description="SEO para negocios en Luarca y el occidente de Asturias. Posicionamiento orgánico local, Google My Business y contenidos que generan tráfico durante años."
+  heading="Posicionamiento en buscadores (SEO)"
+  subheading="SEO para negocios en Luarca y el occidente de Asturias. Que te encuentren en Google antes de que entren por la puerta."
+  schema={schema}
+>
+  <section class="section">
+    <div class="container">
+      <h2>Que te encuentren en Google antes de que entren por la puerta</h2>
+      <p class="intro">El turista que viene a Luarca en agosto ya decidió dónde va a cenar antes de salir de casa. El vecino de Navia que busca un fontanero mira Google, no el listín. Si tu negocio no aparece en los primeros resultados, para ellos no existes.</p>
+      <p class="intro" style="margin-top:-.5rem">En 33setecientos hacemos SEO para negocios del concejo de Valdés y el occidente de Asturias. Conocemos las búsquedas locales, los patrones de temporada y la competencia real que tienes enfrente.</p>
+
+      <div class="services-grid">
+        {services.map((s) => (
+          <div class="card svc">
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container">
+      <h2>Sabes exactamente qué está pasando</h2>
+      <p>Cuadro de mando con las métricas que importan: visitas, posiciones en Google, llamadas generadas, conversiones. Sin informes de 40 páginas que no lee nadie.</p>
+    </div>
+  </section>
+</ServiceLayout>
+
+<style>
+  .intro { color: var(--grey); max-width: 680px; margin-bottom: 1rem; font-size: 1.05rem; }
+  h2 { color: var(--navy); font-size: clamp(1.4rem, 2.5vw, 1.8rem); margin-bottom: 1rem; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+  .svc h3 { color: var(--navy); margin-bottom: .4rem; font-size: 1rem; }
+  .svc p { color: var(--grey); font-size: .9rem; margin: 0; }
+  .section--light p { color: var(--grey); max-width: 680px; }
+</style>

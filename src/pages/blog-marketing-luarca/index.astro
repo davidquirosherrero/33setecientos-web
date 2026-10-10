@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const allTags = [...new Set(allPosts.flatMap((p) => p.data.tags))].sort();
+---
+
+<BaseLayout
+  title="Blog de Marketing Digital en Luarca · 33setecientos"
+  description="Artículos sobre marketing digital para negocios locales en Luarca y el occidente de Asturias. SEO, publicidad, redes sociales y más."
+>
+  <section class="section--light blog-hero">
+    <div class="container">
+      <span class="badge">Blog</span>
+      <h1>Marketing digital para negocios locales</h1>
+      <p>Consejos prácticos de SEO, publicidad digital, redes sociales y gestión de negocios locales en Luarca y el occidente de Asturias.</p>
+    </div>
+  </section>
+
+  {allTags.length > 0 && (
+    <section class="section" style="padding-block:1.5rem 0">
+      <div class="container">
+        <div class="tag-filter">
+          <span class="filter-label">Filtrar:</span>
+          {allTags.map((tag) => (
+            <a href={`#${tag.toLowerCase().replace(/\s+/g,'-')}`} class="badge badge-link">{tag}</a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section">
+    <div class="container">
+      {allPosts.length === 0 ? (
+        <p style="color:var(--grey)">Próximamente los primeros artículos.</p>
+      ) : (
+        <div class="blog-grid">
+          {allPosts.map((post) => (
+            <a href={`/${post.id}/`} class="blog-card card">
+              {post.data.heroImage && (
+                <img src={post.data.heroImage} alt={post.data.title} class="card-img" loading="lazy" width="400" height="225" />
+              )}
+              <div class="card-body">
+                {post.data.tags.length > 0 && (
+                  <div class="post-tags">
+                    {post.data.tags.slice(0,2).map((t) => <span class="badge">{t}</span>)}
+                  </div>
+                )}
+                <h2>{post.data.title}</h2>
+                <p>{post.data.description}</p>
+                <time datetime={post.data.pubDate.toISOString()} class="post-date">
+                  {post.data.pubDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .blog-hero { padding-block: 3rem 2rem; border-bottom: 3px solid var(--teal); }
+  .blog-hero h1 { color: var(--navy); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin: .5rem 0 1rem; }
+  .blog-hero p { color: var(--grey); max-width: 640px; font-size: 1.05rem; }
+  .tag-filter { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+  .filter-label { font-size: .875rem; color: var(--grey); font-weight: 600; }
+  .badge-link { text-decoration: none; cursor: pointer; transition: background .1s; }
+  .badge-link:hover { background: var(--teal); color: var(--white); }
+  .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+  .blog-card { text-decoration: none; color: var(--dark); display: flex; flex-direction: column; transition: transform .15s; }
+  .blog-card:hover { transform: translateY(-3px); }
+  .card-img { width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius) var(--radius) 0 0; display: block; margin: 0; }
+  .card-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; gap: .5rem; }
+  .post-tags { display: flex; gap: .4rem; flex-wrap: wrap; }
+  .blog-card h2 { color: var(--navy); font-size: 1.05rem; line-height: 1.4; margin: 0; }
+  .blog-card p { color: var(--grey); font-size: .875rem; flex: 1; margin: 0; }
+  .post-date { font-size: .8rem; color: var(--grey); margin-top: auto; }
+</style>

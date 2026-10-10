@@ -1,0 +1,70 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Formación en Marketing Digital',
+  provider: { '@type': 'LocalBusiness', name: '33setecientos', url: 'https://33setecientos.com' },
+  areaServed: { '@type': 'AdministrativeArea', name: 'Occidente de Asturias' },
+  description: 'Formación práctica en marketing digital para empresas y negocios de Luarca y Valdés. Sesiones diseñadas para el nivel y objetivos de cada negocio.',
+};
+---
+
+<ServiceLayout
+  title="Formación en Marketing Digital · Luarca · 33setecientos"
+  description="Formación práctica en marketing digital para negocios de Luarca y Valdés. Aprende a gestionar tu presencia digital con autonomía. +10 años de experiencia."
+  heading="Formación"
+  subheading="Formación en marketing digital para empresas en Luarca y Valdés. Aprende a gestionar tu presencia digital sin depender de nadie."
+  schema={schema}
+>
+  <section class="section">
+    <div class="container">
+      <h2>Formación a medida, no cursos enlatados</h2>
+      <p class="intro">Más de 10 años de experiencia y un máster en marketing digital. Pero lo más importante: diseñamos cada sesión según tu negocio, tu nivel actual y tus objetivos. No hay dos negocios iguales, y la formación tampoco debería serlo.</p>
+      <p class="intro" style="margin-top:-.5rem">El objetivo es que te quedes con herramientas propias. Si después prefieres externalizar la gestión, al menos sabrás lo que te estamos haciendo y por qué.</p>
+
+      <div class="topics-grid">
+        <div class="card topic">
+          <h3>Para quién es</h3>
+          <ul class="topic-list">
+            <li>Negocios que quieren gestionar su propio marketing</li>
+            <li>Equipos que necesitan formación interna</li>
+            <li>Empresas que quieren entender qué hace su agencia</li>
+            <li>Emprendedores que arrancan y tienen presupuesto ajustado</li>
+          </ul>
+        </div>
+        <div class="card topic">
+          <h3>Qué cubrimos</h3>
+          <ul class="topic-list">
+            <li>Google Ads y Meta Ads básico y avanzado</li>
+            <li>Gestión de redes sociales (Instagram, Facebook)</li>
+            <li>SEO y contenidos para Google</li>
+            <li>Google Analytics 4 y métricas que importan</li>
+            <li>Email marketing y automatizaciones</li>
+            <li>Google My Business y reseñas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container">
+      <h2>¿Quieres saber qué formación tiene sentido para tu negocio o equipo?</h2>
+      <p>Cuéntanos en qué punto estáis y os decimos qué formación tiene más sentido ahora mismo. Sin compromiso.</p>
+    </div>
+  </section>
+</ServiceLayout>
+
+<style>
+  .intro { color: var(--grey); max-width: 680px; margin-bottom: 1rem; font-size: 1.05rem; }
+  h2 { color: var(--navy); font-size: clamp(1.4rem, 2.5vw, 1.8rem); margin-bottom: 1rem; }
+  .topics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2rem; }
+  .topic h3 { color: var(--navy); margin-bottom: .75rem; }
+  .topic-list { list-style: none; padding: 0; }
+  .topic-list li { color: var(--grey); padding: .35rem 0; border-bottom: 1px solid var(--lgrey); font-size: .9rem; }
+  .topic-list li::before { content: '→ '; color: var(--teal); font-weight: 700; }
+  .section--light p { color: var(--grey); max-width: 680px; }
+  @media (max-width: 640px) { .topics-grid { grid-template-columns: 1fr; } }
+</style>

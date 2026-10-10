@@ -1,0 +1,90 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Diseño y Creación de Webs',
+  provider: { '@type': 'LocalBusiness', name: '33setecientos', url: 'https://33setecientos.com' },
+  areaServed: { '@type': 'AdministrativeArea', name: 'Occidente de Asturias' },
+  description: 'Diseño web para negocios de Luarca y el concejo de Valdés. Webs rápidas, posicionadas en Google y que convierten visitas en clientes.',
+};
+
+const process = [
+  { n: '01', title: 'Asesoramiento honesto', desc: 'Te decimos qué necesita realmente tu negocio, sin venderte más de lo que necesitas.' },
+  { n: '02', title: 'Primera reunión', desc: 'Presencial en el concejo o por videollamada. Entendemos tu negocio antes de diseñar nada.' },
+  { n: '03', title: 'Analytics desde el primer día', desc: 'Google Analytics 4 instalado en cada proyecto, con informe mensual sencillo.' },
+  { n: '04', title: 'Identidad completa si la necesitas', desc: 'Logo, paleta de colores, tarjetas, banners. Diseño que refleja lo que eres, no lo que pareces.' },
+  { n: '05', title: 'Hosting a tu medida', desc: 'Recomendamos el hosting adecuado al tamaño y tráfico de tu web, sin sobrecontratar.' },
+];
+---
+
+<ServiceLayout
+  title="Creamos tu Web · Diseño Web en Luarca · 33setecientos"
+  description="Diseño web para negocios en Luarca y Valdés. Webs rápidas, bien posicionadas en Google y pensadas para convertir visitas en clientes."
+  heading="Creamos tu web"
+  subheading="Una web que trabaja por tu negocio cuando tú no puedes. Diseño web para negocios de Luarca y el concejo de Valdés."
+  schema={schema}
+>
+  <section class="section">
+    <div class="container">
+      <h2>Visibilidad en Google, desde el primer día</h2>
+      <p class="intro">Cada web que creamos incluye SEO técnico básico, velocidad optimizada y ficha de Google Maps configurada. Y contamos con una diseñadora de Valdés que conoce la zona y su público.</p>
+
+      <h2 style="margin-top:3rem">Cómo trabajamos</h2>
+      <div class="process">
+        {process.map((s) => (
+          <div class="step card">
+            <span class="step-n">{s.n}</span>
+            <div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container two-col">
+      <div>
+        <h2>Servicios incluidos</h2>
+        <ul class="service-list">
+          <li>Diseño responsive (móvil, tablet, escritorio)</li>
+          <li>SEO técnico básico</li>
+          <li>Google Maps y ficha de negocio</li>
+          <li>Google Analytics 4</li>
+          <li>Formulario de contacto</li>
+          <li>Hosting recomendado</li>
+        </ul>
+      </div>
+      <div>
+        <h2>También disponible</h2>
+        <ul class="service-list">
+          <li>Logo e identidad visual</li>
+          <li>Banners y material gráfico</li>
+          <li>Blog y sistema de contenidos</li>
+          <li>Tienda online</li>
+          <li>Mantenimiento mensual</li>
+          <li>Formación para gestionar tu web</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</ServiceLayout>
+
+<style>
+  .intro { color: var(--grey); max-width: 680px; margin-bottom: 2.5rem; font-size: 1.05rem; }
+  h2 { color: var(--navy); font-size: clamp(1.4rem, 2.5vw, 1.8rem); margin-bottom: 1rem; }
+  .process { display: flex; flex-direction: column; gap: 1rem; }
+  .step { display: flex; gap: 1.5rem; align-items: flex-start; }
+  .step-n { font-size: 1.5rem; font-weight: 800; color: var(--teal); min-width: 2.5rem; }
+  .step h3 { color: var(--navy); margin-bottom: .25rem; }
+  .step p { color: var(--grey); font-size: .95rem; margin: 0; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .service-list { list-style: none; padding: 0; }
+  .service-list li { color: var(--grey); padding: .4rem 0; border-bottom: 1px solid var(--lgrey); font-size: .95rem; }
+  .service-list li::before { content: '✓ '; color: var(--teal); font-weight: 700; }
+  @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+</style>

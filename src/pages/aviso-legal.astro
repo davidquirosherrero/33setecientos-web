@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Aviso Legal · 33setecientos"
+  description="Aviso legal de 33setecientos. Información sobre titularidad, propiedad intelectual y condiciones de uso del sitio web."
+>
+  <section class="section--light legal-hero">
+    <div class="container">
+      <h1>Aviso Legal</h1>
+      <p class="updated">Última actualización: 8 de agosto de 2023</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container legal-content">
+
+      <h2>1. Identificación</h2>
+      <p>En cumplimiento del artículo 10 de la Ley 34/2002 de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), se informa de los datos identificativos del titular de este sitio web:</p>
+      <ul>
+        <li><strong>Denominación:</strong> 33setecientos</li>
+        <li><strong>Domicilio social:</strong> Centro de Empresas, Polígono Industrial de Barcia - Almuña, Luarca (Asturias)</li>
+        <li><strong>Correo electrónico:</strong> <a href="mailto:info@33setecientos.com">info@33setecientos.com</a></li>
+        <li><strong>Teléfono:</strong> 984 68 11 33</li>
+      </ul>
+
+      <h2>2. Propiedad intelectual e industrial</h2>
+      <p>Los contenidos de este sitio web (textos, imágenes, gráficos, logotipos, iconos y demás materiales) son propiedad de 33setecientos o de terceros que han autorizado su uso. Quedan reservados todos los derechos.</p>
+      <p>Se prohíbe reproducir, distribuir, transformar o comunicar públicamente cualquier contenido de este sitio sin la autorización expresa y por escrito del titular.</p>
+
+      <h2>3. Uso del sitio web</h2>
+      <p>El usuario se compromete a utilizar este sitio web de conformidad con la ley, la moral y el orden público. Queda prohibido el uso del sitio web con fines ilícitos o perjudiciales para 33setecientos o terceros.</p>
+
+      <h2>4. Limitación de responsabilidad</h2>
+      <p>33setecientos no será responsable de los daños y perjuicios que puedan derivarse de la falta de disponibilidad o continuidad del sitio web, ni de errores en el acceso a sus páginas o a las de servicios de terceros enlazados.</p>
+
+      <h2>5. Protección de datos</h2>
+      <p>El tratamiento de datos personales se rige por nuestra <a href="/politica-privacidad/">Política de Privacidad</a>, de conformidad con el Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica de Protección de Datos y Garantía de los Derechos Digitales (LOPDGDD).</p>
+
+      <h2>6. Enlaces externos</h2>
+      <p>Este sitio puede contener enlaces a sitios web de terceros. 33setecientos no controla esos sitios ni asume responsabilidad alguna por sus contenidos o políticas de privacidad.</p>
+
+      <h2>7. Modificaciones</h2>
+      <p>33setecientos se reserva el derecho a modificar este aviso legal y el sitio web en cualquier momento y sin previo aviso.</p>
+
+      <h2>8. Legislación y jurisdicción</h2>
+      <p>Este aviso legal se rige por la normativa española vigente. Para cualquier controversia derivada del uso de este sitio, las partes se someten a los juzgados y tribunales de Luarca, con renuncia expresa a cualquier otro fuero.</p>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-hero { padding-block: 2.5rem 2rem; border-bottom: 3px solid var(--teal); }
+  .legal-hero h1 { color: var(--navy); font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 800; margin-bottom: .25rem; }
+  .updated { color: var(--grey); font-size: .875rem; }
+  .legal-content { max-width: 760px; }
+  .legal-content p { color: var(--grey); line-height: 1.7; margin-bottom: 1rem; }
+  .legal-content h2 { color: var(--navy); font-size: 1.15rem; margin: 2rem 0 .5rem; }
+  .legal-content ul { padding-left: 1.5rem; color: var(--grey); }
+  .legal-content ul li { margin-bottom: .35rem; line-height: 1.6; }
+  .legal-content a { color: var(--teal2); }
+</style>

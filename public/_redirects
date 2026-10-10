@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects
+# Formato: /origen /destino código
+
+# Único slug que cambia en la migración
+/politica-privacidad-2/ /politica-privacidad/ 301
+/politica-privacidad-2  /politica-privacidad/ 301

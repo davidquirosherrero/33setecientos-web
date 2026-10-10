@@ -1,0 +1,279 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 6);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: '33setecientos',
+  description: 'Agencia de marketing digital para negocios del occidente de Asturias. SEO, Google Ads, Meta Ads, web y redes sociales.',
+  url: 'https://33setecientos.com',
+  telephone: '', // TODO: añadir teléfono real
+  email: 'hola@33setecientos.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Centro de Empresas, Polígono Industrial Barcia - Almuña',
+    addressLocality: 'Luarca',
+    addressRegion: 'Asturias',
+    postalCode: '33700',
+    addressCountry: 'ES',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 43.5472,
+    longitude: -6.5327,
+  },
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Occidente de Asturias',
+  },
+  priceRange: '€€',
+};
+
+const services = [
+  { icon: '🌐', title: 'Creamos tu web', href: '/servicios-marketing/creamos-tu-web/', desc: 'Webs rápidas, posicionadas y orientadas a convertir.' },
+  { icon: '📣', title: 'Publicidad Online', href: '/servicios-marketing/publicidad-online/', desc: 'Google Ads y Meta Ads con resultados medibles.' },
+  { icon: '📱', title: 'Redes Sociales', href: '/servicios-marketing/redes-sociales/', desc: 'Gestión de contenido y comunidad en Instagram y Facebook.' },
+  { icon: '📧', title: 'Email Marketing', href: '/servicios-marketing/email-marketing/', desc: 'Automatizaciones y newsletters que generan ventas.' },
+  { icon: '🔍', title: 'Posicionamiento SEO', href: '/servicios-marketing/seo-sem-buscadores/', desc: 'Aparece antes que tu competencia en Google.' },
+  { icon: '🎓', title: 'Formación', href: '/servicios-marketing/formacion/', desc: 'Aprende a gestionar tu marketing digital con autonomía.' },
+];
+
+const stats = [
+  { value: '500K€', label: 'Gestionados en publicidad al mes' },
+  { value: '+10 años', label: 'Con webs sobre Luarca' },
+  { value: '60K', label: 'Búsquedas mensuales sobre Luarca' },
+  { value: '+15 años', label: 'De experiencia online' },
+];
+---
+
+<BaseLayout
+  title="Agencia de Marketing Digital en Luarca · 33setecientos"
+  description="La única agencia de marketing digital que vive y trabaja en Luarca. SEO, Google Ads, Meta Ads, webs y redes sociales para negocios del occidente de Asturias."
+  schema={schema}
+>
+
+  <!-- ── Hero ───────────────────────────────────── -->
+  <section class="hero section--navy">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="badge">Agencia local · Luarca, Asturias</span>
+        <h1>Marketing Digital<br />para vender más.</h1>
+        <p>La única agencia que vive y trabaja aquí.<br />Conocemos tu mercado, tu competencia y a tus clientes.</p>
+        <div class="hero-ctas">
+          <a href="/contacto/" class="btn btn-primary">Contacta ahora</a>
+          <a href="/servicios-marketing/" class="btn btn-outline" style="border-color:rgba(255,255,255,0.4);color:var(--white)">Ver servicios</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img
+          src="/images/hero/luarca-puerto.jpg"
+          alt="Puerto pesquero de Luarca, Asturias"
+          width="600"
+          height="420"
+          fetchpriority="high"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Por qué 33setecientos ──────────────────── -->
+  <section class="section">
+    <div class="container why-inner">
+      <div class="why-text">
+        <span class="badge">Por qué nosotros</span>
+        <h2>La única agencia de marketing que vive y trabaja en Luarca</h2>
+        <p>Cuando hay una tormenta en el puerto y los restaurantes cierran a mediodía, lo sabemos. Cuando hay un eclipse que trae 30.000 visitantes al concejo, lo anticipamos. Una agencia de Oviedo o Madrid no puede hacer eso.</p>
+        <p>Reaccionamos en tiempo real a lo que pasa en el occidente de Asturias porque estamos aquí.</p>
+        <a href="/servicios-marketing/" class="btn btn-primary">Ver servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Servicios ──────────────────────────────── -->
+  <section class="section section--light">
+    <div class="container">
+      <span class="badge">Qué ofrecemos</span>
+      <h2>Servicios de marketing digital</h2>
+      <div class="services-grid">
+        {services.map((s) => (
+          <a href={s.href} class="service-card card">
+            <span class="service-icon" aria-hidden="true">{s.icon}</span>
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Cifras ─────────────────────────────────── -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="stats-grid">
+        {stats.map((s) => (
+          <div class="stat">
+            <p class="stat-value">{s.value}</p>
+            <p class="stat-label">{s.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Casos de éxito ─────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <span class="badge">Resultados reales</span>
+      <h2>Nuestros casos de éxito</h2>
+      <div class="cases-grid">
+        <a href="/caso-exito-marketing-digital-asturias/" class="card case-card">
+          <h3>Cuando dejas de invertir en digital a ciegas</h3>
+          <p>Cómo ordenar la inversión publicitaria y multiplicar el retorno sin gastar más.</p>
+          <span class="link-arrow">Leer caso →</span>
+        </a>
+        <a href="/directorio-digital-luarca-264000-visitas-organicas/" class="card case-card">
+          <h3>264.000 visitas orgánicas sin un solo euro en anuncios</h3>
+          <p>Construimos el mayor directorio digital de Luarca, solo con SEO y contenido.</p>
+          <span class="link-arrow">Leer caso →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────── -->
+  <section class="section section--teal">
+    <div class="container cta-center">
+      <h2>¿No sabes por dónde empezar?</h2>
+      <p>Cuéntanos qué necesita tu negocio. La primera consulta es gratuita.</p>
+      <div class="hero-ctas">
+        <a href="/contacto/" class="btn btn-white">Contactar</a>
+        <a
+          href="https://wa.me/34XXXXXXXXX"
+          class="btn btn-outline"
+          style="border-color:var(--navy);color:var(--navy)"
+          target="_blank"
+          rel="noopener noreferrer"
+        >WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Blog ──────────────────────────────────── -->
+  {posts.length > 0 && (
+    <section class="section section--light">
+      <div class="container">
+        <span class="badge">Blog</span>
+        <h2>Últimos artículos</h2>
+        <div class="blog-grid">
+          {posts.map((post) => (
+            <a href={`/${post.slug}/`} class="blog-card card">
+              <time datetime={post.data.pubDate.toISOString()} class="post-date">
+                {post.data.pubDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+            </a>
+          ))}
+        </div>
+        <div style="margin-top:2rem;text-align:center">
+          <a href="/blog-marketing-luarca/" class="btn btn-outline">Ver todos los artículos</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero { padding-block: clamp(4rem, 8vw, 7rem); }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .hero-text .badge { margin-bottom: 1rem; }
+  .hero-text h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+  .hero-text p { color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 2rem; }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .hero-image img {
+    border-radius: var(--radius);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Por qué */
+  .why-inner { max-width: 680px; }
+  .why-text .badge { margin-bottom: 1rem; }
+  .why-text h2 { color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1rem; }
+  .why-text p { color: var(--grey); margin-bottom: 1rem; }
+  .why-text .btn { margin-top: 0.5rem; }
+
+  /* Servicios */
+  .section h2 { color: var(--navy); font-size: clamp(1.5rem, 3vw, 2rem); margin-block: 0.5rem 2rem; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .service-card {
+    text-decoration: none;
+    color: var(--dark);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .service-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(26,43,107,0.12); }
+  .service-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+  .service-card h3 { color: var(--navy); font-size: 1.05rem; margin-bottom: 0.4rem; }
+  .service-card p { color: var(--grey); font-size: 0.9rem; margin: 0; }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+  .stat-value { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; color: var(--teal); margin: 0; }
+  .stat-label { color: rgba(255,255,255,0.7); font-size: 0.9rem; margin: 0.25rem 0 0; }
+
+  /* Casos */
+  .cases-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; }
+  .case-card { text-decoration: none; color: var(--dark); transition: transform 0.15s; }
+  .case-card:hover { transform: translateY(-3px); }
+  .case-card h3 { color: var(--navy); font-size: 1.05rem; margin-bottom: 0.5rem; }
+  .case-card p { color: var(--grey); font-size: 0.9rem; margin-bottom: 0.75rem; }
+  .link-arrow { color: var(--teal2); font-weight: 600; font-size: 0.9rem; }
+
+  /* CTA */
+  .cta-center { text-align: center; }
+  .cta-center h2 { color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.75rem; }
+  .cta-center p { color: var(--navy); opacity: 0.8; margin-bottom: 2rem; }
+  .cta-center .hero-ctas { justify-content: center; }
+
+  /* Blog */
+  .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+  .blog-card { text-decoration: none; color: var(--dark); transition: transform 0.15s; }
+  .blog-card:hover { transform: translateY(-3px); }
+  .post-date { font-size: 0.8rem; color: var(--grey); margin-bottom: 0.5rem; display: block; }
+  .blog-card h3 { color: var(--navy); font-size: 0.95rem; margin-bottom: 0.4rem; }
+  .blog-card p { color: var(--grey); font-size: 0.875rem; margin: 0; }
+
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-image { display: none; }
+  }
+</style>

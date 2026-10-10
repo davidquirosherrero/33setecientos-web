@@ -1,0 +1,136 @@
+/* Inter self-hosted — pesos usados en el sitio */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/800.css';
+
+/* ─── Design tokens ─────────────────────────────── */
+:root {
+  --navy:   #1A2B6B;
+  --teal:   #4DC9B0;
+  --teal2:  #3BB99E;
+  --light:  #F4F6FB;
+  --dark:   #1A1A2E;
+  --grey:   #6B7280;
+  --lgrey:  #E5E7EB;
+  --white:  #ffffff;
+
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --radius: 8px;
+  --shadow: 0 2px 12px rgba(26, 43, 107, 0.08);
+
+  /* Espaciado base */
+  --section-py: clamp(3rem, 6vw, 5rem);
+  --content-max: 1200px;
+  --gutter: 1rem;
+}
+
+/* ─── Reset mínimo ──────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-family: var(--font-body);
+  color: var(--dark);
+  background: var(--white);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+}
+
+img, video { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.2; font-weight: 700; margin: 0 0 0.5em; }
+p { margin: 0 0 1em; }
+
+/* ─── Utilidades ────────────────────────────────── */
+.container {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+@media (min-width: 640px) {
+  :root { --gutter: 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  :root { --gutter: 2rem; }
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ─── Componentes base ──────────────────────────── */
+
+/* Botón primario */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.75em 1.5em;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.1s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--teal);
+  color: var(--navy);
+}
+.btn-primary:hover { background: var(--teal2); transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--teal);
+  color: var(--teal);
+}
+.btn-outline:hover { background: var(--teal); color: var(--navy); }
+
+.btn-white {
+  background: var(--white);
+  color: var(--navy);
+}
+.btn-white:hover { background: var(--light); }
+
+/* Tarjeta */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--teal);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+/* Sección */
+.section {
+  padding-block: var(--section-py);
+}
+.section--light { background: var(--light); }
+.section--navy  { background: var(--navy); color: var(--white); }
+.section--teal  { background: var(--teal); color: var(--navy); }
+
+/* Badge / etiqueta */
+.badge {
+  display: inline-block;
+  padding: 0.2em 0.7em;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: color-mix(in srgb, var(--teal) 15%, transparent);
+  color: var(--teal2);
+}

@@ -1,0 +1,177 @@
+---
+const navLinks = [
+  { label: 'Inicio', href: '/' },
+  {
+    label: 'Servicios',
+    href: '/servicios-marketing/',
+    children: [
+      { label: 'Publicidad Online', href: '/servicios-marketing/publicidad-online/' },
+      { label: 'Redes Sociales',    href: '/servicios-marketing/redes-sociales/' },
+      { label: 'Creamos tu web',    href: '/servicios-marketing/creamos-tu-web/' },
+      { label: 'Email Marketing',   href: '/servicios-marketing/email-marketing/' },
+      { label: 'Posicionamiento SEO', href: '/servicios-marketing/seo-sem-buscadores/' },
+      { label: 'Formación',         href: '/servicios-marketing/formacion/' },
+    ],
+  },
+  { label: 'Blog', href: '/blog-marketing-luarca/' },
+  { label: 'Contacto', href: '/contacto/' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="header-logo" aria-label="33setecientos — Inicio">
+      <img src="/images/logos/logo-33setecientos.png" alt="33setecientos" width="160" height="40" />
+    </a>
+
+    <nav class="header-nav" aria-label="Navegación principal">
+      <ul role="list">
+        {navLinks.map((link) => (
+          <li class={link.children ? 'has-dropdown' : ''}>
+            <a
+              href={link.href}
+              aria-current={currentPath === link.href ? 'page' : undefined}
+            >
+              {link.label}
+              {link.children && <span aria-hidden="true"> ▾</span>}
+            </a>
+            {link.children && (
+              <ul class="dropdown" role="list">
+                {link.children.map((child) => (
+                  <li>
+                    <a href={child.href} aria-current={currentPath === child.href ? 'page' : undefined}>
+                      {child.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <a href="/contacto/" class="btn btn-primary header-cta">Contacta ahora</a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--lgrey);
+    box-shadow: 0 1px 4px rgba(26,43,107,0.06);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 64px;
+  }
+
+  .header-logo img { display: block; }
+
+  /* Nav desktop */
+  .header-nav { flex: 1; }
+
+  .header-nav > ul {
+    display: flex;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-nav a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+  }
+  .header-nav a:hover,
+  .header-nav a[aria-current="page"] {
+    color: var(--navy);
+    background: var(--light);
+  }
+
+  /* Dropdown */
+  .has-dropdown { position: relative; }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    background: var(--white);
+    border: 1px solid var(--lgrey);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    min-width: 220px;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem;
+    z-index: 200;
+  }
+  .has-dropdown:hover .dropdown,
+  .has-dropdown:focus-within .dropdown { display: block; }
+
+  .dropdown a {
+    font-size: 0.875rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .header-cta { font-size: 0.875rem; white-space: nowrap; }
+
+  /* Toggle — solo móvil */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--navy);
+    border-radius: 2px;
+    transition: transform 0.2s;
+  }
+
+  @media (max-width: 768px) {
+    .header-nav, .header-cta { display: none; }
+    .nav-toggle { display: flex; }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle') as HTMLButtonElement;
+  const nav    = document.querySelector('.header-nav') as HTMLElement;
+  const cta    = document.querySelector('.header-cta') as HTMLElement;
+
+  toggle?.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    if (nav) nav.style.display = expanded ? '' : 'block';
+    if (cta) cta.style.display = expanded ? '' : 'block';
+  });
+</script>

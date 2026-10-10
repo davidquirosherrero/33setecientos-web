@@ -16,6 +16,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 </BaseLayout>
 
+<script>
+  // Conversión: formulario de contacto enviado
+  // gtag lo expone GTM una vez cargado — pequeño delay para asegurar que GA4 está listo
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      if (typeof (window as any).gtag === 'function') {
+        (window as any).gtag('event', 'generate_lead', {
+          event_category: 'contacto',
+          event_label: 'formulario'
+        });
+      }
+    }, 800);
+  });
+</script>
+
 <style>
   h1 { color: var(--navy); font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 1rem 0; }
   p { color: var(--grey); font-size: 1.05rem; }

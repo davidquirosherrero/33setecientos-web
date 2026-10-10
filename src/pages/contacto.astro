@@ -178,3 +178,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .newsletter-form .btn { width: 100%; }
   }
 </style>
+
+<script>
+  function trackContact(event_name: string, label: string) {
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', event_name, {
+        event_category: 'contacto',
+        event_label: label
+      });
+    }
+  }
+
+  document.querySelectorAll('a[href*="wa.me"]').forEach((el) => {
+    el.addEventListener('click', () => trackContact('click_whatsapp', 'whatsapp'));
+  });
+  document.querySelectorAll('a[href^="tel:"]').forEach((el) => {
+    el.addEventListener('click', () => trackContact('click_telefono', 'telefono'));
+  });
+</script>

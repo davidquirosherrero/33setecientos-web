@@ -13,6 +13,8 @@ const updatedStr = updatedDate
   ? updatedDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })
   : null;
 
+const ogImage = heroImage ?? '/images/og-default.png';
+
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -20,18 +22,21 @@ const schema = {
   description,
   datePublished: pubDate.toISOString(),
   dateModified: (updatedDate ?? pubDate).toISOString(),
-  author: { '@type': 'Organization', name: '33setecientos', url: 'https://33setecientos.com' },
-  publisher: { '@type': 'Organization', name: '33setecientos', logo: { '@type': 'ImageObject', url: 'https://33setecientos.com/images/logo.png' } },
-  image: heroImage ? `https://33setecientos.com${heroImage}` : undefined,
+  author: [
+    { '@type': 'Person', name: 'David Quirós', url: 'https://33setecientos.com' },
+    { '@type': 'Organization', name: '33setecientos', url: 'https://33setecientos.com' },
+  ],
+  publisher: { '@type': 'Organization', name: '33setecientos', logo: { '@type': 'ImageObject', url: 'https://33setecientos.com/images/logos/logo.png' } },
+  image: `https://33setecientos.com${ogImage}`,
   mainEntityOfPage: { '@type': 'WebPage', '@id': Astro.url.toString() },
 };
 ---
 
-<BaseLayout title={`${title} · 33setecientos`} description={description} schema={schema}>
+<BaseLayout title={`${title} · 33setecientos`} description={description} image={ogImage} type="article" pubDate={pubDate} schema={schema}>
   <article>
     {heroImage && (
       <div class="post-hero-img">
-        <img src={heroImage} alt={title} width="1200" height="630" loading="eager" />
+        <img src={heroImage} alt={title} loading="eager" style="width:100%;aspect-ratio:16/9;object-fit:cover;" />
       </div>
     )}
 

@@ -23,7 +23,7 @@ const currentPath = Astro.url.pathname;
 <header class="site-header">
   <div class="container header-inner">
     <a href="/" class="header-logo" aria-label="33setecientos — Inicio">
-      <img src="/images/logos/logo.png" alt="33setecientos" width="160" height="40" />
+      <img src="/images/logos/logo.png" alt="33setecientos" width="48" height="48" />
     </a>
 
     <nav class="header-nav" aria-label="Navegación principal">
@@ -78,7 +78,12 @@ const currentPath = Astro.url.pathname;
     height: 64px;
   }
 
-  .header-logo img { display: block; }
+  .header-logo img {
+    display: block;
+    height: 48px;
+    width: auto;
+    max-height: 48px;
+  }
 
   /* Nav desktop */
   .header-nav { flex: 1; }

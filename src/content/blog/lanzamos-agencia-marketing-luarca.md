@@ -48,7 +48,7 @@ No vamos a reinventar la rueda, queremos poner neumáticos nuevos a muchos negoc
 			
 						
 				
-															![](https://i0.wp.com/33setecientos.com/wp-content/uploads/2019/07/blog_img_02.jpg?fit=1170%2C1170&ssl=1)															
+															![](/images/blog/blog-img-02.jpg)															
 				
 					
 		
@@ -56,7 +56,7 @@ No vamos a reinventar la rueda, queremos poner neumáticos nuevos a muchos negoc
 			
 						
 				
-															![](https://i0.wp.com/33setecientos.com/wp-content/uploads/2019/07/blog_img_03.jpg?fit=1170%2C1170&ssl=1)															
+															![](/images/blog/blog-img-03.jpg)															
 				
 					
 		
@@ -108,7 +108,7 @@ Las redes sociales son tu ojos y oídos en Internet. Tus clientes y potenciales 
 				
 				
 				
-															![](https://i0.wp.com/33setecientos.com/wp-content/uploads/2019/07/blog_img_04.jpg?fit=1170%2C780&ssl=1)															
+															![](/images/blog/blog-img-04.jpg)															
 				
 				
 				

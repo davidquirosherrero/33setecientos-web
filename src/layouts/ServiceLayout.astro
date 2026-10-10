@@ -7,16 +7,25 @@ interface Props {
   heading: string;
   subheading?: string;
   schema?: object;
+  heroImage?: string;
+  heroAlt?: string;
 }
-const { title, description, heading, subheading, schema } = Astro.props;
+const { title, description, heading, subheading, schema, heroImage, heroAlt } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} schema={schema}>
   <div class="service-hero section--light">
-    <div class="container">
-      <a href="/servicios-marketing/" class="breadcrumb">← Todos los servicios</a>
-      <h1>{heading}</h1>
-      {subheading && <p class="service-intro">{subheading}</p>}
+    <div class={`container ${heroImage ? 'hero-with-img' : ''}`}>
+      <div class="hero-text">
+        <a href="/servicios-marketing/" class="breadcrumb">← Todos los servicios</a>
+        <h1>{heading}</h1>
+        {subheading && <p class="service-intro">{subheading}</p>}
+      </div>
+      {heroImage && (
+        <div class="hero-img-wrap">
+          <img src={heroImage} alt={heroAlt ?? heading} loading="eager" />
+        </div>
+      )}
     </div>
   </div>
 
@@ -39,6 +48,19 @@ const { title, description, heading, subheading, schema } = Astro.props;
     padding-block: 3rem 2.5rem;
     border-bottom: 3px solid var(--teal);
   }
+  .hero-with-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .hero-img-wrap img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px rgba(26,43,107,0.12);
+  }
   .breadcrumb {
     display: inline-block;
     font-size: 0.875rem;
@@ -58,6 +80,11 @@ const { title, description, heading, subheading, schema } = Astro.props;
     color: var(--grey);
     max-width: 640px;
     margin: 0;
+  }
+  @media (max-width: 768px) {
+    .hero-with-img { grid-template-columns: 1fr; gap: 1.5rem; }
+    .hero-img-wrap { order: -1; }
+    .hero-img-wrap img { height: 200px; }
   }
   .service-cta { padding-block: 4rem; }
   .cta-center { text-align: center; }

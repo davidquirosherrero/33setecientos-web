@@ -76,9 +76,9 @@ const stats = [
       </div>
       <div class="hero-image">
         <img
-          src="/images/hero/luarca-puerto.jpg"
-          alt="Puerto pesquero de Luarca, Asturias"
-          width="600"
+          src="/images/logos/logo.png"
+          alt="33setecientos — Agencia de Marketing Digital en Luarca"
+          width="420"
           height="420"
           fetchpriority="high"
           loading="eager"
@@ -213,12 +213,16 @@ const stats = [
   }
   .hero-text p { color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 2rem; }
   .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .hero-image img {
-    border-radius: var(--radius);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
     width: 100%;
+    max-width: 380px;
     height: auto;
-    object-fit: cover;
+    filter: drop-shadow(0 8px 32px rgba(0,0,0,0.3));
   }
 
   /* Por qué */

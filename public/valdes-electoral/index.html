@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#edf0f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10121a" media="(prefers-color-scheme: dark)">
+<title>Elecciones municipales en Valdés 1979–2023 | 33setecientos</title>
+<meta name="description" content="Resultados históricos de las elecciones municipales en el concejo de Valdés (Asturias) desde 1979 hasta 2023. Voto por partido, concejales y mapas de mesa.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Elecciones municipales en Valdés 1979–2023">
+<meta property="og:description" content="44 años de democracia local en Valdés: cómo ha votado el concejo desde la UCD a la mayoría absoluta del PSOE en 2023.">
+<meta property="og:image" content="https://33setecientos.com/valdes-electoral/og-image-electoral.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="33setecientos">
+<meta property="og:url" content="https://33setecientos.com/valdes-electoral/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Elecciones municipales en Valdés 1979–2023">
+<meta name="twitter:description" content="44 años de democracia local en Valdés: cómo ha votado el concejo desde la UCD a la mayoría absoluta del PSOE en 2023.">
+<meta name="twitter:image" content="https://33setecientos.com/valdes-electoral/og-image-electoral.png">
+<link rel="canonical" href="https://33setecientos.com/valdes-electoral/">
+<title>Valdés Electoral 1979–2023</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js" crossorigin="anonymous"></script>
+
+<style>
+:root {
+  --bg:#edf0f5; --surface:#fff; --surface2:#f4f6fa; --text1:#0c0e14;
+  --text2:#44485a; --text3:#8a8f9e; --border:#dde1eb;
+  --c-psoe:#c41e24; --c-pp:#003594; --c-ucd:#5a8ec4; --c-cds:#7a9a20;
+  --c-local:#888; --c-uras:#1a9c6e; --c-iu:#5a40c8; --c-fac:#d45e18;
+  --c-vox:#158012; --c-cs:#c08800; --c-somos:#c845a0; --c-otros:#999;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --bg:#10121a; --surface:#191c28; --surface2:#1f2230; --text1:#eceff5;
+  --text2:#9da3b6; --text3:#565c70; --border:#2b2f40;
+  --c-psoe:#e04040; --c-pp:#5580d8; --c-ucd:#7aaee0; --c-cds:#9abe30;
+  --c-local:#aaa; --c-uras:#28d090; --c-iu:#8875ee; --c-fac:#f07840;
+  --c-vox:#38c030; --c-cs:#e0a820; --c-somos:#e060b8; --c-otros:#aaa;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#10121a; --surface:#191c28; --surface2:#1f2230; --text1:#eceff5;
+  --text2:#9da3b6; --text3:#565c70; --border:#2b2f40;
+  --c-psoe:#e04040; --c-pp:#5580d8; --c-ucd:#7aaee0; --c-cds:#9abe30;
+  --c-local:#aaa; --c-uras:#28d090; --c-iu:#8875ee; --c-fac:#f07840;
+  --c-vox:#38c030; --c-cs:#e0a820; --c-somos:#e060b8; --c-otros:#aaa;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text1);font-family:'Source Sans 3','Segoe UI',system-ui,sans-serif;font-size:15px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 80px}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--c-psoe);margin-bottom:8px}
+h1{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(1.9rem,5vw,3.1rem);font-weight:700;line-height:1.15;text-wrap:balance;margin-bottom:10px}
+.subtitle{color:var(--text2);font-size:.95rem;max-width:580px;margin-bottom:28px}
+.tiles{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 18px;flex:1;min-width:130px}
+.tile-val{font-family:'Libre Baskerville',serif;font-size:1.75rem;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;margin-bottom:4px}
+.tile-lbl{font-size:.7rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em}
+.tile.red{border-left:3px solid var(--c-psoe)}.tile.red .tile-val{color:var(--c-psoe)}
+.tile.blue{border-left:3px solid var(--c-pp)}.tile.blue .tile-val{color:var(--c-pp)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:20px;border:1.5px solid var(--border);
+  background:var(--surface2);font-size:.75rem;font-weight:600;cursor:pointer;transition:opacity .15s;user-select:none;color:var(--text1)}
+.chip-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.chip.off{opacity:.35}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px 24px;margin-bottom:20px}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.card h2{font-family:'Libre Baskerville',serif;font-size:1.05rem;font-weight:700}
+.card-note{font-size:.72rem;color:var(--text3)}
+.chart-wrap{width:100%;position:relative}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:620px){.two-col{grid-template-columns:1fr}}
+.alc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.alc-item{border:1px solid var(--border);border-radius:6px;padding:10px 12px;background:var(--surface2)}
+.alc-period{font-size:.68rem;font-weight:700;color:var(--text3);letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px}
+.alc-name{font-size:.8rem;font-weight:600;line-height:1.3;margin-bottom:5px}
+.badge{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.04em;border-radius:3px;padding:1px 6px;color:#fff}
+.notes{display:flex;flex-direction:column;gap:7px}
+.note{background:var(--surface2);border-left:3px solid var(--border);border-radius:0 4px 4px 0;padding:7px 12px;font-size:.78rem;color:var(--text2)}
+.note strong{color:var(--text1);font-weight:700}
+footer{border-top:1px solid var(--border);padding-top:20px;font-size:.7rem;color:var(--text3);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+footer a{color:var(--text3)}
+.tbtn{position:fixed;top:max(12px,env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));
+  width:34px;height:34px;border-radius:50%;border:1px solid var(--border);background:var(--surface);
+  color:var(--text1);cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;z-index:20}
+.ytabs{display:flex;gap:6px;flex-wrap:wrap}
+.ytab{padding:4px 12px;border-radius:6px;border:1.5px solid var(--border);background:var(--surface2);
+  font-size:.78rem;font-weight:600;cursor:pointer;color:var(--text2);transition:.15s}
+.ytab.active{background:var(--text1);color:var(--surface);border-color:var(--text1)}
+</style>
+
+</head>
+<body>
+<button class="tbtn" id="tbtn">🌙</button>
+
+<div class="wrap">
+  <div class="eyebrow">Elecciones Municipales · Valdés, Asturias</div>
+  <h1>Histórico Electoral<br>1979 – 2023</h1>
+  <p class="subtitle">12 convocatorias municipales desde la restauración democrática. Datos oficiales del Ministerio del Interior — votos exactos por partido y mesa.</p>
+
+  <div class="tiles">
+    <div class="tile red">
+      <div class="tile-val">6<span style="font-size:1rem">/12</span></div>
+      <div class="tile-lbl">Elecciones lideradas por PSOE</div>
+    </div>
+    <div class="tile">
+      <div class="tile-val">64,1%</div>
+      <div class="tile-lbl">Máximo PSOE (2011)</div>
+    </div>
+    <div class="tile">
+      <div class="tile-val" style="color:var(--text3)">−45%</div>
+      <div class="tile-lbl">Caída del censo 1987–2023</div>
+    </div>
+    <div class="tile blue">
+      <div class="tile-val">66,6%</div>
+      <div class="tile-lbl">Participación 2023</div>
+    </div>
+  </div>
+
+  <div class="chips" id="chipBar"></div>
+
+  <div class="card">
+    <div class="card-head">
+      <h2>Distribución del voto (%)</h2>
+      <span class="card-note">1979: sin datos de censo · % sobre votos a candidaturas · 1983: sin datos en el archivo digital del Ministerio</span>
+    </div>
+    <div class="chart-wrap" style="height:300px"><canvas id="c1"></canvas></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <h2>Concejales por partido</h2>
+      <span class="card-note">21 escaños hasta 1983 · 17 desde 1987</span>
+    </div>
+    <div class="chart-wrap" style="height:240px"><canvas id="c2"></canvas></div>
+  </div>
+
+  <div class="two-col">
+    <div class="card" style="margin-bottom:0">
+      <div class="card-head"><h2>Participación (%)</h2><span class="card-note">1987–2023</span></div>
+      <div class="chart-wrap" style="height:170px"><canvas id="c3"></canvas></div>
+    </div>
+    <div class="card" style="margin-bottom:0">
+      <div class="card-head">
+        <h2>Censo electoral</h2>
+        <span class="card-note">electores · 1987–2023</span>
+      </div>
+      <div class="chart-wrap" style="height:170px"><canvas id="c4"></canvas></div>
+    </div>
+  </div>
+  <div style="margin-bottom:20px"></div>
+
+  <!-- MESA BREAKDOWN -->
+  <div class="card">
+    <div class="card-head">
+      <h2>Voto por mesa</h2>
+      <div class="ytabs" id="ytabs">
+        <button class="ytab active" data-y="202305">2023</button>
+        <button class="ytab" data-y="201905">2019</button>
+        <button class="ytab" data-y="201505">2015</button>
+        <button class="ytab" data-y="201105">2011</button>
+        <button class="ytab" data-y="200705">2007</button>
+        <button class="ytab" data-y="200305">2003</button>
+        <button class="ytab" data-y="199906">1999</button>
+        <button class="ytab" data-y="199505">1995</button>
+        <button class="ytab" data-y="199105">1991</button>
+        <button class="ytab" data-y="198706">1987</button>
+      </div>
+    </div>
+    <span class="card-note" style="display:block;margin-bottom:12px">Mesas ordenadas de mayor a menor voto PSOE · hover para detalle · 2023: colegios electorales del BOPA</span>
+    <div class="chart-wrap" id="c5wrap" style="height:420px"><canvas id="c5"></canvas></div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-bottom:16px">Alcaldes desde la democracia</h2>
+    <div class="alc-grid" id="alcGrid"></div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-bottom:14px">Claves del histórico</h2>
+    <div class="notes">
+      <div class="note"><strong>1979:</strong> Primeras elecciones democráticas. UCD gana con el 43,9% y 10 de 21 concejales. Las candidaturas locales obtienen 8 escaños con el 38,2%. PSOE apenas el 12,7% y 2 concejales.</div>
+      <div class="note"><strong>1983:</strong> Sin datos en el archivo digital del Ministerio del Interior. El fichero de resultados municipales de ese año no incluye los municipios 001–056 de Asturias; Valdés (código 034) queda fuera. No hay segunda descarga disponible.</div>
+      <div class="note"><strong>1987:</strong> Cambio estructural: el PSOE se convierte en partido dominante con el 48% y 9 de 17 concejales (el concejo se reduce de 21 a 17 escaños). PP segundo con 34,7% y 6 concejales.</div>
+      <div class="note"><strong>1991–1995:</strong> El PSOE consolida la mayoría absoluta: 52,9% y 10/17 en 1991; 51% y 9/17 en 1995. PP mantiene entre 7 y 8 escaños pero sin alcanzar el gobierno.</div>
+      <div class="note"><strong>1999:</strong> La elección más ajustada del periodo: PP 45% vs PSOE 44,8% — dos décimas de diferencia — pero ambos empatan a 8 concejales. URAS debuta con el 6,5% y 1 escaño, árbitro del pleno.</div>
+      <div class="note"><strong>2003:</strong> Irrupción de URAS: sube al 26,4% y obtiene 5 concejales, convirtiéndose en la tercera fuerza. PSOE lidera con 7/17 (40,6%). PP y URAS sumaban mayoría (10/17) pero el PSOE formó gobierno.</div>
+      <div class="note"><strong>2007:</strong> Aplastante victoria socialista: 59,8% y 11 de 17 concejales. URAS colapsa a la irrelevancia. PP queda en 6 escaños.</div>
+      <div class="note"><strong>2011:</strong> FAC (partido de Francisco Álvarez Cascos) irrumpe con el 26,5% y 5 concejales. El PSOE baja a 7/17. Con FAC + PP + URAS + IU se alcanza mayoría alternativa (10/17): José Modesto Vallejo (FAC) se convierte en alcalde.</div>
+      <div class="note"><strong>2015:</strong> El PSOE recupera la alcaldía con 44,6% y 8/17 (mayoría). Alta fragmentación: PP 3, FAC 3, URAS 2, IU 1. Primera vez con cinco fuerzas en el pleno.</div>
+      <div class="note"><strong>2019:</strong> El PSOE mantiene la mayoría con 46,9% y 8/17. Ciudadanos sube como segunda fuerza con 24,9% y 4 concejales. PP baja a 3.</div>
+      <div class="note"><strong>2023:</strong> El PSOE logra su mejor resultado histórico en Valdés: 64,3% y 12 de 17 concejales — mayoría absoluta amplísima. PP segundo con 22,2% y 4 escaños. FAC retiene 1 escaño. Ciudadanos desaparece.</div>
+    </div>
+  </div>
+
+  <footer>
+    <span>Fuente: <a href="https://infoelectoral.interior.gob.es" target="_blank" rel="noopener">Ministerio del Interior — ficheros DAT desagregados por mesa</a></span>
+    <span>33setecientos · Octubre 2026</span>
+  </footer>
+</div>
+
+<script>
+const PORDER = ['psoe','pp','ucd','cds','local','uras','iu','fac','vox','cs'];
+const PLABELS = {
+  psoe:'PSOE', pp:'PP / AP', ucd:'UCD', cds:'CDS',
+  local:'Candidaturas locales', uras:'URAS', iu:'IU',
+  fac:'Foro Asturias', vox:'Vox', cs:'Ciudadanos',
+  otros:'Otros'
+};
+
+const EL = [
+  {y:1979,e:null, v:8018, p:null, vt:{"local":38.2,"ucd":43.9,"psoe":12.7,"pp":5.2},  si:{"local":8,"ucd":10,"psoe":2,"pp":1},  tot:21},
+  {y:1983,e:null, v:null, p:null, vt:{},  si:{},  tot:21},
+  {y:1987,e:14377, v:8883, p:61.8, vt:{"psoe":48.0,"pp":34.7,"otros":15.5,"iu":1.9},  si:{"psoe":9,"pp":6,"otros":2},  tot:17},
+  {y:1991,e:14515, v:8941, p:61.6, vt:{"psoe":52.9,"pp":39.8,"otros":5.1,"iu":2.1},  si:{"psoe":10,"pp":7},  tot:17},
+  {y:1995,e:14069, v:9304, p:66.1, vt:{"psoe":51.0,"pp":43.7,"iu":4.1,"otros":1.1},  si:{"psoe":9,"pp":8},  tot:17},
+  {y:1999,e:14650, v:9533, p:65.1, vt:{"pp":45.0,"psoe":44.8,"uras":6.5,"iu":2.3,"otros":1.5},  si:{"pp":8,"psoe":8,"uras":1},  tot:17},
+  {y:2003,e:14361, v:9153, p:63.7, vt:{"psoe":40.6,"pp":29.3,"uras":26.4,"iu":3.1,"otros":0.6},  si:{"psoe":7,"pp":5,"uras":5},  tot:17},
+  {y:2007,e:13839, v:8287, p:59.9, vt:{"psoe":59.8,"pp":30.1,"iu":4.5,"uras":0.5,"otros":5.0},  si:{"psoe":11,"pp":6},  tot:17},
+  {y:2011,e:11530, v:7691, p:66.7, vt:{"psoe":41.9,"fac":26.5,"pp":19.4,"uras":6.1,"iu":6.1},  si:{"psoe":7,"fac":5,"pp":3,"uras":1,"iu":1},  tot:17},
+  {y:2015,e:10847, v:6349, p:58.5, vt:{"psoe":44.6,"pp":16.4,"fac":15.6,"uras":13.5,"iu":9.9},  si:{"psoe":8,"pp":3,"fac":3,"uras":2,"iu":1},  tot:17},
+  {y:2019,e:10051, v:6468, p:64.4, vt:{"psoe":46.9,"cs":24.9,"pp":17.0,"fac":5.9,"otros":5.3},  si:{"psoe":8,"cs":4,"pp":3,"fac":1,"otros":1},  tot:17},
+  {y:2023,e:9570,  v:6160, p:64.4, vt:{"psoe":64.3,"pp":22.2,"fac":6.1,"iu":2.0,"vox":2.9,"cs":1.5,"otros":1.0},  si:{"psoe":12,"pp":4,"fac":1},  tot:17},
+];
+
+const ALCALDES = [
+  {period:'1979–1980',name:'Delfín Blanco Arias',          p:'UCD', k:'ucd' },
+  {period:'1980–1987',name:'Joaquín Morilla García-Cernuda',p:'UCD/AP',k:'pp'},
+  {period:'1987–2003',name:'Jesús Landeira Álvarez-Cascos',p:'PSOE',k:'psoe'},
+  {period:'2003–2011',name:'J.J.A. Fernández Pereiro',     p:'PSOE',k:'psoe'},
+  {period:'2011–2013',name:'José Modesto Vallejo',          p:'FAC',  k:'fac'},
+  {period:'2013–2019',name:'Simón Guardado Pérez',          p:'PSOE',k:'psoe'},
+  {period:'2019–',    name:'Óscar Pérez Suárez',            p:'PSOE',k:'psoe'},
+];
+
+// Datos de mesa: 1987–2023 (todos los años con datos desagregados)
+const MESA_DATA = {"198706":[{"id":"01-0001-A","sec":"01-0001","dist":"01","mesa":"A","censo":667,"part":70.2,"pcts":{"psoe":54.9,"pp":32.8,"iu":1.3,"otros":10.9}},{"id":"01-0002-A","sec":"01-0002","dist":"01","mesa":"A","censo":984,"part":70.5,"pcts":{"psoe":44.8,"pp":42.5,"iu":0.9,"otros":11.8}},{"id":"01-0003-A","sec":"01-0003","dist":"01","mesa":"A","censo":674,"part":73.1,"pcts":{"psoe":49.1,"pp":34.5,"iu":2.9,"otros":13.5}},{"id":"01-0004-A","sec":"01-0004","dist":"01","mesa":"A","censo":754,"part":68.3,"pcts":{"psoe":48.8,"pp":37.5,"iu":0.8,"otros":12.9}},{"id":"01-0004-B","sec":"01-0004","dist":"01","mesa":"B","censo":656,"part":70.3,"pcts":{"psoe":44.1,"pp":43.0,"iu":1.4,"otros":11.6}},{"id":"01-0005-A","sec":"01-0005","dist":"01","mesa":"A","censo":814,"part":54.1,"pcts":{"psoe":48.3,"pp":38.5,"iu":1.4,"otros":11.8}},{"id":"02-0001-A","sec":"02-0001","dist":"02","mesa":"A","censo":599,"part":57.4,"pcts":{"psoe":47.3,"pp":36.8,"iu":6.0,"otros":9.9}},{"id":"02-0002-A","sec":"02-0002","dist":"02","mesa":"A","censo":972,"part":53.5,"pcts":{"psoe":52.9,"pp":20.2,"iu":1.8,"otros":25.1}},{"id":"02-0002-B","sec":"02-0002","dist":"02","mesa":"B","censo":276,"part":60.1,"pcts":{"psoe":61.3,"pp":26.4,"iu":0.6,"otros":11.7}},{"id":"02-0003-A","sec":"02-0003","dist":"02","mesa":"A","censo":738,"part":44.6,"pcts":{"psoe":33.7,"pp":42.6,"iu":0.9,"otros":22.7}},{"id":"02-0004-A","sec":"02-0004","dist":"02","mesa":"A","censo":318,"part":34.9,"pcts":{"psoe":37.8,"pp":52.3,"iu":0.9,"otros":9.0}},{"id":"02-0004-B","sec":"02-0004","dist":"02","mesa":"B","censo":584,"part":42.1,"pcts":{"psoe":65.8,"pp":24.2,"iu":0.8,"otros":9.2}},{"id":"02-0005-A","sec":"02-0005","dist":"02","mesa":"A","censo":516,"part":84.9,"pcts":{"psoe":29.2,"pp":34.1,"iu":0.2,"otros":36.4}},{"id":"03-0001-A","sec":"03-0001","dist":"03","mesa":"A","censo":491,"part":61.5,"pcts":{"psoe":56.7,"pp":33.3,"iu":0.7,"otros":9.3}},{"id":"03-0002-A","sec":"03-0002","dist":"03","mesa":"A","censo":689,"part":57.0,"pcts":{"psoe":50.6,"pp":39.7,"iu":0.8,"otros":8.8}},{"id":"03-0003-A","sec":"03-0003","dist":"03","mesa":"A","censo":691,"part":69.0,"pcts":{"psoe":52.8,"pp":27.4,"iu":0.6,"otros":19.2}},{"id":"04-0001-A","sec":"04-0001","dist":"04","mesa":"A","censo":1047,"part":64.9,"pcts":{"psoe":52.0,"pp":40.4,"iu":1.2,"otros":6.4}},{"id":"04-0002-A","sec":"04-0002","dist":"04","mesa":"A","censo":505,"part":66.3,"pcts":{"psoe":47.1,"pp":42.6,"iu":5.1,"otros":5.1}},{"id":"04-0003-A","sec":"04-0003","dist":"04","mesa":"A","censo":433,"part":42.7,"pcts":{"psoe":42.3,"pp":10.4,"iu":1.1,"otros":46.2}},{"id":"04-0003-B","sec":"04-0003","dist":"04","mesa":"B","censo":367,"part":69.2,"pcts":{"psoe":32.1,"pp":2.8,"iu":1.6,"otros":63.5}},{"id":"05-0001-A","sec":"05-0001","dist":"05","mesa":"A","censo":238,"part":65.5,"pcts":{"psoe":73.7,"pp":5.1,"iu":17.3,"otros":3.8}},{"id":"05-0001-B","sec":"05-0001","dist":"05","mesa":"B","censo":238,"part":50.0,"pcts":{"psoe":71.2,"pp":23.7,"iu":2.5,"otros":2.5}},{"id":"05-0001-C","sec":"05-0001","dist":"05","mesa":"C","censo":226,"part":70.4,"pcts":{"psoe":32.9,"pp":17.1,"iu":9.5,"otros":40.5}},{"id":"05-0002-A","sec":"05-0002","dist":"05","mesa":"A","censo":436,"part":44.5,"pcts":{"psoe":29.5,"pp":65.3,"iu":0.5,"otros":4.7}},{"id":"05-0002-B","sec":"05-0002","dist":"05","mesa":"B","censo":206,"part":69.4,"pcts":{"psoe":35.0,"pp":62.2,"iu":0.7,"otros":2.1}},{"id":"05-0002-C","sec":"05-0002","dist":"05","mesa":"C","censo":258,"part":101.6,"pcts":{"psoe":57.3,"pp":40.5,"iu":1.1,"otros":1.1}}],"199105":[{"id":"01-0001-A","sec":"01-0001","dist":"01","mesa":"A","censo":923,"part":50.9,"pcts":{"psoe":53.7,"pp":28.8,"iu":1.7,"otros":15.7}},{"id":"01-0002-A","sec":"01-0002","dist":"01","mesa":"A","censo":969,"part":68.9,"pcts":{"psoe":48.7,"pp":38.6,"iu":1.2,"otros":11.5}},{"id":"01-0003-A","sec":"01-0003","dist":"01","mesa":"A","censo":688,"part":67.7,"pcts":{"psoe":49.3,"pp":39.6,"iu":3.3,"otros":7.8}},{"id":"01-0004-A","sec":"01-0004","dist":"01","mesa":"A","censo":773,"part":63.3,"pcts":{"psoe":43.5,"pp":47.6,"iu":2.5,"otros":6.4}},{"id":"01-0004-B","sec":"01-0004","dist":"01","mesa":"B","censo":680,"part":66.8,"pcts":{"psoe":45.5,"pp":43.4,"iu":2.7,"otros":8.4}},{"id":"01-0005-A","sec":"01-0005","dist":"01","mesa":"A","censo":812,"part":52.5,"pcts":{"psoe":50.8,"pp":40.6,"iu":1.4,"otros":7.1}},{"id":"02-0001-A","sec":"02-0001","dist":"02","mesa":"A","censo":589,"part":63.2,"pcts":{"psoe":51.4,"pp":38.9,"iu":3.0,"otros":6.8}},{"id":"02-0002-A","sec":"02-0002","dist":"02","mesa":"A","censo":949,"part":60.0,"pcts":{"psoe":40.6,"pp":49.0,"iu":3.2,"otros":7.2}},{"id":"02-0002-B","sec":"02-0002","dist":"02","mesa":"B","censo":270,"part":65.2,"pcts":{"psoe":64.0,"pp":35.4,"iu":0.6}},{"id":"02-0003-A","sec":"02-0003","dist":"02","mesa":"A","censo":736,"part":51.2,"pcts":{"psoe":27.6,"pp":70.2,"iu":0.8,"otros":1.3}},{"id":"02-0004-A","sec":"02-0004","dist":"02","mesa":"A","censo":314,"part":49.4,"pcts":{"psoe":52.6,"pp":47.4}},{"id":"02-0004-B","sec":"02-0004","dist":"02","mesa":"B","censo":560,"part":55.5,"pcts":{"psoe":79.4,"pp":20.3,"otros":0.3}},{"id":"02-0005-A","sec":"02-0005","dist":"02","mesa":"A","censo":515,"part":78.1,"pcts":{"psoe":44.8,"pp":48.7,"iu":3.1,"otros":3.4}},{"id":"03-0001-A","sec":"03-0001","dist":"03","mesa":"A","censo":676,"part":60.4,"pcts":{"psoe":48.2,"pp":47.9,"iu":2.7,"otros":1.2}},{"id":"03-0001-B","sec":"03-0001","dist":"03","mesa":"B","censo":474,"part":64.8,"pcts":{"psoe":51.2,"pp":43.5,"iu":2.7,"otros":2.7}},{"id":"03-0003-A","sec":"03-0003","dist":"03","mesa":"A","censo":693,"part":74.9,"pcts":{"psoe":51.8,"pp":44.3,"iu":1.2,"otros":2.7}},{"id":"04-0001-A","sec":"04-0001","dist":"04","mesa":"A","censo":1082,"part":63.1,"pcts":{"psoe":59.7,"pp":34.3,"iu":1.8,"otros":4.2}},{"id":"04-0002-A","sec":"04-0002","dist":"04","mesa":"A","censo":502,"part":62.9,"pcts":{"psoe":56.3,"pp":34.6,"iu":5.5,"otros":3.6}},{"id":"04-0003-A","sec":"04-0003","dist":"04","mesa":"A","censo":427,"part":36.3,"pcts":{"psoe":73.9,"pp":24.2,"otros":2.0}},{"id":"04-0003-B","sec":"04-0003","dist":"04","mesa":"B","censo":356,"part":66.0,"pcts":{"psoe":42.9,"pp":53.7,"iu":2.2,"otros":1.3}},{"id":"05-0001-A","sec":"05-0001","dist":"05","mesa":"A","censo":210,"part":66.7,"pcts":{"psoe":85.7,"pp":6.4,"iu":7.9}},{"id":"05-0001-B","sec":"05-0001","dist":"05","mesa":"B","censo":218,"part":62.4,"pcts":{"psoe":80.6,"pp":14.2,"iu":3.0,"otros":2.2}},{"id":"05-0001-C","sec":"05-0001","dist":"05","mesa":"C","censo":224,"part":69.6,"pcts":{"psoe":51.0,"pp":42.6,"iu":3.9,"otros":2.6}},{"id":"05-0002-A","sec":"05-0002","dist":"05","mesa":"A","censo":244,"part":61.1,"pcts":{"psoe":58.8,"pp":39.9,"iu":0.7,"otros":0.7}},{"id":"05-0002-B","sec":"05-0002","dist":"05","mesa":"B","censo":199,"part":70.4,"pcts":{"psoe":85.6,"pp":12.1,"iu":0.8,"otros":1.5}},{"id":"05-0002-C","sec":"05-0002","dist":"05","mesa":"C","censo":432,"part":60.6,"pcts":{"psoe":75.9,"pp":23.4,"iu":0.4,"otros":0.4}}],"199505":[{"id":"01-001-U","sec":"01-001","dist":"01","mesa":"U","censo":1012,"part":46.5,"pcts":{"psoe":55.8,"pp":40.1,"iu":3.2,"otros":0.9}},{"id":"01-002-U","sec":"01-002","dist":"01","mesa":"U","censo":822,"part":77.5,"pcts":{"psoe":46.1,"pp":49.4,"iu":4.0,"otros":0.5}},{"id":"01-003-U","sec":"01-003","dist":"01","mesa":"U","censo":879,"part":72.2,"pcts":{"psoe":48.3,"pp":45.1,"iu":5.5,"otros":1.1}},{"id":"01-004-A","sec":"01-004","dist":"01","mesa":"A","censo":735,"part":71.0,"pcts":{"psoe":39.6,"pp":53.6,"iu":5.8,"otros":1.0}},{"id":"01-004-B","sec":"01-004","dist":"01","mesa":"B","censo":647,"part":70.2,"pcts":{"psoe":43.1,"pp":50.8,"iu":5.6,"otros":0.4}},{"id":"01-005-U","sec":"01-005","dist":"01","mesa":"U","censo":1015,"part":58.2,"pcts":{"psoe":46.8,"pp":46.8,"iu":5.3,"otros":1.1}},{"id":"01-006-U","sec":"01-006","dist":"01","mesa":"U","censo":521,"part":82.9,"pcts":{"psoe":39.6,"pp":44.8,"iu":11.6,"otros":4.0}},{"id":"02-001-U","sec":"02-001","dist":"02","mesa":"U","censo":699,"part":58.4,"pcts":{"psoe":38.6,"pp":53.0,"iu":6.1,"otros":2.3}},{"id":"02-002-A","sec":"02-002","dist":"02","mesa":"A","censo":920,"part":67.8,"pcts":{"psoe":40.5,"pp":56.3,"iu":2.3,"otros":1.0}},{"id":"02-002-B","sec":"02-002","dist":"02","mesa":"B","censo":347,"part":58.5,"pcts":{"psoe":47.2,"pp":48.7,"iu":3.5,"otros":0.5}},{"id":"02-003-U","sec":"02-003","dist":"02","mesa":"U","censo":527,"part":60.2,"pcts":{"psoe":37.5,"pp":60.0,"iu":1.9,"otros":0.6}},{"id":"02-004-A","sec":"02-004","dist":"02","mesa":"A","censo":256,"part":47.7,"pcts":{"psoe":43.3,"pp":53.3,"iu":2.5,"otros":0.8}},{"id":"02-004-B","sec":"02-004","dist":"02","mesa":"B","censo":512,"part":58.4,"pcts":{"psoe":80.1,"pp":16.5,"iu":2.4,"otros":1.0}},{"id":"03-001-A","sec":"03-001","dist":"03","mesa":"A","censo":634,"part":63.7,"pcts":{"psoe":49.4,"pp":44.1,"iu":2.8,"otros":3.8}},{"id":"03-001-B","sec":"03-001","dist":"03","mesa":"B","censo":421,"part":68.4,"pcts":{"psoe":49.1,"pp":44.8,"iu":3.6,"otros":2.5}},{"id":"03-002-U","sec":"03-002","dist":"03","mesa":"U","censo":669,"part":80.9,"pcts":{"psoe":55.6,"pp":39.5,"iu":4.3,"otros":0.6}},{"id":"04-001-A","sec":"04-001","dist":"04","mesa":"A","censo":1044,"part":67.1,"pcts":{"psoe":55.4,"pp":41.1,"iu":3.2,"otros":0.3}},{"id":"04-001-B","sec":"04-001","dist":"04","mesa":"B","censo":449,"part":70.8,"pcts":{"psoe":57.6,"pp":39.2,"iu":2.8,"otros":0.3}},{"id":"04-003-A","sec":"04-003","dist":"04","mesa":"A","censo":296,"part":58.4,"pcts":{"psoe":77.3,"pp":19.6,"iu":0.6,"otros":2.5}},{"id":"04-003-B","sec":"04-003","dist":"04","mesa":"B","censo":307,"part":70.7,"pcts":{"psoe":47.7,"pp":51.9,"iu":0.5}},{"id":"05-001-U","sec":"05-001","dist":"05","mesa":"U","censo":603,"part":74.1,"pcts":{"psoe":74.4,"pp":20.4,"iu":4.1,"otros":1.1}},{"id":"05-002-A","sec":"05-002","dist":"05","mesa":"A","censo":378,"part":61.4,"pcts":{"psoe":64.1,"pp":31.2,"iu":3.9,"otros":0.9}},{"id":"05-002-B","sec":"05-002","dist":"05","mesa":"B","censo":376,"part":71.3,"pcts":{"psoe":67.9,"pp":31.7,"iu":0.4}}],"199906":[{"id":"01-001-U","sec":"01-001","dist":"01","mesa":"U","censo":1351,"part":37.4,"pcts":{"psoe":47.8,"pp":45.6,"iu":0.8,"uras":4.4,"otros":1.4}},{"id":"01-002-U","sec":"01-002","dist":"01","mesa":"U","censo":816,"part":73.2,"pcts":{"psoe":36.8,"pp":57.6,"iu":1.7,"uras":2.7,"otros":1.2}},{"id":"01-003-U","sec":"01-003","dist":"01","mesa":"U","censo":915,"part":74.1,"pcts":{"psoe":44.8,"pp":48.3,"iu":2.0,"uras":3.9,"otros":1.1}},{"id":"01-004-A","sec":"01-004","dist":"01","mesa":"A","censo":761,"part":71.2,"pcts":{"psoe":38.5,"pp":54.5,"iu":1.7,"uras":4.1,"otros":1.1}},{"id":"01-004-B","sec":"01-004","dist":"01","mesa":"B","censo":690,"part":71.6,"pcts":{"psoe":31.2,"pp":61.3,"iu":3.1,"uras":3.5,"otros":0.8}},{"id":"01-005-U","sec":"01-005","dist":"01","mesa":"U","censo":1165,"part":66.9,"pcts":{"psoe":38.3,"pp":51.1,"iu":1.6,"uras":5.2,"otros":3.8}},{"id":"01-006-U","sec":"01-006","dist":"01","mesa":"U","censo":578,"part":78.2,"pcts":{"psoe":34.5,"pp":38.1,"iu":2.4,"uras":22.3,"otros":2.7}},{"id":"02-001-U","sec":"02-001","dist":"02","mesa":"U","censo":706,"part":64.2,"pcts":{"psoe":38.0,"pp":50.6,"iu":1.6,"uras":9.2,"otros":0.7}},{"id":"02-002-A","sec":"02-002","dist":"02","mesa":"A","censo":934,"part":65.0,"pcts":{"psoe":41.5,"pp":54.1,"iu":0.3,"uras":3.0,"otros":1.0}},{"id":"02-002-B","sec":"02-002","dist":"02","mesa":"B","censo":368,"part":56.5,"pcts":{"psoe":42.0,"pp":51.0,"iu":0.5,"uras":5.5,"otros":1.0}},{"id":"02-003-U","sec":"02-003","dist":"02","mesa":"U","censo":514,"part":59.1,"pcts":{"psoe":23.4,"pp":70.4,"uras":6.2}},{"id":"02-004-A","sec":"02-004","dist":"02","mesa":"A","censo":242,"part":52.9,"pcts":{"psoe":34.1,"pp":58.7,"uras":7.1}},{"id":"02-004-B","sec":"02-004","dist":"02","mesa":"B","censo":496,"part":61.5,"pcts":{"psoe":59.7,"pp":19.5,"iu":0.3,"uras":19.5,"otros":1.0}},{"id":"03-001-A","sec":"03-001","dist":"03","mesa":"A","censo":626,"part":63.9,"pcts":{"psoe":46.3,"pp":44.0,"iu":3.1,"uras":4.1,"otros":2.6}},{"id":"03-001-B","sec":"03-001","dist":"03","mesa":"B","censo":434,"part":63.1,"pcts":{"psoe":45.9,"pp":44.7,"iu":2.3,"uras":5.6,"otros":1.5}},{"id":"03-002-U","sec":"03-002","dist":"03","mesa":"U","censo":692,"part":75.0,"pcts":{"psoe":58.9,"pp":32.1,"iu":3.3,"uras":2.3,"otros":3.3}},{"id":"04-001-A","sec":"04-001","dist":"04","mesa":"A","censo":1095,"part":66.5,"pcts":{"psoe":39.0,"pp":39.6,"iu":9.6,"uras":11.6,"otros":0.3}},{"id":"04-001-B","sec":"04-001","dist":"04","mesa":"B","censo":459,"part":70.4,"pcts":{"psoe":45.9,"pp":40.6,"iu":3.4,"uras":6.6,"otros":3.4}},{"id":"04-003-A","sec":"04-003","dist":"04","mesa":"A","censo":261,"part":65.9,"pcts":{"psoe":67.4,"pp":28.5,"iu":1.2,"uras":2.3,"otros":0.6}},{"id":"04-003-B","sec":"04-003","dist":"04","mesa":"B","censo":273,"part":70.3,"pcts":{"psoe":59.5,"pp":36.8,"iu":1.1,"uras":1.6,"otros":1.1}},{"id":"05-001-A","sec":"05-001","dist":"05","mesa":"A","censo":278,"part":79.1,"pcts":{"psoe":64.8,"pp":25.5,"iu":0.9,"uras":8.8}},{"id":"05-001-B","sec":"05-001","dist":"05","mesa":"B","censo":284,"part":71.1,"pcts":{"psoe":80.4,"pp":11.6,"iu":4.0,"uras":3.5,"otros":0.5}},{"id":"05-002-A","sec":"05-002","dist":"05","mesa":"A","censo":334,"part":59.3,"pcts":{"psoe":54.6,"pp":35.1,"iu":0.5,"uras":9.8}},{"id":"05-002-B","sec":"05-002","dist":"05","mesa":"B","censo":378,"part":66.9,"pcts":{"psoe":72.8,"pp":23.6,"iu":0.4,"uras":2.4,"otros":0.8}}],"200305":[{"id":"01-001-U","sec":"01-001","dist":"01","mesa":"U","censo":1826,"part":25.5,"pcts":{"psoe":47.8,"pp":32.7,"iu":3.3,"uras":15.4,"otros":0.9}},{"id":"01-002-U","sec":"01-002","dist":"01","mesa":"U","censo":735,"part":71.8,"pcts":{"psoe":40.7,"pp":38.6,"iu":2.1,"uras":17.5,"otros":1.2}},{"id":"01-003-U","sec":"01-003","dist":"01","mesa":"U","censo":917,"part":71.1,"pcts":{"psoe":49.1,"pp":27.8,"iu":1.9,"uras":20.2,"otros":0.9}},{"id":"01-004-A","sec":"01-004","dist":"01","mesa":"A","censo":680,"part":74.1,"pcts":{"psoe":49.3,"pp":30.0,"iu":2.0,"uras":16.9,"otros":1.8}},{"id":"01-004-B","sec":"01-004","dist":"01","mesa":"B","censo":608,"part":69.4,"pcts":{"psoe":45.8,"pp":37.3,"iu":2.9,"uras":13.0,"otros":1.0}},{"id":"01-005-A","sec":"01-005","dist":"01","mesa":"A","censo":675,"part":66.5,"pcts":{"psoe":42.3,"pp":27.7,"iu":3.0,"uras":25.6,"otros":1.4}},{"id":"01-005-B","sec":"01-005","dist":"01","mesa":"B","censo":594,"part":70.4,"pcts":{"psoe":38.9,"pp":34.5,"iu":3.2,"uras":22.9,"otros":0.5}},{"id":"01-006-U","sec":"01-006","dist":"01","mesa":"U","censo":546,"part":81.0,"pcts":{"psoe":36.2,"pp":35.0,"iu":5.8,"uras":23.0}},{"id":"02-001-U","sec":"02-001","dist":"02","mesa":"U","censo":688,"part":69.6,"pcts":{"psoe":30.2,"pp":33.0,"iu":3.6,"uras":32.8,"otros":0.4}},{"id":"02-002-A","sec":"02-002","dist":"02","mesa":"A","censo":915,"part":64.6,"pcts":{"psoe":37.5,"pp":26.1,"iu":1.0,"uras":34.8,"otros":0.5}},{"id":"02-002-B","sec":"02-002","dist":"02","mesa":"B","censo":339,"part":70.8,"pcts":{"psoe":37.1,"pp":21.9,"iu":0.4,"uras":40.5}},{"id":"02-002-C","sec":"02-002","dist":"02","mesa":"C","censo":480,"part":62.3,"pcts":{"psoe":18.1,"pp":35.6,"iu":0.7,"uras":45.6}},{"id":"02-004-A","sec":"02-004","dist":"02","mesa":"A","censo":221,"part":59.7,"pcts":{"psoe":13.6,"pp":18.2,"iu":1.5,"uras":66.7}},{"id":"02-004-B","sec":"02-004","dist":"02","mesa":"B","censo":450,"part":65.1,"pcts":{"psoe":37.8,"pp":18.9,"iu":0.7,"uras":42.6}},{"id":"03-001-A","sec":"03-001","dist":"03","mesa":"A","censo":582,"part":67.2,"pcts":{"psoe":35.8,"pp":26.1,"iu":9.7,"uras":28.2,"otros":0.3}},{"id":"03-001-B","sec":"03-001","dist":"03","mesa":"B","censo":397,"part":64.5,"pcts":{"psoe":31.5,"pp":26.6,"iu":6.5,"uras":35.5}},{"id":"03-002-U","sec":"03-002","dist":"03","mesa":"U","censo":639,"part":74.0,"pcts":{"psoe":43.7,"pp":35.9,"iu":3.7,"uras":15.8,"otros":0.9}},{"id":"04-001-A","sec":"04-001","dist":"04","mesa":"A","censo":612,"part":71.4,"pcts":{"psoe":45.2,"pp":34.0,"iu":4.7,"uras":15.4,"otros":0.7}},{"id":"04-001-B","sec":"04-001","dist":"04","mesa":"B","censo":399,"part":70.7,"pcts":{"psoe":42.5,"pp":30.8,"iu":8.8,"uras":17.2,"otros":0.7}},{"id":"04-001-C","sec":"04-001","dist":"04","mesa":"C","censo":428,"part":65.2,"pcts":{"psoe":35.6,"pp":23.6,"iu":1.5,"uras":37.8,"otros":1.5}},{"id":"04-001-D","sec":"04-001","dist":"04","mesa":"D","censo":241,"part":67.2,"pcts":{"psoe":59.3,"pp":26.5,"iu":1.2,"uras":12.3,"otros":0.6}},{"id":"04-001-E","sec":"04-001","dist":"04","mesa":"E","censo":241,"part":67.2,"pcts":{"psoe":45.1,"pp":31.5,"uras":23.5}},{"id":"05-001-A","sec":"05-001","dist":"05","mesa":"A","censo":251,"part":76.5,"pcts":{"psoe":36.3,"pp":12.6,"uras":51.1}},{"id":"05-001-B","sec":"05-001","dist":"05","mesa":"B","censo":275,"part":68.7,"pcts":{"psoe":47.3,"pp":10.6,"iu":4.8,"uras":37.2}},{"id":"05-002-A","sec":"05-002","dist":"05","mesa":"A","censo":280,"part":63.6,"pcts":{"psoe":41.8,"pp":19.4,"iu":2.4,"uras":36.5}},{"id":"05-002-B","sec":"05-002","dist":"05","mesa":"B","censo":342,"part":69.3,"pcts":{"psoe":51.7,"pp":19.0,"uras":28.9,"otros":0.4}}],"200705":[{"id":"01-001-U","sec":"01-001","dist":"01","mesa":"U","censo":2049,"part":21.2,"pcts":{"psoe":74.3,"pp":20.2,"iu":3.8,"uras":0.2,"otros":1.4}},{"id":"01-002-U","sec":"01-002","dist":"01","mesa":"U","censo":621,"part":71.0,"pcts":{"psoe":66.7,"pp":23.5,"iu":2.3,"uras":1.2,"otros":6.3}},{"id":"01-003-U","sec":"01-003","dist":"01","mesa":"U","censo":831,"part":67.3,"pcts":{"psoe":69.7,"pp":23.8,"iu":3.5,"uras":0.4,"otros":2.7}},{"id":"01-004-A","sec":"01-004","dist":"01","mesa":"A","censo":662,"part":68.9,"pcts":{"psoe":69.0,"pp":23.6,"iu":2.7,"uras":0.2,"otros":4.5}},{"id":"01-004-B","sec":"01-004","dist":"01","mesa":"B","censo":582,"part":69.8,"pcts":{"psoe":70.0,"pp":20.4,"iu":4.8,"uras":0.3,"otros":4.6}},{"id":"01-005-A","sec":"01-005","dist":"01","mesa":"A","censo":762,"part":66.1,"pcts":{"psoe":66.4,"pp":20.9,"iu":4.5,"uras":0.8,"otros":7.4}},{"id":"01-005-B","sec":"01-005","dist":"01","mesa":"B","censo":699,"part":66.1,"pcts":{"psoe":68.2,"pp":22.7,"iu":3.9,"uras":0.2,"otros":5.0}},{"id":"01-006-U","sec":"01-006","dist":"01","mesa":"U","censo":510,"part":78.4,"pcts":{"psoe":50.0,"pp":34.8,"iu":9.4,"uras":1.2,"otros":4.7}},{"id":"02-001-U","sec":"02-001","dist":"02","mesa":"U","censo":659,"part":70.3,"pcts":{"psoe":55.7,"pp":34.4,"iu":8.0,"uras":0.2,"otros":1.8}},{"id":"02-002-A","sec":"02-002","dist":"02","mesa":"A","censo":850,"part":63.5,"pcts":{"psoe":60.8,"pp":32.4,"iu":2.8,"uras":0.6,"otros":3.4}},{"id":"02-002-B","sec":"02-002","dist":"02","mesa":"B","censo":340,"part":67.4,"pcts":{"psoe":61.9,"pp":28.3,"iu":1.3,"otros":8.4}},{"id":"02-002-C","sec":"02-002","dist":"02","mesa":"C","censo":420,"part":59.0,"pcts":{"psoe":57.4,"pp":37.2,"iu":2.1,"otros":3.3}},{"id":"02-004-A","sec":"02-004","dist":"02","mesa":"A","censo":236,"part":53.8,"pcts":{"psoe":34.4,"pp":47.2,"iu":8.8,"otros":9.6}},{"id":"02-004-B","sec":"02-004","dist":"02","mesa":"B","censo":409,"part":56.2,"pcts":{"psoe":44.1,"pp":50.7,"iu":0.4,"uras":1.3,"otros":3.5}},{"id":"03-001-A","sec":"03-001","dist":"03","mesa":"A","censo":530,"part":63.4,"pcts":{"psoe":52.6,"pp":35.5,"iu":6.2,"uras":0.6,"otros":5.0}},{"id":"03-001-B","sec":"03-001","dist":"03","mesa":"B","censo":372,"part":61.8,"pcts":{"psoe":46.4,"pp":43.6,"iu":7.3,"uras":0.5,"otros":2.3}},{"id":"03-002-U","sec":"03-002","dist":"03","mesa":"U","censo":568,"part":73.9,"pcts":{"psoe":44.0,"pp":37.5,"iu":6.8,"uras":1.3,"otros":10.4}},{"id":"04-001-A","sec":"04-001","dist":"04","mesa":"A","censo":561,"part":67.6,"pcts":{"psoe":51.5,"pp":31.1,"iu":6.1,"uras":1.4,"otros":9.9}},{"id":"04-001-B","sec":"04-001","dist":"04","mesa":"B","censo":387,"part":62.5,"pcts":{"psoe":52.1,"pp":38.0,"iu":4.3,"uras":0.4,"otros":5.1}},{"id":"04-001-C","sec":"04-001","dist":"04","mesa":"C","censo":377,"part":66.6,"pcts":{"psoe":48.5,"pp":41.8,"iu":6.8,"otros":3.0}},{"id":"04-001-D","sec":"04-001","dist":"04","mesa":"D","censo":239,"part":67.8,"pcts":{"psoe":73.9,"pp":19.3,"iu":3.1,"otros":3.7}},{"id":"05-001-A","sec":"05-001","dist":"05","mesa":"A","censo":379,"part":73.4,"pcts":{"psoe":59.6,"pp":35.6,"iu":1.9,"uras":0.7,"otros":2.2}},{"id":"05-001-B","sec":"05-001","dist":"05","mesa":"B","censo":259,"part":63.7,"pcts":{"psoe":62.3,"pp":22.7,"iu":9.7,"uras":0.6,"otros":4.5}},{"id":"05-001-C","sec":"05-001","dist":"05","mesa":"C","censo":249,"part":55.8,"pcts":{"psoe":48.2,"pp":33.8,"iu":0.7,"otros":17.3}},{"id":"05-001-D","sec":"05-001","dist":"05","mesa":"D","censo":288,"part":64.2,"pcts":{"psoe":61.2,"pp":31.7,"iu":1.6,"otros":5.5}}],"201105":[{"id":"01-001-U","sec":"01-001","dist":"01","mesa":"U","censo":523,"part":72.7,"pcts":{"psoe":48.3,"pp":26.0,"iu":5.0,"uras":1.1,"fac":19.6}},{"id":"01-002-U","sec":"01-002","dist":"01","mesa":"U","censo":554,"part":68.4,"pcts":{"psoe":37.6,"pp":28.9,"iu":4.3,"uras":2.4,"fac":26.8}},{"id":"01-003-U","sec":"01-003","dist":"01","mesa":"U","censo":792,"part":67.3,"pcts":{"psoe":48.8,"pp":22.6,"iu":8.8,"uras":3.3,"fac":16.5}},{"id":"01-004-A","sec":"01-004","dist":"01","mesa":"A","censo":597,"part":72.0,"pcts":{"psoe":47.6,"pp":22.1,"iu":4.6,"uras":1.9,"fac":23.8}},{"id":"01-004-B","sec":"01-004","dist":"01","mesa":"B","censo":526,"part":66.9,"pcts":{"psoe":50.7,"pp":20.8,"iu":5.0,"uras":1.5,"fac":22.0}},{"id":"01-005-A","sec":"01-005","dist":"01","mesa":"A","censo":763,"part":61.9,"pcts":{"psoe":38.9,"pp":15.6,"iu":12.6,"uras":4.3,"fac":28.6}},{"id":"01-005-B","sec":"01-005","dist":"01","mesa":"B","censo":731,"part":62.2,"pcts":{"psoe":40.0,"pp":20.2,"iu":7.2,"uras":2.6,"fac":30.0}},{"id":"01-006-A","sec":"01-006","dist":"01","mesa":"A","censo":495,"part":78.2,"pcts":{"psoe":43.8,"pp":23.2,"iu":6.8,"uras":5.1,"fac":21.1}},{"id":"01-006-B","sec":"01-006","dist":"01","mesa":"B","censo":483,"part":64.2,"pcts":{"psoe":33.9,"pp":20.1,"iu":3.4,"uras":10.1,"fac":32.6}},{"id":"01-006-C","sec":"01-006","dist":"01","mesa":"C","censo":364,"part":69.0,"pcts":{"psoe":34.6,"pp":21.4,"iu":6.2,"uras":6.6,"fac":31.3}},{"id":"02-001-U","sec":"02-001","dist":"02","mesa":"U","censo":612,"part":66.3,"pcts":{"psoe":43.2,"pp":20.9,"iu":5.5,"uras":2.3,"fac":28.1}},{"id":"02-002-A","sec":"02-002","dist":"02","mesa":"A","censo":811,"part":65.8,"pcts":{"psoe":38.0,"pp":21.8,"iu":3.9,"uras":3.7,"fac":32.8}},{"id":"02-002-B","sec":"02-002","dist":"02","mesa":"B","censo":331,"part":66.5,"pcts":{"psoe":44.2,"pp":24.7,"iu":0.9,"uras":0.9,"fac":29.3}},{"id":"02-002-C","sec":"02-002","dist":"02","mesa":"C","censo":369,"part":62.9,"pcts":{"psoe":47.2,"pp":14.4,"iu":2.2,"fac":36.2}},{"id":"02-004-A","sec":"02-004","dist":"02","mesa":"A","censo":216,"part":53.2,"pcts":{"psoe":18.3,"pp":22.9,"iu":1.8,"uras":3.7,"fac":53.2}},{"id":"02-004-B","sec":"02-004","dist":"02","mesa":"B","censo":364,"part":51.9,"pcts":{"psoe":43.0,"pp":15.6,"iu":2.7,"uras":10.8,"fac":28.0}},{"id":"03-002-U","sec":"03-002","dist":"03","mesa":"U","censo":530,"part":73.4,"pcts":{"psoe":34.9,"pp":13.4,"iu":5.6,"uras":23.6,"fac":22.5}},{"id":"04-001-A","sec":"04-001","dist":"04","mesa":"A","censo":518,"part":69.5,"pcts":{"psoe":35.6,"pp":18.5,"iu":5.9,"uras":14.4,"fac":25.6}},{"id":"04-001-B","sec":"04-001","dist":"04","mesa":"B","censo":374,"part":69.8,"pcts":{"psoe":38.3,"pp":15.7,"iu":6.0,"uras":12.1,"fac":27.8}},{"id":"04-001-C","sec":"04-001","dist":"04","mesa":"C","censo":344,"part":66.3,"pcts":{"psoe":35.9,"pp":13.9,"iu":4.9,"uras":20.2,"fac":25.1}},{"id":"04-001-D","sec":"04-001","dist":"04","mesa":"D","censo":213,"part":72.3,"pcts":{"psoe":63.1,"pp":12.1,"iu":8.1,"uras":1.3,"fac":15.4}},{"id":"05-001-A","sec":"05-001","dist":"05","mesa":"A","censo":337,"part":68.8,"pcts":{"psoe":51.3,"pp":15.8,"iu":10.5,"uras":5.7,"fac":16.7}},{"id":"05-001-B","sec":"05-001","dist":"05","mesa":"B","censo":230,"part":64.3,"pcts":{"psoe":46.5,"pp":8.5,"iu":16.2,"uras":4.9,"fac":23.9}},{"id":"05-001-C","sec":"05-001","dist":"05","mesa":"C","censo":214,"part":60.3,"pcts":{"psoe":21.3,"pp":8.7,"iu":11.8,"uras":21.3,"fac":37.0}},{"id":"05-001-D","sec":"05-001","dist":"05","mesa":"D","censo":239,"part":60.7,"pcts":{"psoe":57.1,"pp":5.0,"iu":1.4,"uras":0.7,"fac":35.7}}],"201505":[{"id":"01-001-A","sec":"01-001","dist":"01","mesa":"A","censo":488,"part":59.4,"pcts":{"psoe":44.6,"pp":22.7,"iu":7.8,"uras":4.5,"fac":20.4}},{"id":"01-001-B","sec":"01-001","dist":"01","mesa":"B","censo":496,"part":63.7,"pcts":{"psoe":42.3,"pp":25.3,"iu":12.3,"uras":5.7,"fac":14.3}},{"id":"01-003-U","sec":"01-003","dist":"01","mesa":"U","censo":738,"part":62.3,"pcts":{"psoe":45.7,"pp":20.0,"iu":12.0,"uras":8.7,"fac":13.6}},{"id":"01-004-A","sec":"01-004","dist":"01","mesa":"A","censo":524,"part":63.0,"pcts":{"psoe":46.2,"pp":25.7,"iu":5.9,"uras":4.3,"fac":17.8}},{"id":"01-004-B","sec":"01-004","dist":"01","mesa":"B","censo":523,"part":55.1,"pcts":{"psoe":40.4,"pp":25.8,"iu":8.5,"uras":4.6,"fac":20.8}},{"id":"01-005-A","sec":"01-005","dist":"01","mesa":"A","censo":761,"part":56.1,"pcts":{"psoe":47.1,"pp":12.1,"iu":10.5,"uras":11.8,"fac":18.4}},{"id":"01-005-B","sec":"01-005","dist":"01","mesa":"B","censo":734,"part":54.5,"pcts":{"psoe":44.8,"pp":15.4,"iu":12.1,"uras":8.2,"fac":19.5}},{"id":"01-006-A","sec":"01-006","dist":"01","mesa":"A","censo":488,"part":71.7,"pcts":{"psoe":48.9,"pp":20.5,"iu":10.3,"uras":5.4,"fac":14.8}},{"id":"01-006-B","sec":"01-006","dist":"01","mesa":"B","censo":809,"part":58.3,"pcts":{"psoe":39.1,"pp":13.8,"iu":8.0,"uras":20.7,"fac":18.4}},{"id":"01-006-C","sec":"01-006","dist":"01","mesa":"C","censo":490,"part":66.1,"pcts":{"psoe":29.3,"pp":11.8,"iu":8.1,"uras":31.6,"fac":19.2}},{"id":"02-001-U","sec":"02-001","dist":"02","mesa":"U","censo":579,"part":58.4,"pcts":{"psoe":48.7,"pp":17.9,"iu":7.5,"uras":13.3,"fac":12.7}},{"id":"02-002-A","sec":"02-002","dist":"02","mesa":"A","censo":777,"part":51.7,"pcts":{"psoe":38.4,"pp":18.5,"iu":11.2,"uras":8.7,"fac":23.2}},{"id":"02-002-B","sec":"02-002","dist":"02","mesa":"B","censo":319,"part":60.5,"pcts":{"psoe":45.9,"pp":13.8,"iu":8.8,"uras":9.4,"fac":22.1}},{"id":"02-002-C","sec":"02-002","dist":"02","mesa":"C","censo":333,"part":58.3,"pcts":{"psoe":59.1,"pp":15.1,"iu":2.2,"uras":7.5,"fac":16.1}},{"id":"02-004-A","sec":"02-004","dist":"02","mesa":"A","censo":204,"part":42.2,"pcts":{"psoe":40.5,"pp":17.9,"uras":19.0,"fac":22.6}},{"id":"02-004-B","sec":"02-004","dist":"02","mesa":"B","censo":320,"part":47.2,"pcts":{"psoe":50.0,"pp":6.8,"iu":20.9,"uras":16.2,"fac":6.1}},{"id":"04-001-A","sec":"04-001","dist":"04","mesa":"A","censo":834,"part":61.6,"pcts":{"psoe":42.3,"pp":12.3,"iu":16.8,"uras":23.2,"fac":5.3}},{"id":"04-001-B","sec":"04-001","dist":"04","mesa":"B","censo":324,"part":60.2,"pcts":{"psoe":34.2,"pp":12.5,"iu":9.2,"uras":29.3,"fac":14.7}},{"id":"05-001-A","sec":"05-001","dist":"05","mesa":"A","censo":814,"part":55.2,"pcts":{"psoe":52.1,"pp":9.1,"iu":10.0,"uras":22.2,"fac":6.5}},{"id":"05-001-B","sec":"05-001","dist":"05","mesa":"B","censo":292,"part":58.2,"pcts":{"psoe":60.7,"pp":8.9,"iu":1.2,"uras":15.5,"fac":13.7}}],"201905":[{"id":"01-001-A","sec":"01-001","dist":"01","mesa":"A","censo":432,"part":67.1,"pcts":{"psoe":40.1,"pp":18.7,"cs":32.7,"fac":4.2,"otros":4.2}},{"id":"01-001-B","sec":"01-001","dist":"01","mesa":"B","censo":491,"part":66.6,"pcts":{"psoe":42.2,"pp":19.3,"cs":29.2,"fac":2.2,"otros":7.1}},{"id":"01-003-U","sec":"01-003","dist":"01","mesa":"U","censo":704,"part":66.8,"pcts":{"psoe":49.0,"pp":18.4,"cs":24.7,"fac":2.4,"otros":5.4}},{"id":"01-004-A","sec":"01-004","dist":"01","mesa":"A","censo":503,"part":69.2,"pcts":{"psoe":39.8,"pp":23.7,"cs":29.5,"fac":4.1,"otros":2.9}},{"id":"01-004-B","sec":"01-004","dist":"01","mesa":"B","censo":452,"part":69.0,"pcts":{"psoe":43.0,"pp":23.6,"cs":27.5,"fac":2.9,"otros":2.9}},{"id":"01-005-A","sec":"01-005","dist":"01","mesa":"A","censo":878,"part":62.9,"pcts":{"psoe":49.6,"pp":15.1,"cs":26.9,"fac":3.7,"otros":4.7}},{"id":"01-005-B","sec":"01-005","dist":"01","mesa":"B","censo":791,"part":64.9,"pcts":{"psoe":47.4,"pp":11.9,"cs":30.4,"fac":4.4,"otros":5.8}},{"id":"01-006-A","sec":"01-006","dist":"01","mesa":"A","censo":469,"part":78.9,"pcts":{"psoe":47.8,"pp":19.9,"cs":24.9,"fac":3.0,"otros":4.4}},{"id":"01-006-B","sec":"01-006","dist":"01","mesa":"B","censo":736,"part":63.0,"pcts":{"psoe":44.2,"pp":19.6,"cs":28.4,"fac":3.1,"otros":4.8}},{"id":"01-006-C","sec":"01-006","dist":"01","mesa":"C","censo":448,"part":64.5,"pcts":{"psoe":39.0,"pp":18.1,"cs":22.4,"fac":10.1,"otros":10.5}},{"id":"02-001-U","sec":"02-001","dist":"02","mesa":"U","censo":551,"part":64.8,"pcts":{"psoe":34.4,"pp":18.2,"cs":24.7,"fac":15.9,"otros":6.8}},{"id":"02-002-A","sec":"02-002","dist":"02","mesa":"A","censo":712,"part":60.5,"pcts":{"psoe":45.8,"pp":13.7,"cs":27.4,"fac":7.5,"otros":5.7}},{"id":"02-002-B","sec":"02-002","dist":"02","mesa":"B","censo":287,"part":71.1,"pcts":{"psoe":39.8,"pp":18.9,"cs":32.3,"fac":5.5,"otros":3.5}},{"id":"02-002-C","sec":"02-002","dist":"02","mesa":"C","censo":302,"part":50.3,"pcts":{"psoe":56.3,"pp":30.5,"cs":7.9,"fac":5.3}},{"id":"04-001-A","sec":"04-001","dist":"04","mesa":"A","censo":772,"part":63.6,"pcts":{"psoe":50.3,"pp":16.6,"cs":19.5,"fac":5.2,"otros":8.5}},{"id":"04-001-B","sec":"04-001","dist":"04","mesa":"B","censo":289,"part":57.4,"pcts":{"psoe":50.0,"pp":11.7,"cs":27.8,"fac":6.2,"otros":4.3}},{"id":"05-001-A","sec":"05-001","dist":"05","mesa":"A","censo":706,"part":62.5,"pcts":{"psoe":61.2,"pp":6.6,"cs":15.5,"fac":10.7,"otros":5.9}},{"id":"05-001-B","sec":"05-001","dist":"05","mesa":"B","censo":260,"part":56.9,"pcts":{"psoe":52.4,"pp":17.2,"cs":6.9,"fac":20.7,"otros":2.8}},{"id":"05-001-C","sec":"05-001","dist":"05","mesa":"C","censo":268,"part":53.4,"pcts":{"psoe":70.6,"pp":9.8,"cs":13.3,"fac":3.5,"otros":2.8}}],"202305":[{"id":"01-001-A","sec":"01-001","dist":"01","mesa":"A","censo":391,"part":65.0,"pcts":{"psoe":59.0,"pp":25.5,"vox":4.2,"iu":2.5,"cs":0.4,"fac":3.8,"otros":4.6}},{"id":"01-001-B","sec":"01-001","dist":"01","mesa":"B","censo":446,"part":61.0,"pcts":{"psoe":59.8,"pp":28.9,"vox":2.3,"iu":2.3,"cs":1.1,"fac":3.4,"otros":2.3}},{"id":"01-003-U","sec":"01-003","dist":"01","mesa":"U","censo":673,"part":63.2,"pcts":{"psoe":65.9,"pp":20.9,"vox":1.9,"iu":2.4,"cs":1.5,"fac":4.9,"otros":2.4}},{"id":"01-004-A","sec":"01-004","dist":"01","mesa":"A","censo":507,"part":65.9,"pcts":{"psoe":60.4,"pp":28.5,"vox":3.1,"iu":0.3,"cs":1.5,"fac":4.6,"otros":1.5}},{"id":"01-004-B","sec":"01-004","dist":"01","mesa":"B","censo":450,"part":66.7,"pcts":{"psoe":61.8,"pp":23.6,"vox":4.2,"iu":2.1,"cs":2.8,"fac":4.9,"otros":0.7}},{"id":"01-005-A","sec":"01-005","dist":"01","mesa":"A","censo":843,"part":62.0,"pcts":{"psoe":62.4,"pp":22.7,"vox":3.8,"iu":2.0,"cs":2.0,"fac":5.6,"otros":1.4}},{"id":"01-005-B","sec":"01-005","dist":"01","mesa":"B","censo":779,"part":60.5,"pcts":{"psoe":66.1,"pp":21.2,"vox":2.2,"iu":1.3,"cs":3.3,"fac":4.0,"otros":1.8}},{"id":"01-006-A","sec":"01-006","dist":"01","mesa":"A","censo":478,"part":74.7,"pcts":{"psoe":52.5,"pp":38.4,"vox":2.9,"iu":2.6,"cs":0.3,"fac":2.6,"otros":0.6}},{"id":"01-006-B","sec":"01-006","dist":"01","mesa":"B","censo":718,"part":63.5,"pcts":{"psoe":67.9,"pp":20.4,"vox":2.5,"iu":0.7,"cs":1.1,"fac":7.5}},{"id":"01-006-C","sec":"01-006","dist":"01","mesa":"C","censo":428,"part":65.2,"pcts":{"psoe":63.5,"pp":20.7,"vox":5.5,"iu":2.6,"cs":2.6,"fac":4.1,"otros":1.1}},{"id":"02-001-U","sec":"02-001","dist":"02","mesa":"U","censo":517,"part":62.5,"pcts":{"psoe":54.3,"pp":17.9,"vox":2.9,"iu":3.2,"fac":20.4,"otros":1.3}},{"id":"02-002-A","sec":"02-002","dist":"02","mesa":"A","censo":697,"part":66.4,"pcts":{"psoe":70.7,"pp":20.5,"vox":1.8,"iu":1.6,"cs":0.7,"fac":4.7}},{"id":"02-002-B","sec":"02-002","dist":"02","mesa":"B","censo":271,"part":69.4,"pcts":{"psoe":66.3,"pp":28.3,"cs":0.5,"fac":4.3,"otros":0.5}},{"id":"02-002-C","sec":"02-002","dist":"02","mesa":"C","censo":267,"part":58.8,"pcts":{"psoe":73.2,"pp":21.7,"iu":1.3,"fac":3.8}},{"id":"04-001-A","sec":"04-001","dist":"04","mesa":"A","censo":732,"part":65.8,"pcts":{"psoe":63.2,"pp":21.3,"vox":3.2,"iu":3.6,"cs":3.6,"fac":5.1}},{"id":"04-001-B","sec":"04-001","dist":"04","mesa":"B","censo":266,"part":54.9,"pcts":{"psoe":60.6,"pp":18.2,"vox":5.8,"iu":6.6,"cs":4.4,"fac":4.4}},{"id":"05-001-A","sec":"05-001","dist":"05","mesa":"A","censo":631,"part":66.2,"pcts":{"psoe":72.4,"pp":13.0,"vox":2.4,"iu":2.0,"cs":0.2,"fac":9.5,"otros":0.5}},{"id":"05-001-B","sec":"05-001","dist":"05","mesa":"B","censo":228,"part":65.8,"pcts":{"psoe":65.1,"pp":13.7,"vox":6.2,"fac":15.1}},{"id":"05-001-C","sec":"05-001","dist":"05","mesa":"C","censo":248,"part":65.3,"pcts":{"psoe":79.4,"pp":13.1,"vox":1.9,"fac":5.6}}]};
+
+// ── THEME ──
+let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const tbtn = document.getElementById('tbtn');
+function applyTheme(){document.documentElement.dataset.theme=dark?'dark':'light';tbtn.textContent=dark?'☀':'🌙'}
+tbtn.addEventListener('click',()=>{dark=!dark;applyTheme();rebuildAll()});
+applyTheme();
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function pColor(k){return css(`--c-${k}`)}
+
+// ── ACTIVE PARTIES ──
+const active=new Set(PORDER);
+function buildChips(){
+  const bar=document.getElementById('chipBar');
+  bar.innerHTML='';
+  PORDER.forEach(k=>{
+    const b=document.createElement('button');
+    b.className='chip'+(active.has(k)?'':' off');
+    b.innerHTML=`<span class="chip-dot" style="background:${pColor(k)}"></span>${PLABELS[k]}`;
+    b.addEventListener('click',()=>{active.has(k)?active.delete(k):active.add(k);b.classList.toggle('off');rebuildAll()});
+    bar.appendChild(b);
+  });
+}
+
+// ── CHART HELPERS ──
+function tc(){return{t1:css('--text1'),t2:css('--text2'),t3:css('--text3'),bd:css('--border'),sf:css('--surface')}}
+function baseOpts(t){
+  return{
+    responsive:true,maintainAspectRatio:false,animation:{duration:250},
+    plugins:{
+      legend:{display:false},
+      tooltip:{backgroundColor:t.sf,titleColor:t.t1,bodyColor:t.t2,borderColor:t.bd,borderWidth:1,padding:10,
+        titleFont:{family:"'Libre Baskerville',serif",weight:'bold',size:13},
+        bodyFont:{family:"'Source Sans 3',sans-serif",size:12},
+        callbacks:{label:i=>i.raw>0?` ${i.dataset.label}: ${i.raw}`:null}
+      }
+    },
+    scales:{
+      x:{ticks:{color:t.t2,font:{size:12}},grid:{display:false},border:{color:t.bd}},
+      y:{ticks:{color:t.t2,font:{size:11}},grid:{color:t.bd+'50'},border:{color:t.bd}}
+    }
+  }
+}
+let charts={};
+function destroyAll(){Object.values(charts).forEach(c=>c&&c.destroy());charts={}}
+
+function buildC1(){
+  const t=tc();
+  const ds=PORDER.filter(k=>active.has(k)).map(k=>({
+    label:PLABELS[k],data:EL.map(e=>+(e.vt[k]??0).toFixed(1)),
+    backgroundColor:pColor(k),borderColor:t.sf,borderWidth:1.5,stack:'s'
+  })).filter(d=>d.data.some(v=>v>0));
+  const opts=baseOpts(t);
+  charts.c1=new Chart(document.getElementById('c1').getContext('2d'),{
+    type:'bar',data:{labels:EL.map(e=>e.y.toString()),datasets:ds},
+    options:{...opts,
+      scales:{x:{...opts.scales.x,stacked:true},y:{...opts.scales.y,stacked:true,max:100,ticks:{...opts.scales.y.ticks,callback:v=>v+'%'}}},
+      plugins:{...opts.plugins,tooltip:{...opts.plugins.tooltip,callbacks:{
+        title:ii=>{const e=EL[ii[0].dataIndex];return`${e.y}${e.p?'  ·  part. '+e.p+'%':'  ·  sin datos'}${e.e?'  ·  censo '+e.e.toLocaleString('es-ES'):''}`;},
+        label:i=>i.raw>0?` ${i.dataset.label}: ${i.raw.toFixed(1)}%`:null
+      }}}
+    }
+  });
+}
+
+function buildC2(){
+  const t=tc();
+  const ds=PORDER.filter(k=>active.has(k)).map(k=>({
+    label:PLABELS[k],data:EL.map(e=>e.si[k]??0),
+    backgroundColor:pColor(k),borderColor:t.sf,borderWidth:1.5,stack:'s'
+  })).filter(d=>d.data.some(v=>v>0));
+  const opts=baseOpts(t);
+  charts.c2=new Chart(document.getElementById('c2').getContext('2d'),{
+    type:'bar',data:{labels:EL.map(e=>e.y.toString()),datasets:ds},
+    options:{...opts,
+      scales:{x:{...opts.scales.x,stacked:true},y:{...opts.scales.y,stacked:true,max:23,ticks:{...opts.scales.y.ticks,stepSize:5}}},
+      plugins:{...opts.plugins,tooltip:{...opts.plugins.tooltip,callbacks:{
+        title:ii=>`${EL[ii[0].dataIndex].y}  ·  ${EL[ii[0].dataIndex].tot} concejales en total`,
+        label:i=>i.raw>0?` ${i.dataset.label}: ${i.raw} concejales`:null
+      }}}
+    }
+  });
+}
+
+function buildC3(){
+  const t=tc(),data=EL.filter(e=>e.p!==null);
+  const opts=baseOpts(t);
+  charts.c3=new Chart(document.getElementById('c3').getContext('2d'),{
+    type:'line',data:{labels:data.map(e=>e.y.toString()),datasets:[{
+      label:'Participación',data:data.map(e=>e.p),borderColor:t.t1,backgroundColor:t.t1+'22',
+      borderWidth:2.5,pointRadius:5,pointHoverRadius:7,pointBackgroundColor:t.sf,
+      pointBorderColor:t.t1,pointBorderWidth:2,tension:0.3,fill:true
+    }]},
+    options:{...opts,scales:{x:opts.scales.x,y:{...opts.scales.y,min:50,max:75,ticks:{...opts.scales.y.ticks,callback:v=>v+'%'}}},
+      plugins:{...opts.plugins,tooltip:{...opts.plugins.tooltip,callbacks:{
+        title:ii=>data[ii[0].dataIndex].y.toString(),label:i=>` Participación: ${i.raw}%`
+      }}}
+    }
+  });
+}
+
+function buildC4(){
+  const t=tc(),data=EL.filter(e=>e.e!==null),ppC=pColor('pp');
+  const opts=baseOpts(t);
+  charts.c4=new Chart(document.getElementById('c4').getContext('2d'),{
+    type:'bar',data:{labels:data.map(e=>e.y.toString()),datasets:[{
+      label:'Electores',data:data.map(e=>e.e),backgroundColor:ppC+'55',borderColor:ppC,
+      borderWidth:1.5,borderRadius:2,borderSkipped:false
+    }]},
+    options:{...opts,scales:{x:opts.scales.x,y:{...opts.scales.y,ticks:{...opts.scales.y.ticks,callback:v=>(v/1000).toFixed(0)+'k'}}},
+      plugins:{...opts.plugins,tooltip:{...opts.plugins.tooltip,callbacks:{
+        title:ii=>data[ii[0].dataIndex].y.toString(),label:i=>` Censo: ${i.raw.toLocaleString('es-ES')} electores`
+      }}}
+    }
+  });
+}
+
+// ── MESA CHART ──
+let activeYear='202305';
+const MESA_PARTIES=['psoe','pp','vox','iu','cs','uras','fac','otros'];
+
+// Colegios electorales — fuente BOPA Asturias. Clave: dist-sec-mesa (ej. "01-001-A").
+// 2023/2019: BOPA nº67/68. 2015: BOPA nº78 2015. 2011: BOPA nº78 2011.
+// 01-003-U = mesa CERA (votantes ausentes residentes en el extranjero).
+const COLEGIOS={
+  '202305':{'01-001-A':'Casa del Mar','01-001-B':'Casa del Mar','01-003-U':'C. Padre Galo (CERA)','01-004-A':'C. Padre Galo','01-004-B':'C. Padre Galo','01-005-A':'C. Ramón Muñoz','01-005-B':'C. Ramón Muñoz','01-006-A':'Escuelas de Barcia','01-006-B':'Cámara Agraria Canero','01-006-C':'Escuelas de Cadavedo','02-001-U':'Escuelas de Otur','02-002-A':'Escuelas de Moanes','02-002-B':'N. Escuela de Setienes','02-002-C':'Escuelas de Belén','04-001-A':'Colegio EGB Trevías','04-001-B':'Escuelas de Villanueva','05-001-A':'Escuelas de Muñas','05-001-B':'Telecentro de Ayones','05-001-C':'Escuelas de Paredes'},
+  '201905':{'01-001-A':'Casa del Mar','01-001-B':'Casa del Mar','01-003-U':'C. Padre Galo (CERA)','01-004-A':'C. Padre Galo','01-004-B':'C. Padre Galo','01-005-A':'C. Ramón Muñoz','01-005-B':'C. Ramón Muñoz','01-006-A':'Escuelas de Barcia','01-006-B':'Cámara Agraria Canero','01-006-C':'Escuelas de Cadavedo','02-001-U':'Escuelas de Otur','02-002-A':'Escuelas de Moanes','02-002-B':'N. Escuela de Setienes','02-002-C':'Escuelas de Belén','04-001-A':'Colegio EGB Trevías','04-001-B':'Escuelas de Villanueva','05-001-A':'Escuelas de Muñas','05-001-B':'Telecentro de Ayones','05-001-C':'Escuelas de Paredes'},
+  '201505':{'01-001-A':'Casa del Mar','01-001-B':'Casa del Mar','01-003-U':'C. Padre Galo (CERA)','01-004-A':'C. Padre Galo','01-004-B':'C. Padre Galo','01-005-A':'C. Ramón Muñoz','01-005-B':'C. Ramón Muñoz','01-006-A':'Escuelas de Barcia','01-006-B':'Cámara Agraria Canero','01-006-C':'Escuelas de Cadavedo','02-001-U':'Escuelas de Otur','02-002-A':'Escuelas de Moanes','02-002-B':'N. Escuela de Setienes','02-002-C':'Escuelas de Belén','02-004-A':'Ramón Muñoz·Luarca','02-004-B':'Escuelas de Paredes','04-001-A':'Colegio EGB Trevías','04-001-B':'Escuelas de Villanueva','05-001-A':'Escuelas de Muñas','05-001-B':'Telecentro de Ayones'},
+  '201105':{'01-001-U':'Casa del Mar','01-002-U':'Casa del Mar','01-003-U':'C. Padre Galo (CERA)','01-004-A':'C. Padre Galo','01-004-B':'C. Padre Galo','01-005-A':'C. Ramón Muñoz','01-005-B':'C. Ramón Muñoz','01-006-A':'Escuelas de Barcia','01-006-B':'Cámara Agraria Canero (A-K)','01-006-C':'Cámara Agraria Canero (L-Z)','02-001-U':'Escuelas de Otur','02-002-A':'Escuelas de Moanes','02-002-B':'N. Escuela de Setienes','02-002-C':'Escuelas de Belén','02-004-A':'Ramón Muñoz·Luarca','02-004-B':'Escuelas de Paredes','03-002-U':'Escuelas de Cadavedo','04-001-A':'Colegio EGB Trevías','04-001-B':'Colegio EGB Trevías','04-001-C':'Escuelas de Villanueva','04-001-D':'Escuelas de Arcallana','05-001-A':'Escuelas de Muñas','05-001-B':'Escuelas de Carcedo','05-001-C':'Escuelas de Castañedo','05-001-D':'Telecentro de Ayones'},
+};
+// Zonas geográficas — fallback por dist-sec para años sin BOPA
+const ZONAS={
+  '200705':{'01-001':'Luarca','01-002':'Luarca','01-003':'Luarca','01-004':'Luarca','01-005':'Luarca','01-006':'Barcia·Costa','02-001':'Otur','02-002':'Setienes·Montaña','02-004':'Paredes','03-001':'Costa','03-002':'Cadavedo','04-001':'Trevías','05-001':'Interior'},
+  '200305':{'01-001':'Luarca','01-002':'Luarca','01-003':'Luarca','01-004':'Luarca','01-005':'Luarca','01-006':'Barcia·Costa','02-001':'Otur','02-002':'Setienes·Montaña','02-004':'Paredes','03-001':'Costa','03-002':'Cadavedo','04-001':'Trevías','05-001':'Interior'},
+  '199906':{'01-001':'Luarca','01-002':'Luarca','01-003':'Luarca','01-004':'Luarca','01-005':'Barcia·Costa','01-006':'Costa','02-001':'Otur','02-002':'Setienes·Montaña','02-003':'Rural','02-004':'Paredes','03-001':'Costa','03-002':'Cadavedo','04-001':'Trevías','04-003':'Trevías·Interior','05-001':'Interior','05-002':'Interior'},
+  '199505':{'01-001':'Luarca','01-002':'Luarca','01-003':'Luarca','01-004':'Luarca','01-005':'Barcia·Costa','01-006':'Costa','02-001':'Otur','02-002':'Setienes·Montaña','02-003':'Rural','02-004':'Paredes','03-001':'Costa','03-002':'Cadavedo','04-001':'Trevías','04-003':'Trevías·Interior','05-001':'Interior','05-002':'Interior'},
+  '199105':{'01-0001':'Luarca','01-0002':'Luarca','01-0003':'Luarca','01-0004':'Luarca','01-0005':'Barcia·Costa','02-0001':'Otur','02-0002':'Setienes·Montaña','02-0003':'Costa','02-0004':'Paredes','02-0005':'Luarca','03-0001':'Costa','03-0003':'Cadavedo','04-0001':'Trevías','04-0002':'Trevías','04-0003':'Trevías','05-0001':'Interior','05-0002':'Interior'},
+  '198706':{'01-0001':'Luarca','01-0002':'Luarca','01-0003':'Luarca','01-0004':'Luarca','01-0005':'Barcia·Costa','02-0001':'Otur','02-0002':'Setienes·Montaña','02-0003':'Costa','02-0004':'Paredes','02-0005':'Luarca','03-0001':'Costa','03-0002':'Cadavedo','03-0003':'Costa','04-0001':'Trevías','04-0002':'Trevías','04-0003':'Trevías','05-0001':'Interior','05-0002':'Interior'},
+};
+function mesaLabel(year,m){
+  const col=(COLEGIOS[year]||{})[m.id];
+  if(col) return col;
+  const z=(ZONAS[year]||{})[m.sec];
+  if(z) return z;
+  const dn={'01':'Luarca','02':'Costa·Montaña','03':'Cadavedo','04':'Trevías','05':'Interior'};
+  return dn[m.dist]||'D'+m.dist;
+}
+
+function buildC5(){
+  const t=tc();
+  const data=[...MESA_DATA[activeYear]].sort((a,b)=>(b.pcts.psoe||0)-(a.pcts.psoe||0));
+  const labels=data.map(m=>`${m.sec}·${m.mesa}  ${mesaLabel(activeYear,m)}`);
+  const ds=MESA_PARTIES.map(k=>({
+    label:PLABELS[k]||k,
+    data:data.map(m=>+(m.pcts[k]??0).toFixed(1)),
+    backgroundColor:pColor(k),borderColor:t.sf,borderWidth:1,stack:'s'
+  })).filter(d=>d.data.some(v=>v>0));
+
+  // Ajustar altura según número de mesas (mínimo 300px, ~20px por mesa)
+  document.getElementById('c5wrap').style.height=Math.max(300, data.length*20+40)+'px';
+
+  const opts=baseOpts(t);
+  charts.c5=new Chart(document.getElementById('c5').getContext('2d'),{
+    type:'bar',data:{labels,datasets:ds},
+    options:{...opts,
+      indexAxis:'y',
+      scales:{
+        x:{...opts.scales.x,stacked:true,max:100,ticks:{...opts.scales.x.ticks,callback:v=>v+'%'},grid:{color:t.bd+'50',display:true}},
+        y:{...opts.scales.y,stacked:true,ticks:{...opts.scales.y.ticks,font:{size:11}}}
+      },
+      plugins:{...opts.plugins,tooltip:{...opts.plugins.tooltip,callbacks:{
+        title:ii=>{const m=data[ii[0].dataIndex];return`${mesaLabel(activeYear,m)} · Mesa ${m.id}  ·  censo ${m.censo}  ·  part. ${m.part}%`},
+        label:i=>i.raw>0?` ${i.dataset.label}: ${i.raw.toFixed(1)}%`:null
+      }}}
+    }
+  });
+}
+
+function buildAlcGrid(){
+  document.getElementById('alcGrid').innerHTML=ALCALDES.map(a=>
+    `<div class="alc-item"><div class="alc-period">${a.period}</div><div class="alc-name">${a.name}</div><span class="badge" style="background:${pColor(a.k)}">${a.p}</span>${a.note?`<div style="font-size:.65rem;color:var(--text3);margin-top:4px">${a.note}</div>`:''}</div>`
+  ).join('');
+}
+
+function rebuildAll(){
+  destroyAll();buildChips();buildAlcGrid();
+  buildC1();buildC2();buildC3();buildC4();buildC5();
+}
+
+// Tabs año mesa
+document.getElementById('ytabs').addEventListener('click',e=>{
+  const btn=e.target.closest('.ytab');
+  if(!btn)return;
+  document.querySelectorAll('.ytab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  activeYear=btn.dataset.y;
+  if(charts.c5){charts.c5.destroy();delete charts.c5}
+  buildC5();
+});
+
+document.fonts.ready.then(rebuildAll);
+</script>
+</body>
+</html>

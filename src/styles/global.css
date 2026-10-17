@@ -132,5 +132,5 @@ p { margin: 0 0 1em; }
   text-transform: uppercase;
   letter-spacing: 0.05em;
   background: color-mix(in srgb, var(--teal) 15%, transparent);
-  color: var(--teal2);
+  color: var(--navy);
 }

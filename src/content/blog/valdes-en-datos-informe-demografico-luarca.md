@@ -9,7 +9,7 @@ draft: false
 
 Llevamos tiempo trabajando con negocios de Valdés y siempre hemos tomado decisiones con los datos que teníamos a mano: temporada alta, cliente local, comportamiento en buscadores. Pero nunca habíamos juntado en un sitio todos los datos públicos disponibles sobre el concejo.
 
-Eso es lo que hemos hecho. Y el resultado nos ha sorprendido en algunos puntos.
+Eso es lo que hemos hecho: un [informe interactivo con datos del INE y SADEI](https://33setecientos.com/valdes-en-datos/) sobre demografía, turismo y tejido empresarial. Y el resultado nos ha sorprendido en algunos puntos.
 
 **El número que más impacta: 430**
 

@@ -1,7 +1,7 @@
 # 33setecientos — Web
 
 Sitio web de la agencia 33setecientos.  
-**Stack:** Astro + Cloudflare Pages · **Coste de hosting:** 0 €
+**Stack:** Astro + Vercel · **Coste de hosting:** 0 €
 
 ## Desarrollo local
 
@@ -16,48 +16,25 @@ npm run preview   # sirve dist/ localmente
 
 ```
 src/
-  components/     # Header, Footer, SEO, etc.
+  components/     # Header, Footer, SEO, CookieBanner, etc.
   content/
     blog/         # Posts del blog en Markdown
   layouts/        # BaseLayout, BlogPostLayout
   pages/          # Rutas → HTML estático
   styles/         # global.css (design tokens)
 public/
-  _redirects      # Redirects Cloudflare Pages
-  _headers        # Response headers
-  fonts/          # Inter self-hosted
   images/         # Logos, hero, servicios
+  fonts/          # Inter self-hosted
+vercel.json       # Redirects 301 + security headers + cache headers
 ```
 
-## Añadir un post al blog
+## Variables de entorno
 
-Crear `src/content/blog/YYYY-MM-DD-slug.md` con este frontmatter:
-
-```markdown
----
-title: "Título del artículo"
-description: "Meta description (150–160 caracteres)"
-pubDate: 2026-11-01
-heroImage: /images/blog/nombre-imagen.jpg
-tags: [marketing, luarca]
----
-
-Contenido en Markdown...
-```
-
-El slug de la URL será el nombre del fichero sin la fecha y sin `.md`.  
-Ejemplo: `2026-11-01-marketing-otono-luarca.md` → `/marketing-otono-luarca/`
+| Variable | Descripción |
+|---|---|
+| `PUBLIC_WEB3FORMS_KEY` | Clave de acceso Web3Forms para los formularios de contacto |
 
 ## Deploy
 
-Cada push a `main` despliega automáticamente en Cloudflare Pages.  
-Preview URL: `https://33setecientos-web.pages.dev`  
-Producción: `https://33setecientos.com` (tras el cambio DNS)
-
-## Decisiones de arquitectura
-
-- **Astro** sobre WordPress: Lighthouse 90+ garantizado, sin plugins, blog en Markdown
-- **Cloudflare Pages** sobre Webempresa: CDN global, free tier, 0 €/año
-- **Inter self-hosted** vía `@fontsource/inter`: elimina petición DNS a Google Fonts
-- **Schema en HTML estático**: no depende de GTM ni JS para los rich results
-- **`_redirects` nativo**: solo 1 redirect necesario (`/politica-privacidad-2/`)
+Conectado a GitHub (`main` branch). Cada push despliega automáticamente en Vercel.  
+Dominio: **33setecientos.com**

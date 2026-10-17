@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import ServiceIcon from '../components/ServiceIcon.astro';
+import { Image } from 'astro:assets';
+import logoImg from '../assets/logos/logo.png';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -76,11 +78,13 @@ const stats = [
         </div>
       </div>
       <div class="hero-image">
-        <img
-          src="/images/logos/logo.png"
+        <Image
+          src={logoImg}
           alt="33setecientos — Agencia de Marketing Digital en Luarca"
-          width="420"
-          height="420"
+          width={420}
+          height={420}
+          format="webp"
+          quality={90}
           fetchpriority="high"
           loading="eager"
         />
@@ -265,7 +269,7 @@ const stats = [
   .case-card:hover { transform: translateY(-3px); }
   .case-card h3 { color: var(--navy); font-size: 1.05rem; margin-bottom: 0.5rem; }
   .case-card p { color: var(--grey); font-size: 0.9rem; margin-bottom: 0.75rem; }
-  .link-arrow { color: var(--teal2); font-weight: 600; font-size: 0.9rem; }
+  .link-arrow { color: var(--navy); font-weight: 600; font-size: 0.9rem; }
 
   /* CTA */
   .cta-center { text-align: center; }

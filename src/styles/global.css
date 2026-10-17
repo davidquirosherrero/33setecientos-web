@@ -130,3 +130,7 @@ p { margin: 0 0 1em; }
   background: color-mix(in srgb, var(--teal) 15%, transparent);
   color: var(--navy);
 }
+.section--navy .badge {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.15);
+}

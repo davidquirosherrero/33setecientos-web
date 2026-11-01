@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<title>Búsquedas en Luarca</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+
+<style>
+:root {
+  --navy:  #1A2B6B;
+  --teal:  #4DC9B0;
+  --teal2: #3BB99E;
+  --light: #F4F6FB;
+  --dark:  #1A1A2E;
+  --grey:  #6B7280;
+  --lgrey: #E5E7EB;
+  --white: #ffffff;
+  --shadow: 0 2px 16px rgba(26,43,107,0.10);
+  --radius: 10px;
+  --font: 'Inter', system-ui, sans-serif;
+  --section-py: clamp(3rem, 6vw, 5rem);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --light: #1e2a45;
+    --dark: #e8edf8;
+    --lgrey: #2d3a5a;
+    --grey: #9aa5c0;
+    --white: #1a2236;
+    --shadow: 0 2px 16px rgba(0,0,0,0.35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --light: #1e2a45;
+  --dark: #e8edf8;
+  --lgrey: #2d3a5a;
+  --grey: #9aa5c0;
+  --white: #1a2236;
+  --shadow: 0 2px 16px rgba(0,0,0,0.35);
+  color-scheme: dark;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-family:var(--font);color:var(--dark);background:var(--white);scroll-behavior:smooth}
+body{background:var(--white);line-height:1.6}
+img,video{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{line-height:1.2;font-weight:700}
+
+.wrap{
+  max-width:1160px;
+  margin-inline:auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+
+/* ── HEADER ── */
+.site-header{
+  background:var(--navy);
+  padding-block:.9rem;
+  position:sticky;top:0;z-index:50;
+}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-weight:800;font-size:1.05rem;color:var(--teal);letter-spacing:-.01em}
+.header-cta{
+  background:var(--teal);color:var(--navy);font-weight:700;font-size:.8rem;
+  padding:.45em 1.1em;border-radius:6px;white-space:nowrap;
+  transition:background .15s;
+}
+.header-cta:hover{background:var(--teal2)}
+
+/* ── HERO ── */
+.hero{
+  background:var(--navy);
+  color:#fff;
+  padding-block:clamp(3.5rem,8vw,6rem) clamp(3rem,6vw,4.5rem);
+  text-align:center;
+}
+.hero-eyebrow{
+  display:inline-block;
+  background:rgba(77,201,176,.18);
+  color:var(--teal);
+  font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:.35em 1em;border-radius:99px;margin-bottom:1.2rem;
+}
+.hero h1{font-size:clamp(1.9rem,5vw,3.2rem);font-weight:800;color:#fff;max-width:680px;margin-inline:auto;margin-bottom:1rem;text-wrap:balance}
+.hero h1 span{color:var(--teal)}
+.hero-sub{font-size:clamp(.95rem,2.2vw,1.1rem);color:rgba(255,255,255,.72);max-width:540px;margin-inline:auto;margin-bottom:2.2rem}
+.stat-row{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-bottom:2.8rem}
+.stat-chip{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:99px;padding:.5em 1.2em;
+  display:flex;align-items:center;gap:.5rem;
+}
+.stat-chip .num{font-size:1.3rem;font-weight:800;color:var(--teal)}
+.stat-chip .lbl{font-size:.8rem;color:rgba(255,255,255,.75)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
+.btn{
+  display:inline-flex;align-items:center;gap:.4em;
+  padding:.75em 1.6em;border-radius:8px;font-weight:700;font-size:.9rem;
+  transition:background .15s,transform .1s;cursor:pointer;border:none;text-decoration:none;
+}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{background:var(--light)}
+.btn-outline{background:transparent;border:2px solid var(--teal);color:var(--teal)}
+.btn-outline:hover{background:var(--teal);color:var(--navy)}
+
+/* ── SECTIONS ── */
+.section{padding-block:var(--section-py)}
+.section--light{background:var(--light)}
+.section--white{background:var(--white)}
+.section-label{
+  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--teal);margin-bottom:.6rem;
+}
+.section h2{font-size:clamp(1.4rem,3.5vw,2.1rem);margin-bottom:.5rem;color:var(--dark)}
+.section-intro{color:var(--grey);max-width:560px;margin-bottom:2.5rem;font-size:.95rem}
+
+/* ── CARDS ── */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.2rem}
+.cat-card{
+  background:var(--white);
+  border-radius:var(--radius);
+  border:1px solid var(--lgrey);
+  box-shadow:var(--shadow);
+  padding:1.4rem 1.4rem 1.2rem;
+  display:flex;flex-direction:column;gap:.7rem;
+  transition:transform .15s,box-shadow .15s;
+}
+.cat-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(26,43,107,.14)}
+.cat-header{display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem}
+.card-icon{width:18px;height:18px;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;fill:none;flex-shrink:0;color:var(--grey)}
+.competition-badge{
+  font-size:.65rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  padding:.25em .65em;border-radius:99px;white-space:nowrap;
+}
+.comp-low{background:rgba(52,211,153,.18);color:#059669}
+.comp-high{background:rgba(251,113,133,.18);color:#be123c}
+.comp-mixed{background:rgba(167,139,250,.18);color:#7c3aed}
+.cat-name{font-size:.78rem;font-weight:600;color:var(--grey);text-transform:uppercase;letter-spacing:.04em}
+.cat-volume{font-size:2rem;font-weight:800;color:var(--navy);line-height:1;font-variant-numeric:tabular-nums}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .cat-volume{color:var(--teal)}
+}
+:root[data-theme="dark"] .cat-volume{color:var(--teal)}
+.cat-vol-label{font-size:.75rem;color:var(--grey);margin-top:.1rem}
+.cat-note{font-size:.72rem;color:var(--grey);font-style:italic;line-height:1.4}
+.sparkline-wrap{height:34px;margin-top:.2rem}
+
+/* ── CHART ── */
+.chart-container{background:var(--white);border-radius:var(--radius);border:1px solid var(--lgrey);box-shadow:var(--shadow);padding:1.6rem 1.4rem 1.2rem}
+.chart-title{font-size:1.05rem;font-weight:700;color:var(--dark);margin-bottom:.3rem}
+.chart-subtitle{font-size:.82rem;color:var(--grey);margin-bottom:1.4rem}
+.chart-canvas-wrap{position:relative;width:100%;height:320px}
+.chart-legend{display:flex;flex-wrap:wrap;gap:.6rem .9rem;margin-top:1.1rem}
+.legend-item{display:flex;align-items:center;gap:.4rem;cursor:pointer;user-select:none;padding:.25rem .5rem;border-radius:4px;transition:opacity .15s}
+.legend-item.hidden{opacity:.35}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.legend-label{font-size:.76rem;font-weight:600;color:var(--dark)}
+
+/* ── BUSINESS CARDS ── */
+.biz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1.1rem}
+.biz-card{
+  background:var(--white);
+  border-radius:var(--radius);
+  border:1px solid var(--lgrey);
+  box-shadow:var(--shadow);
+  padding:1.2rem 1.3rem 1rem;
+  display:flex;flex-direction:column;gap:.6rem;
+  transition:transform .15s,box-shadow .15s;
+}
+.biz-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(26,43,107,.14)}
+.biz-header{display:flex;align-items:center;gap:.55rem}
+.biz-name{font-size:.87rem;font-weight:700;color:var(--dark);line-height:1.25}
+.biz-cat{font-size:.7rem;color:var(--grey);font-style:italic}
+.biz-volume{font-size:1.7rem;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.biz-vol-label{font-size:.72rem;color:var(--grey);margin-top:.05rem}
+
+/* ── INSIGHTS ── */
+.insights-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem}
+.insight-card{
+  background:var(--white);
+  border-radius:var(--radius);
+  border-left:4px solid var(--teal);
+  box-shadow:var(--shadow);
+  padding:1.4rem 1.5rem;
+}
+.insight-num{font-size:1.9rem;font-weight:800;color:var(--teal);line-height:1;margin-bottom:.3rem}
+.insight-title{font-weight:700;color:var(--dark);margin-bottom:.4rem;font-size:.97rem}
+.insight-body{font-size:.84rem;color:var(--grey);line-height:1.55}
+
+/* ── CTA ── */
+.cta-section{background:var(--teal);color:var(--navy);padding-block:clamp(3rem,6vw,4.5rem);text-align:center}
+.cta-section .section-label{color:var(--navy);opacity:.6}
+.cta-section h2{color:var(--navy);font-size:clamp(1.5rem,4vw,2.2rem);max-width:580px;margin-inline:auto;margin-bottom:.8rem;text-wrap:balance}
+.cta-section p{color:var(--navy);opacity:.75;max-width:480px;margin-inline:auto;margin-bottom:2rem;font-size:.95rem}
+.cta-buttons{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:#142259}
+.btn-navy-outline{background:transparent;border:2px solid var(--navy);color:var(--navy)}
+.btn-navy-outline:hover{background:var(--navy);color:#fff}
+
+/* ── FOOTER ── */
+.footer{background:var(--navy);color:rgba(255,255,255,.5);padding-block:1.8rem;font-size:.78rem;text-align:center}
+.footer a{color:var(--teal)}
+.footer strong{color:rgba(255,255,255,.9)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .stat-row{gap:.6rem}
+  .stat-chip .num{font-size:1.1rem}
+  .chart-canvas-wrap{height:220px}
+  .cards-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:380px){
+  .cards-grid{grid-template-columns:1fr}
+}
+</style>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="logo">33setecientos</span>
+    <a href="https://33setecientos.com/contacto/" class="header-cta">Contactar</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">Análisis de búsquedas · Luarca, Asturias</div>
+    <h1>Cuánto busca Google<br><span>tu negocio en Luarca</span></h1>
+    <p class="hero-sub">Cada mes, más de 75.000 personas buscan Luarca en Google. Solo una parte llega a los negocios locales. ¿Sabes cuánta llega al tuyo?</p>
+    <div class="stat-row">
+      <div class="stat-chip"><span class="num">+75.000</span><span class="lbl">búsquedas/mes sobre Luarca</span></div>
+      <div class="stat-chip"><span class="num">~13.000</span><span class="lbl">buscan un negocio concreto</span></div>
+      <div class="stat-chip"><span class="num">5</span><span class="lbl">sectores analizados</span></div>
+    </div>
+    <div class="hero-ctas">
+      <a href="https://33setecientos.com/contacto/" class="btn btn-white">Ver mis datos personalizados</a>
+      <a href="https://wa.me/34984681133" class="btn btn-outline">WhatsApp · 984 68 11 33</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="wrap">
+    <div class="section-label">Por sector</div>
+    <h2>Volumen de búsquedas por categoría</h2>
+    <p class="section-intro">Media mensual de búsquedas relacionadas con negocios de Luarca según Google Keyword Planner. Datos ene – dic 2026.</p>
+    <div class="cards-grid" id="cards-grid"></div>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="wrap">
+    <div class="section-label">Estacionalidad</div>
+    <h2>Curvas por sector (12 meses)</h2>
+    <p class="section-intro">Cada línea es un sector. Haz clic en la leyenda para aislar sectores y comparar sus picos estacionales.</p>
+    <div class="chart-container">
+      <div class="chart-title">Búsquedas mensuales totales por sector</div>
+      <div class="chart-subtitle">Suma de keywords representativas · ene – dic 2026</div>
+      <div class="chart-canvas-wrap"><canvas id="main-chart"></canvas></div>
+      <div class="chart-legend" id="chart-legend"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="wrap">
+    <div class="section-label">Marca propia</div>
+    <h2>Negocios que la gente busca por su nombre</h2>
+    <p class="section-intro">13 negocios del concejo de Valdés con más de 200 búsquedas mensuales por su propio nombre. La gente los busca directamente — no busca "restaurante luarca" o "hotel luarca": busca a ellos.</p>
+    <div class="biz-grid" id="biz-grid"></div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="wrap">
+    <div class="section-label">Insights</div>
+    <h2>Lo que dicen los datos</h2>
+    <p class="section-intro">Tres conclusiones que cambian cómo deberías planificar tu presencia en Google.</p>
+    <div class="insights-grid">
+      <div class="insight-card">
+        <div class="insight-num">+125%</div>
+        <div class="insight-title">Septiembre supera a agosto</div>
+        <p class="insight-body">"Restaurante Luarca" alcanza 5.400 búsquedas en septiembre frente a 1.000 en febrero. El pico turístico real llega al final del verano, no al principio. Quien prepara su presencia en primavera llega antes que la demanda.</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-num">14×</div>
+        <div class="insight-title">El poder de las playas</div>
+        <p class="insight-body">"Playas de Luarca" va de 590 búsquedas en diciembre a 8.100 en agosto y septiembre. Es el término con mayor volumen y mayor variación estacional de toda la comarca. Una web sin presencia en esas fechas pierde la ola.</p>
+      </div>
+      <div class="insight-card">
+        <div class="insight-num">3.600</div>
+        <div class="insight-title">Una pastelería supera a sectores enteros</div>
+        <p class="insight-body">Pastelería Cabo Busto genera 3.600 búsquedas mensuales por su nombre — más que toda la Alimentación o Salud & Bienestar combinadas. No buscan "pastelería luarca": buscan directamente a ellos. Así de potente es construir marca en Google.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="wrap">
+    <div class="section-label">Tu negocio</div>
+    <h2>¿Cuántas búsquedas captura <em>tu</em> negocio?</h2>
+    <p>Estos son los datos sectoriales. Los de tu negocio concreto —nombre, servicios, competidores— son otra historia. Te los mostramos en una sesión gratuita de 30 minutos.</p>
+    <div class="cta-buttons">
+      <a href="https://33setecientos.com/contacto/" class="btn btn-navy">Solicitar análisis gratuito</a>
+      <a href="https://wa.me/34984681133" class="btn btn-navy-outline">WhatsApp · 984 68 11 33</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>Datos extraídos de <strong>Google Keyword Planner</strong> · Luarca, Asturias · ene – dic 2026<br>
+    Informe elaborado por <strong><a href="https://33setecientos.com">33setecientos</a></strong> · Agencia de marketing digital local · Luarca</p>
+  </div>
+</footer>
+
+<script>
+const MONTHS = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+
+// Datos originales nov→oct reordenados a ene→dic (índices: 2,3,4,5,6,7,8,9,10,11,0,1)
+const SECTORS = [
+  {
+    name:'Restaurantes & Bares',icon:'utensils',avgMonthly:6400,competition:'BAJA',compClass:'comp-low',
+    note:null,color:'#4DC9B0',
+    monthly:[4090,2950,4530,6670,7260,5150,6170,9840,12900,7250,6690,4090]
+  },
+  {
+    name:'Alojamiento',icon:'bed',avgMonthly:3230,competition:'ALTA',compClass:'comp-high',
+    note:null,color:'#5B8DEF',
+    monthly:[980,2040,2250,2790,2860,3250,4440,6580,6340,2500,1720,940]
+  },
+  {
+    name:'Ocio & Turismo',icon:'compass',avgMonthly:2990,competition:'MIXTA',compClass:'comp-mixed',
+    note:null,color:'#FB7185',
+    monthly:[860,1090,1090,1370,2090,2350,4290,9360,9480,3360,1370,910]
+  },
+  {
+    name:'Salud & Bienestar',icon:'heart-pulse',avgMonthly:380,competition:'BAJA',compClass:'comp-low',
+    note:null,color:'#38BDF8',
+    monthly:[350,360,310,420,370,330,400,520,830,320,330,280]
+  },
+  {
+    name:'Alimentación',icon:'shopping-basket',avgMonthly:290,competition:'BAJA',compClass:'comp-low',
+    note:null,color:'#34D399',
+    monthly:[190,110,130,210,220,200,320,680,870,340,160,130]
+  },
+];
+
+// Negocios de la app de Luarca con búsqueda de marca propia (≥200 búsquedas/mes)
+// Datos ene→dic 2026 (reordenados desde respuesta Nov→Oct de la API)
+const BUSINESSES = [
+  {
+    name:'Pastelería Cabo Busto', icon:'cookie', avgMonthly:3600, color:'#F59E0B',
+    cat:'Alimentación',
+    monthly:[5400,2400,2400,2400,2900,2400,4400,4400,6600,2900,2400,1900]
+  },
+  {
+    name:'Museo del Calamar Gigante', icon:'landmark', avgMonthly:2400, color:'#6366F1',
+    cat:'Ocio & Cultura',
+    monthly:[1000,720,590,880,1600,1600,2400,4400,8100,2900,1900,1000]
+  },
+  {
+    name:'Parque de la Vida', icon:'telescope', avgMonthly:1900, color:'#10B981',
+    cat:'Ocio & Cultura',
+    monthly:[480,590,880,1600,3600,2400,1900,2900,4400,3600,880,720]
+  },
+  {
+    name:'HolaCamp Luarca', icon:'tent', avgMonthly:1000, color:'#84CC16',
+    cat:'Alojamiento · camping',
+    monthly:[0,0,0,0,0,210,880,2900,6600,1600,0,0]
+  },
+  {
+    name:'Hotel Villa de Luarca', icon:'castle', avgMonthly:880, color:'#8B5CF6',
+    cat:'Alojamiento',
+    monthly:[170,260,320,1000,1000,1000,1600,1300,1300,1000,480]
+  },
+  {
+    name:'Casa Consuelo', icon:'utensils', avgMonthly:880, color:'#EF4444',
+    cat:'Restaurante · Otur, Valdés',
+    monthly:[720,480,590,880,720,590,720,1000,1600,880,1600,590]
+  },
+  {
+    name:'Hotel Báltico', icon:'building-2', avgMonthly:590, color:'#3B82F6',
+    cat:'Alojamiento · Puerto de Luarca',
+    monthly:[260,390,390,480,590,720,1000,1300,1000,720,320,170]
+  },
+  {
+    name:'Hotel Puerto de Luarca', icon:'anchor', avgMonthly:480, color:'#0EA5E9',
+    cat:'Alojamiento',
+    monthly:[390,480,480,590,480,480,590,590,720,480,480,390]
+  },
+  {
+    name:'Restaurante Báltico', icon:'fish', avgMonthly:480, color:'#2563EB',
+    cat:'Restaurante · Puerto de Luarca',
+    monthly:[320,260,390,390,590,390,480,880,880,720,590,320]
+  },
+  {
+    name:'La Luarquesa', icon:'wheat', avgMonthly:390, color:'#EC4899',
+    cat:'Alimentación · desde 1896',
+    monthly:[390,320,480,480,390,390,320,320,390,480,480,480]
+  },
+  {
+    name:'Restaurante Marisol', icon:'waves', avgMonthly:390, color:'#F97316',
+    cat:'Restaurante',
+    monthly:[170,140,260,320,320,260,390,590,1600,480,390,260]
+  },
+  {
+    name:'Hotel Finca Portizuelo', icon:'leaf', avgMonthly:320, color:'#059669',
+    cat:'Alojamiento · eco',
+    monthly:[140,90,140,320,210,210,320,720,720,390,140,110]
+  },
+  {
+    name:'La Masera de Luarca', icon:'beer', avgMonthly:320, color:'#D97706',
+    cat:'Restaurante',
+    monthly:[110,70,110,170,210,320,390,720,1300,480,170,90]
+  }
+];
+
+// Sparklines
+function makeSVG(data, color) {
+  const w=200, h=34, pad=3;
+  const max=Math.max(...data), min=Math.min(...data), rng=max-min||1;
+  const step=(w-pad*2)/(data.length-1);
+  const y=(v)=>h-pad-((v-min)/rng)*(h-pad*2);
+  const pts=data.map((v,i)=>`${(pad+i*step).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  const first=pad, last=pad+(data.length-1)*step;
+  const area=`M${first},${h} `+data.map((v,i)=>`L${(pad+i*step).toFixed(1)},${y(v).toFixed(1)}`).join(' ')+` L${last.toFixed(1)},${h} Z`;
+  return `<svg viewBox="0 0 ${w} ${h}" style="width:100%;height:100%" xmlns="http://www.w3.org/2000/svg">
+    <path d="${area}" fill="${color}" opacity="0.13"/>
+    <polyline points="${pts}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`;
+}
+
+// Build cards
+const grid = document.getElementById('cards-grid');
+SECTORS.forEach(s => {
+  const card = document.createElement('div');
+  card.className = 'cat-card';
+  card.innerHTML = `
+    <div class="cat-header">
+      <i data-lucide="${s.icon}" class="card-icon"></i>
+      <span class="competition-badge ${s.compClass}">${s.competition}</span>
+    </div>
+    <div>
+      <div class="cat-name">${s.name}</div>
+      <div class="cat-volume">${s.avgMonthly.toLocaleString('es-ES')}</div>
+      <div class="cat-vol-label">búsquedas/mes (media anual)</div>
+    </div>
+    ${s.note ? `<div class="cat-note">${s.note}</div>` : ''}
+    <div class="sparkline-wrap">${makeSVG(s.monthly, s.color)}</div>
+  `;
+  grid.appendChild(card);
+});
+
+// Chart
+const isDark = () =>
+  document.documentElement.dataset.theme==='dark' ||
+  (!document.documentElement.dataset.theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+const gridColor  = () => isDark() ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.06)';
+const tickColor  = () => isDark() ? 'rgba(255,255,255,0.45)' : 'rgba(26,43,107,0.5)';
+const tooltipBg  = () => isDark() ? '#1e2a45' : '#fff';
+const tooltipFg  = () => isDark() ? '#e8edf8' : '#1A2B6B';
+const tooltipSub = () => isDark() ? '#9aa5c0' : '#6B7280';
+const tooltipBdr = () => isDark() ? '#2d3a5a' : '#E5E7EB';
+
+const ctx = document.getElementById('main-chart').getContext('2d');
+const datasets = SECTORS.map(s => ({
+  label: s.name,
+  data: s.monthly,
+  borderColor: s.color,
+  backgroundColor: s.color + '15',
+  borderWidth: 2.5,
+  pointRadius: 3,
+  pointHoverRadius: 5,
+  tension: 0.35,
+  fill: false,
+}));
+
+const chart = new Chart(ctx, {
+  type: 'line',
+  data: { labels: MONTHS, datasets },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: tooltipBg(),
+        titleColor: tooltipFg(),
+        bodyColor: tooltipSub(),
+        borderColor: tooltipBdr(),
+        borderWidth: 1,
+        padding: 10,
+        callbacks: {
+          label(c){ return ` ${c.dataset.label}: ${c.parsed.y.toLocaleString('es-ES')}`; }
+        }
+      }
+    },
+    scales: {
+      x: { grid:{color:gridColor()}, ticks:{color:tickColor(),font:{size:11}} },
+      y: {
+        grid:{color:gridColor()},
+        ticks:{
+          color:tickColor(),font:{size:11},
+          callback:v => v>=1000 ? (v/1000).toFixed(v%1000===0?0:1)+'k' : v
+        }
+      }
+    }
+  }
+});
+
+// Build business cards
+const bizGrid = document.getElementById('biz-grid');
+BUSINESSES.forEach(b => {
+  const card = document.createElement('div');
+  card.className = 'biz-card';
+  card.innerHTML = `
+    <div class="biz-header">
+      <i data-lucide="${b.icon}" class="card-icon"></i>
+      <div>
+        <div class="biz-name">${b.name}</div>
+        <div class="biz-cat">${b.cat}</div>
+      </div>
+    </div>
+    <div>
+      <div class="biz-volume" style="color:${b.color}">${b.avgMonthly.toLocaleString('es-ES')}</div>
+      <div class="biz-vol-label">búsquedas/mes (media anual)</div>
+    </div>
+    <div class="sparkline-wrap">${makeSVG(b.monthly, b.color)}</div>
+  `;
+  bizGrid.appendChild(card);
+});
+
+// Custom legend
+const legendEl = document.getElementById('chart-legend');
+SECTORS.forEach((s, i) => {
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  item.innerHTML = `<span class="legend-dot" style="background:${s.color}"></span><span class="legend-label">${s.name}</span>`;
+  item.addEventListener('click', () => {
+    const meta = chart.getDatasetMeta(i);
+    meta.hidden = !meta.hidden;
+    item.classList.toggle('hidden', meta.hidden);
+    chart.update();
+  });
+  legendEl.appendChild(item);
+});
+
+lucide.createIcons();
+</script>

@@ -4,6 +4,7 @@ description: "Luarca, con su encanto único y su rica historia, es un lugar que 
 pubDate: "2024-09-10"
 updatedDate: "2026-05-19"
 tags: ['luarca', 'negocios-locales']
+heroImage: /images/blog/soluciones-digitales-negocios-luarca.png
 draft: false
 ---
 

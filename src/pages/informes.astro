@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const informes = [
+  {
+    titulo: 'Valdés Electoral 1977–2023',
+    descripcion: 'Municipales y generales mesa a mesa: 12 + 16 convocatorias desde la Transición, con comparativa del voto diferencial por elección.',
+    href: '/valdes-electoral/',
+    imagen: '/valdes-electoral/og-image-electoral.png',
+    etiqueta: 'Elecciones',
+    color: '#c41e24',
+  },
+  {
+    titulo: 'Valdés en datos',
+    descripcion: 'Por cada niño hay 4,3 jubilados. Demografía, turismo y tejido empresarial del concejo con datos del INE y SADEI.',
+    href: '/valdes-en-datos/',
+    imagen: '/valdes-en-datos/og-image.png',
+    etiqueta: 'Demografía',
+    color: '#1a2b6b',
+  },
+  {
+    titulo: 'Búsquedas en Luarca',
+    descripcion: 'Qué buscan los usuarios en Google sobre Luarca: volumen, estacionalidad y oportunidades para los negocios locales.',
+    href: '/informe-busquedas-luarca.html',
+    imagen: null,
+    etiqueta: 'SEO local',
+    color: '#0e7a5a',
+  },
+];
+---
+
+<BaseLayout
+  title="Informes locales | 33setecientos"
+  description="Datos públicos sobre el occidente de Asturias analizados por 33setecientos: elecciones, demografía, turismo y comportamiento de búsqueda en Google."
+  image="/images/og-informes.png"
+>
+
+<main class="informes-page">
+  <div class="container">
+    <div class="page-head">
+      <span class="eyebrow">Datos públicos · Occidente de Asturias</span>
+      <h1>Informes</h1>
+      <p class="lead">Análisis sobre Valdés y el occidente de Asturias a partir de datos oficiales del INE, Ministerio del Interior y Google. Acceso libre.</p>
+    </div>
+
+    <div class="informes-grid">
+      {informes.map((inf) => (
+        <a href={inf.href} class="informe-card">
+          {inf.imagen
+            ? <div class="card-thumb"><img src={inf.imagen} alt={inf.titulo} width="600" height="315" loading="lazy" /></div>
+            : <div class="card-thumb card-thumb--empty" style={`background:${inf.color}18`}>
+                <span class="thumb-icon" style={`color:${inf.color}`}>📊</span>
+              </div>
+          }
+          <div class="card-body">
+            <span class="card-tag" style={`background:${inf.color}18;color:${inf.color}`}>{inf.etiqueta}</span>
+            <h2>{inf.titulo}</h2>
+            <p>{inf.descripcion}</p>
+            <span class="card-cta">Ver informe →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</main>
+
+<style>
+.informes-page { padding-block: 3rem 5rem; }
+
+.page-head {
+  max-width: 640px;
+  margin-bottom: 3rem;
+}
+.eyebrow {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #1a2b6b;
+  margin-bottom: .6rem;
+}
+.page-head h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: .6rem;
+  line-height: 1.1;
+}
+.lead {
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.informes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.informe-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e8eaf0;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow .2s, transform .2s;
+}
+.informe-card:hover {
+  box-shadow: 0 8px 30px rgba(26,43,107,.12);
+  transform: translateY(-2px);
+}
+
+.card-thumb {
+  aspect-ratio: 1200/630;
+  overflow: hidden;
+  background: #f0f2f8;
+}
+.card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card-thumb--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thumb-icon { font-size: 2.5rem; }
+
+.card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  flex: 1;
+}
+.card-tag {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 2px 8px;
+  width: fit-content;
+}
+.card-body h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+}
+.card-body p {
+  font-size: .9rem;
+  color: #475569;
+  line-height: 1.55;
+  flex: 1;
+}
+.card-cta {
+  font-size: .85rem;
+  font-weight: 600;
+  color: #1a2b6b;
+  margin-top: .25rem;
+}
+</style>
+</BaseLayout>

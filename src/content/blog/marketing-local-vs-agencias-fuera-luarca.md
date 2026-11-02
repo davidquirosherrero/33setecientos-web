@@ -48,3 +48,4 @@ En **33setecientos** no solo hacemos webs o gestionamos redes; ayudamos a los ne
 
 - [La precisión técnica y la frescura local como antídotos contra el error digital](https://33setecientos.com/errores-digitales-profesionales-luarca/)
 - [Relevo generacional en Luarca: La nueva era empresarial](https://33setecientos.com/relevo-empresarial-luarca-valdes/)
+- [Marketing digital en Luarca y el occidente de Asturias: servicios y casos reales](/marketing-digital-luarca-asturias-occidental/)

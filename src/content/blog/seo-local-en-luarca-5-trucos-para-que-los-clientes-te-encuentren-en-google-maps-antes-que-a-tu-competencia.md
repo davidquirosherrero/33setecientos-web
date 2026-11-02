@@ -67,3 +67,4 @@ Escríbenos a través de nuestra sección de contacto. Vamos a hacer que tu nego
 
 - [¿Tu negocio en Luarca depende solo de Facebook o Instagram?](https://33setecientos.com/porque-necesitas-web-propia/)
 - [Negocios en Luarca: No pierdas clientes frente a los de fuera](https://33setecientos.com/negocios-servicios-valdes-digital/)
+- [Marketing digital en Luarca y el occidente de Asturias: servicios y casos reales](/marketing-digital-luarca-asturias-occidental/)

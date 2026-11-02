@@ -26,7 +26,9 @@
     { "source": "/politica-privacidad-2", "destination": "/politica-privacidad/", "permanent": true },
     { "source": "/sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true },
     { "source": "/sitemap_index.xml", "destination": "/sitemap-index.xml", "permanent": true },
-    { "source": "/wp-sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true }
+    { "source": "/wp-sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true },
+    { "source": "/valdes-en-datos", "destination": "/valdes-en-datos-informe-demografico-luarca/", "permanent": true },
+    { "source": "/valdes-en-datos/", "destination": "/valdes-en-datos-informe-demografico-luarca/", "permanent": true }
   ],
   "headers": [
     {

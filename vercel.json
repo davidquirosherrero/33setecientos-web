@@ -29,16 +29,9 @@
     { "source": "/wp-sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true },
     { "source": "/valdes-en-datos", "destination": "/valdes-en-datos-informe-demografico-luarca/", "permanent": true },
     { "source": "/valdes-en-datos/", "destination": "/valdes-en-datos-informe-demografico-luarca/", "permanent": true },
-    { "source": "/informe-busquedas-luarca", "destination": "/informe-busquedas-luarca.html", "permanent": true },
-    { "source": "/informe-busquedas-luarca/", "destination": "/informe-busquedas-luarca.html", "permanent": true }
+    { "source": "/informe-busquedas-luarca.html", "destination": "/informe-busquedas-luarca/", "permanent": true }
   ],
   "headers": [
-    {
-      "source": "/informe-busquedas-luarca.html",
-      "headers": [
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
-      ]
-    },
     {
       "source": "/(.*)",
       "headers": [

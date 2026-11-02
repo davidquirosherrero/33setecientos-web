@@ -3,7 +3,7 @@ title: "75.000 búsquedas al mes sobre Luarca. ¿Cuántas llegan a tu negocio?"
 description: "Hemos analizado los datos reales de Google Keyword Planner para Luarca: qué buscan, cuándo y con qué volumen. El resultado, sector a sector y negocio a negocio, está en un informe interactivo público."
 pubDate: "2026-11-01"
 tags: ['luarca', 'datos', 'seo-local', 'negocios-locales']
-heroImage: /images/blog/informe-busquedas-luarca-datos-google-negocios.svg
+heroImage: /images/blog/google-trends-luarca-datos-negocio-valdes-2026.png
 draft: false
 ---
 

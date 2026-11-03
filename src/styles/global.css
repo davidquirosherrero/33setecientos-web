@@ -94,6 +94,8 @@ p { margin: 0 0 1em; }
   color: var(--teal);
 }
 .btn-outline:hover { background: var(--teal); color: var(--navy); }
+.section--light .btn-outline { color: var(--navy); border-color: var(--navy); }
+.section--light .btn-outline:hover { background: var(--navy); color: var(--white); }
 
 .btn-white {
   background: var(--white);

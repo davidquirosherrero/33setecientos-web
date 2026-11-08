@@ -44,6 +44,10 @@ Este mayo, no esperes a ver las matrículas de Madrid por el barrio de La Pescad
 
 [Escríbenos y lo hablamos](https://33setecientos.com/contacto/).
 
+---
+
+¿Estás planificando tu escapada a Luarca para los puentes? En [App Luarca](https://app-luarca.33setecientos.com/) tienes el directorio completo de [hoteles y alojamientos](https://app-luarca.33setecientos.com/negocios?categoria=Alojamiento) y [restaurantes](https://app-luarca.33setecientos.com/negocios?categoria=Restaurantes%20y%20bares) del concejo con horarios y datos de contacto actualizados.
+
 **También puede interesarte:**
 
 - [Reservas online para restaurantes en Luarca: cómo activarlas](https://33setecientos.com/reservas-online-restaurantes-luarca-hosteleria/)

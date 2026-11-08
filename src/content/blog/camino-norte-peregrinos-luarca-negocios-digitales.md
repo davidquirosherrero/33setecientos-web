@@ -30,6 +30,8 @@ El restaurante que pone "menú peregrino" en su ficha de Google y en sus fotos t
 
 Ninguno de estos cambios requiere una inversión significativa. Requieren que alguien se ocupe de hacerlos.
 
+Si eres peregrino y estás planificando tu etapa por Luarca, en [App Luarca](https://app-luarca.33setecientos.com/) encontrarás el directorio de negocios del concejo con horarios, teléfonos y ubicación: [restaurantes](https://app-luarca.33setecientos.com/negocios?categoria=Restaurantes%20y%20bares), [alojamientos](https://app-luarca.33setecientos.com/negocios?categoria=Alojamiento), [comercios](https://app-luarca.33setecientos.com/negocios?categoria=Comercio%20local) y más.
+
 ## 2026 es el momento de prepararse
 
 El Año Santo de 2027 va a disparar el tráfico de peregrinos en todos los caminos jacobeos. El Camino del Norte va a pasar de ser el camino alternativo y tranquilo a ser un camino con saturación real en determinados tramos. Luarca está en el corredor.

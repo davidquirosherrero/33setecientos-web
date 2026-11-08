@@ -6,8 +6,11 @@ export default defineConfig({
   site: 'https://33setecientos.com',
   integrations: [
     sitemap({
-      // Excluir páginas que no deben indexarse
-      filter: (page) => !page.includes('/page-404'),
+      filter: (page) =>
+        !page.includes('/page-404') &&
+        !page.includes('/gracias') &&
+        !page.includes('/aviso-legal') &&
+        !page.includes('/politica-privacidad'),
     }),
   ],
   // Rutas que deben generarse como HTML estático

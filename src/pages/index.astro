@@ -12,6 +12,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  '@id': 'https://33setecientos.com/#organization',
   name: '33setecientos',
   description: 'Agencia de marketing digital para negocios del occidente de Asturias. SEO, Google Ads, Meta Ads, web y redes sociales.',
   url: 'https://33setecientos.com',

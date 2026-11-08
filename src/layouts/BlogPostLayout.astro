@@ -15,21 +15,34 @@ const updatedStr = updatedDate
 
 const ogImage = heroImage ?? '/images/og-default.png';
 
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
-  headline: title,
-  description,
-  datePublished: pubDate.toISOString(),
-  dateModified: (updatedDate ?? pubDate).toISOString(),
-  author: [
-    { '@type': 'Person', name: 'David Quirós', url: 'https://33setecientos.com' },
-    { '@type': 'Organization', name: '33setecientos', url: 'https://33setecientos.com' },
-  ],
-  publisher: { '@type': 'Organization', name: '33setecientos', logo: { '@type': 'ImageObject', url: 'https://33setecientos.com/images/logos/logo.png' } },
-  image: `https://33setecientos.com${ogImage}`,
-  mainEntityOfPage: { '@type': 'WebPage', '@id': Astro.url.toString() },
-};
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? 'https://33setecientos.com';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description,
+    datePublished: pubDate.toISOString(),
+    dateModified: (updatedDate ?? pubDate).toISOString(),
+    author: [
+      { '@type': 'Person', name: 'David Quirós', url: siteUrl },
+      { '@type': 'Organization', name: '33setecientos', url: siteUrl },
+    ],
+    publisher: { '@type': 'Organization', name: '33setecientos', logo: { '@type': 'ImageObject', url: `${siteUrl}/images/logos/logo.png` } },
+    image: `${siteUrl}${ogImage}`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': Astro.url.toString() },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog-marketing-luarca/` },
+      { '@type': 'ListItem', position: 3, name: title, item: Astro.url.toString() },
+    ],
+  },
+];
 ---
 
 <BaseLayout title={`${title} · 33setecientos`} description={description} image={ogImage} type="article" pubDate={pubDate} schema={schema}>

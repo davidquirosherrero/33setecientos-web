@@ -9,12 +9,15 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   type?: 'website' | 'article';
   pubDate?: Date;
   schema?: object;
+  noindex?: boolean;
 }
 
-const { title, description, image, type, pubDate, schema } = Astro.props;
+const { title, description, image, imageWidth, imageHeight, type, pubDate, schema, noindex } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,14 +25,19 @@ const { title, description, image, type, pubDate, schema } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1A2B6B" />
     <SEO
       title={title}
       description={description}
       image={image}
+      imageWidth={imageWidth}
+      imageHeight={imageHeight}
       type={type}
       pubDate={pubDate}
+      noindex={noindex}
     />
-    <link rel="icon" type="image/png" href="/images/logos/logo.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/images/logos/logo.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     {schema && (

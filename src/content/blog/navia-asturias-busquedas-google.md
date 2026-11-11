@@ -13,7 +13,7 @@ draft: false
 
 La búsqueda "navia asturias" registra 3.600 búsquedas mensuales con una competencia muy baja (índice 4/100). Eso significa que mucha gente llega a ese resultado y poca empresa está invirtiendo por aparecer ahí.
 
-Para un municipio de unos 9.000 habitantes es un volumen que merece atención. El patrón se parece al [que ya analizamos para Luarca y el Occidente](/blog/informe-busquedas-luarca-datos-google-negocios/): la gente busca para decidir, no para confirmar algo que ya sabe.
+Para un municipio de unos 9.000 habitantes es un volumen que merece atención. El patrón se parece al [que ya analizamos para Luarca y el Occidente](/informe-busquedas-luarca-datos-google-negocios/): la gente busca para decidir, no para confirmar algo que ya sabe.
 
 ## Lo primero que buscan es dónde dormir
 
@@ -45,7 +45,7 @@ Para un negocio ubicado allí, esto tiene una implicación directa: trabajar con
 
 ## El Camino del Norte pasa por Navia
 
-El albergue San Roque aparece en los datos con 40 búsquedas mensuales. Es un número pequeño, pero los peregrinos del Camino del Norte son un segmento que planifica con días de antelación: buscan alojamiento, restauración y servicios antes de llegar. [Ya vimos cómo este flujo afecta a los negocios de la costa asturiana](/blog/camino-norte-peregrinos-luarca-negocios-digitales/) — en Navia el patrón es el mismo. Volumen bajo, constante y con intención de compra clara.
+El albergue San Roque aparece en los datos con 40 búsquedas mensuales. Es un número pequeño, pero los peregrinos del Camino del Norte son un segmento que planifica con días de antelación: buscan alojamiento, restauración y servicios antes de llegar. [Ya vimos cómo este flujo afecta a los negocios de la costa asturiana](/camino-norte-peregrinos-luarca-negocios-digitales/) — en Navia el patrón es el mismo. Volumen bajo, constante y con intención de compra clara.
 
 ## Qué hace un negocio de Navia con todo esto
 

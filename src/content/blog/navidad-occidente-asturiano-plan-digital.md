@@ -19,7 +19,7 @@ Los primeros ya saben dónde van. Los segundos toman decisiones en Google diez d
 
 **Hoteles y casas rurales**: diciembre es temporada media-baja salvo los puentes de la Inmaculada (5-8 dic), Nochebuena/Nochevieja y Reyes. El error más común es no activar nada hasta el 15 de diciembre. Para entonces ya están llenos los que lo hicieron antes.
 
-**Restaurantes**: hay demanda real para menús de empresa, comidas de cuadrilla y Nochebuena. Pero si no estás en Google Maps con el menú actualizado y las reseñas recientes, no existes para quien busca desde Oviedo o Gijón.
+**Restaurantes**: hay demanda real para menús de empresa, comidas de pandilla y Nochebuena. Pero si no estás en Google Maps con el menú actualizado y las reseñas recientes, no existes para quien busca desde Oviedo o Gijón.
 
 **Comercio local**: el tráfico de diciembre es el mejor del año. Pero no viene solo. Necesita un empujón digital para convertir "estoy en Luarca" en "entro en esta tienda".
 
@@ -40,11 +40,11 @@ El puente de la Inmaculada mueve gente por toda Asturias. Muchos lo deciden con 
 - Publica en redes sociales algo concreto: "quedan X habitaciones para el puente" o "menú especial 6-8 diciembre". No publicidad genérica, información real.
 - Manda el mensaje a tu lista de contactos con la oferta del puente.
 
-La [presencia digital para restaurantes en el Occidente asturiano](/blog/presencia-digital-restaurantes-luarca-google) tiene mucho más impacto en estas fechas que en agosto, porque la competencia baja y la intención de compra es alta.
+La [presencia digital para restaurantes en el Occidente asturiano](/presencia-digital-restaurantes-luarca-google) tiene mucho más impacto en estas fechas que en agosto, porque la competencia baja y la intención de compra es alta.
 
 ## Semanas del 9 al 22 dic: comidas de empresa y grupos
 
-La quincena central de diciembre es para grupos. Cuadrillas, equipos de trabajo, familias que se adelantan.
+La quincena central de diciembre es para grupos. Pandillas, equipos de trabajo, familias que se adelantan.
 
 - Si tienes menú de grupo: comunícalo explícitamente. No basta con "tenemos disponibilidad". Di el precio, el número mínimo, qué incluye.
 - Reseñas: si llevas tiempo sin pedir reseñas, esta es la semana. Las reseñas recientes pesan en el algoritmo de Google Maps.

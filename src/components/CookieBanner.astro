@@ -1,12 +1,12 @@
 ---
-// Cookie banner GDPR nativo — sin dependencias externas
-// Guarda consentimiento en localStorage. GA4 solo se carga si se acepta.
+// Cookie banner GDPR — Consent Mode v2
+// GTM ya está cargado en el <head>. Este banner solo actualiza el estado de consent.
 ---
 
 <div id="cookie-banner" class="cookie-banner" role="alertdialog" aria-label="Aviso de cookies" aria-describedby="cookie-desc">
   <div class="cookie-inner">
     <p id="cookie-desc">
-      Usamos cookies propias y de terceros (Google Analytics) para mejorar la experiencia y analizar el tráfico.
+      Usamos cookies propias y de terceros (Google Analytics, Meta/Facebook) para analizar el tráfico y mejorar tu experiencia.
       <a href="/politica-privacidad/" class="cookie-link">Política de privacidad</a>
     </p>
     <div class="cookie-btns">
@@ -32,40 +32,50 @@
     if (banner) banner.style.display = 'none';
   }
 
-  function loadAnalytics() {
-    // Cargar Google Tag Manager (ya tiene GA4 configurado internamente)
-    const GTM_ID = 'GTM-MRS2VN3V';
-    (function(w,d,s,l,i){
-      (w as any)[l]=(w as any)[l]||[];
-      (w as any)[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-      const f=d.getElementsByTagName(s)[0];
-      const j=d.createElement(s) as HTMLScriptElement;
-      const dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode!.insertBefore(j,f);
-    })(window,document,'script','dataLayer',GTM_ID);
+  function grantConsent() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: unknown[]) { (window as any).dataLayer.push(args); }
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted'
+    });
+    (window as any).dataLayer.push({ event: 'consent_accepted' });
   }
 
-  // On load
+  function denyConsent() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: unknown[]) { (window as any).dataLayer.push(args); }
+    gtag('consent', 'update', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+  }
+
+  // On load: aplicar consent guardado
   const consent = getCookieConsent();
   if (consent === 'accepted') {
     hideBanner();
-    loadAnalytics();
+    grantConsent();
   } else if (consent === 'rejected') {
     hideBanner();
+    denyConsent();
   }
-  // Otherwise, show banner
+  // Sin consent previo: mostrar banner
 
   document.getElementById('cookie-accept')?.addEventListener('click', () => {
     setCookieConsent('accepted');
     hideBanner();
-    loadAnalytics();
+    grantConsent();
   });
 
   document.getElementById('cookie-reject')?.addEventListener('click', () => {
     setCookieConsent('rejected');
     hideBanner();
+    denyConsent();
   });
 </script>
 
